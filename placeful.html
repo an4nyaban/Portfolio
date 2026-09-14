@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Placeful Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Newsreader:ital,wght@0,600&family=Tillana:wght@500&family=Zalando+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Zalando+Sans+Expanded:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="cs-body">
+
+<!-- ============ MAIN SITE NAV ============ -->
+<header class="site-nav" id="site-nav">
+  <div class="nav-logo-cs"><img src="Assets/ab_star.png" alt="AB monogram logo"></div>
+  <ul>
+    <li><a href="index.html" class="nav-current">work</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="coming-soon.html?project=Collage">collage</a></li>
+    <li>
+      <a href="https://docs.google.com/document/d/1rjOiWTw3FA5mIrzkZx_TTW7is4Xb-dvMyha_8OCmCT4/edit?usp=sharing"
+         target="_blank"
+         rel="noopener noreferrer">
+        resume
+      </a>
+    </li>
+  </ul>
+</header>
+
+<!-- ============ CASE STUDY SECONDARY NAV ============ -->
+<div class="cs-subnav-wrap" id="cs-subnav-wrap">
+  <nav class="cs-subnav" id="cs-subnav" aria-label="Case study sections">
+    <button data-target="background" class="active">Background</button>
+    <button data-target="research">Research</button>
+    <button data-target="wireframes">Wireframes</button>
+    <button data-target="testing">Testing</button>
+    <button data-target="final">Final</button>
+    <button data-target="reflection">Reflection</button>
+  </nav>
+</div>
+
+<main>
+<!-- ============ BACKGROUND SECTION ============ -->
+<section class="cs-section" id="background">
+
+  <!-- intro -->
+  <div class="cs-intro">
+    <div class="intro-hero shadow-card">
+      <div class="intro-layer intro-bg-r">
+        <img src="Assets/placeful_logo.png" alt="">
+      </div>
+      <div class="intro-layer intro-phones">
+        <img src="Assets/placeful_cs/intro_phones.png" alt="Screenshots of the Placeful app showing a park detail page and a furnished virtual room">
+      </div>
+      <div class="intro-layer intro-bg-tl">
+        <img src="Assets/placeful_logo.png" alt="">
+      </div>
+      <div class="intro-layer intro-bg-bl">
+        <img src="Assets/placeful_logo.png" alt="">
+      </div>
+      <div class="intro-layer intro-leaf">
+        <img src="Assets/placeful_logo.png" alt="">
+      </div>
+    </div>
+
+    <div class="intro-details">
+      <p class="intro-title">Placeful: A cozy, community-focused take on social media</p>
+      <div class="intro-meta">
+        <div class="intro-col role">
+          <p class="intro-col-label">Role</p>
+          <div class="intro-col-body">
+            <p>Product Designer</p>
+            <p>UX Researcher</p>
+          </div>
+        </div>
+        <div class="intro-col tools">
+          <p class="intro-col-label">Tools</p>
+          <div class="intro-col-body">
+            <p>Figma</p>
+            <p>FigJam</p>
+            <p>UserTesting</p>
+            <p>Notion</p>
+          </div>
+        </div>
+        <div class="intro-col team">
+          <p class="intro-col-label">Team</p>
+          <div class="intro-col-body">
+            <p>9-person team:</p>
+            <p>Product Designers Product Managers</p>
+            <p>Mentors</p>
+          </div>
+        </div>
+        <div class="intro-col duration">
+          <p class="intro-col-label">Duration</p>
+          <div class="intro-col-body intro-col-body--duration">
+            <p>May 2026 - August 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- background copy + from bloom to placeful -->
+  <div class="cs-bg-content">
+    <div class="cs-divider"></div>
+
+    <div class="cs-bg-top">
+      <h2 class="cs-h1">Background</h2>
+      <div class="cs-bg-group">
+        <ul class="cs-bg-paras">
+          <li>
+            <span class="nenos-logo-inline"><img src="Assets/placeful_cs/nenos_logo.png" alt="nenos"></span>
+            is a 501(c)(3) <span class="hl">nonprofit</span> rethinking what social media can look like when it's designed around <span class="hl">people</span> rather than <span class="hl">engagement metrics</span>.
+          </li>
+          <li>
+            Their mission is to create an <span class="hl">ethical</span>, <span class="hl">community-focused</span> social platform centered around <span class="hl">human well-being</span> and <span class="hl">meaningful real-world connection</span>.
+          </li>
+        </ul>
+        <div class="cs-pill-wrap">
+          <p class="cs-pill">AD FREE &nbsp;&middot;&nbsp; CHRONOLOGICAL &nbsp;&middot;&nbsp; LOCAL-FIRST &nbsp;&middot;&nbsp; CALM BY DESIGN</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-bloom-block">
+      <div class="cs-bloom-row">
+        <div class="cs-bloom-text">
+          <h2 class="cs-h1">From Bloom to Placeful</h2>
+          <ul class="cs-bullets">
+            <li><span class="hl-bright">Bloom</span>, nenos's previous app, helped users stay connected with friends and family while discovering events in their local communities.</li>
+            <li>A central part of the experience was <span class="hl-bright">Discover</span>, which allowed users to browse event recommendations and find things happening nearby.</li>
+          </ul>
+        </div>
+        <div class="cs-bloom-img">
+          <img src="Assets/placeful_cs/old_discover.png" alt="Screenshot of Bloom's old Discover feed showing event recommendation cards">
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-divider"></div>
+  </div>
+
+  <!-- the problem -->
+  <div class="cs-problem-wrap">
+    <div class="cs-problem">
+      <div class="cs-problem-header">
+        <h2 class="cs-problem-title">The Problem</h2>
+        <div class="cs-problem-desc">
+          <p class="desc-muted">Bloom could help people discover their community, but</p>
+          <p class="desc-accent">gave them few ways to meaningfully participate in it.</p>
+        </div>
+      </div>
+
+      <div class="cs-problem-cards">
+        <div class="cs-problem-card">
+          <div class="cs-problem-card-inner">
+            <img class="cs-problem-icon" src="Assets/placeful_cs/icon_passive_discovery.svg" alt="" width="89" height="89">
+            <div class="cs-problem-card-text">
+              <p class="cs-problem-card-title">Passive discovery</p>
+              <p>Users could find events, but there was little motivation within the product to actually engage with them.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs-problem-card">
+          <div class="cs-problem-card-inner">
+            <img class="cs-problem-icon" src="Assets/placeful_cs/icon_limited_participation.svg" alt="" width="86" height="86">
+            <div class="cs-problem-card-text">
+              <p class="cs-problem-card-title">Limited participation</p>
+              <p>Beyond discovering events, posting, and messaging, there were few meaningful ways for users to interact with their community.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs-problem-card">
+          <div class="cs-problem-card-inner">
+            <img class="cs-problem-icon" src="Assets/placeful_cs/icon_disconnected_impact.svg" alt="" width="80" height="80">
+            <div class="cs-problem-card-text">
+              <p class="cs-problem-card-title">Disconnected offline impact</p>
+              <p>Because event participation happened outside the app, nenos had limited visibility into whether discovery translated into real-world engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-divider"></div>
+  </div>
+
+  <!-- the solution (part 1) -->
+  <div class="cs-solution-wrap">
+    <div class="cs-solution-head">
+      <h2 class="cs-problem-title">The Solution</h2>
+      <div class="cs-solution-desc">
+        <p class="sol-desc-line1">From discovering your community to...</p>
+        <p class="sol-desc-line2">becoming a part of it!</p>
+      </div>
+    </div>
+
+    <p class="cs-solution-copy">
+      <span class="placeful-logo-inline"><img src="Assets/placeful_cs/placeful_wordmark.png" alt="Placeful"></span>
+      is a completely new social experience that would build on Bloom's community-focused mission while creating a stronger connection between users' digital identities and their real-world experiences.
+    </p>
+
+    <div class="cs-solution-row">
+      <div class="cs-solution-room">
+        <img class="room-main" src="Assets/placeful_cs/sol_room.png" alt="Isometric illustration of a cozy bedroom with a bed, desk, and bookshelf">
+        <span class="cs-solution-room-sticker"><img src="Assets/placeful_cs/sol_housewarming_plant.png" alt=""></span>
+      </div>
+      <div class="cs-solution-mementos">
+        <img src="Assets/placeful_cs/mementos_examples.png" alt="Six collectible memento icons users can earn: Sugar Maple, Neko Charm, Pretty Pretzel, Cozy Plant, Cool Camera, and Mr. Mike, each glowing on a white tile">
+      </div>
+    </div>
+  </div>
+
+  <!-- center of places -->
+  <div class="cs-places-wrap">
+    <div class="cs-places-desc">
+      <p class="cs-places-heading">
+        <span>At the center of</span>
+        <span class="cs-places-logo-inline"><img src="Assets/placeful_cs/placeful_wordmark.png" alt="Placeful"></span>
+        <span>is <span class="cs-places-serif">Places</span>:</span>
+      </p>
+      <p class="cs-places-copy">
+        <span class="hl">Places</span> reimagines the traditional social media profile as a customizable 2D space, called a <span class="hl">&#8220;Place&#8221;</span>, representing <span class="hl">where</span> a user goes, <span class="hl">what</span> they <span class="hl">experience</span>, and the <span class="hl">communities</span> they participate in.
+      </p>
+      <p class="cs-places-copy">
+        Users can populate their <span class="hl">&#8220;Place&#8221;</span> by attending events and earning <span class="hl">&#8220;Mementos&#8221;</span>: digital souvenirs that represent their real-world experiences and memories.
+      </p>
+    </div>
+
+    <div class="cs-pill-wrap">
+      <p class="cs-places-flow">Discover <span class="arrow">&rarr;</span> Attend <span class="arrow">&rarr;</span> Verify <span class="arrow">&rarr;</span> Collect a Memento <span class="arrow">&rarr;</span> Build your Place</p>
+    </div>
+  </div>
+
+  <!-- our challenge -->
+  <div class="cs-challenge-band">
+    <div class="cs-challenge-wrap">
+      <div class="cs-divider"></div>
+      <div class="cs-challenge">
+        <h2 class="cs-h1">Our Challenge</h2>
+        <div class="cs-challenge-card">
+          <p>
+            Bring <span class="cs-places-serif cs-challenge-serif">Places</span> to life by designing how users would <span class="cs-challenge-hl">create</span> their Places, <span class="cs-challenge-hl">collect</span> Mementos, and <span class="cs-challenge-hl">interact</span> with this new experience.
+          </p>
+        </div>
+      </div>
+      <div class="cs-divider"></div>
+    </div>
+  </div>
+
+  <!-- initial research: user personas -->
+  <div class="cs-research-wrap">
+    <h2 class="cs-h1" id="research-trigger">Initial Research</h2>
+
+    <div class="cs-personas">
+      <h3 class="cs-personas-title">User Personas:</h3>
+
+      <div class="cs-persona-row cs-persona-row--left cs-persona-row--jodie">
+        <img src="Assets/placeful_cs/persona_jodie.png" alt="User persona: Jodie Combs, &quot;The Local,&quot; age 32, a burnt-out millennial social worker in Tampa, FL who keeps her social media private but wants to connect more with her local community. Personality spectrum: introvert-leaning, analytical, busy, messy, independent, passive, safe. Tags: Stressed, Goal-oriented, Exploratory.">
+        <ul class="cs-personas-desc">
+          <li>Developed 3 user personas to understand the app&rsquo;s diverse user base through different perspectives.</li>
+        </ul>
+      </div>
+      <div class="cs-persona-row cs-persona-row--right">
+        <img src="Assets/placeful_cs/persona_chelsea.png" alt="User persona: Chelsea Jones, &quot;The Traveler,&quot; age 28, a Gen Z nurse in Orlando, FL who travels 3-4 times a year seeking spontaneous, authentic experiences and dislikes social media's focus on showing off. Personality spectrum: introvert-leaning, analytical, moderately busy, organized, independent, passive, safe. Tags: Authentic, Spontaneous, Intentional.">
+      </div>
+      <div class="cs-persona-row cs-persona-row--left">
+        <img src="Assets/placeful_cs/persona_miles.png" alt="User persona: Miles Solano, &quot;The Explorer,&quot; age 25, a Gen Z freelance photographer in Miami, FL who curates his social posts like a personal diary and avoids doom-scrolling. Personality spectrum: extrovert-leaning, creative, time rich, messy, balanced independent/team player, active, risky. Tags: Intentional, Curated, Aspirational.">
+      </div>
+    </div>
+
+    <div class="cs-journey">
+      <h3 class="cs-personas-title">User Journey:</h3>
+      <div class="cs-journey-img">
+        <img src="Assets/placeful_cs/user_journey.png" alt="User journey map across six steps (Awareness, Consideration, Onboarding, Exploration, Participation, Reflection/Feedback), each broken into user actions, goals and experiences, feelings and thoughts, pain points, and opportunities, captured as sticky notes">
+      </div>
+    </div>
+
+    <div class="cs-flows-wrap">
+      <h3 class="cs-personas-title">User Flows:</h3>
+      <div class="cs-flows-row">
+        <div class="cs-flows-col cs-flows-col-left">
+          <ul class="cs-flows-desc">
+            <li>Mapped end-to-end user flows to understand how users would navigate through Placeful, from discovering and attending events to verifying their participation, collecting Mementos, and adding them to their Place</li>
+          </ul>
+          <div class="cs-flow-img cs-flow-img--1">
+            <img src="Assets/placeful_cs/user_flow1.png" alt="Flow 1: Onboarding. Input user information, opt in to create a Place, select a style (basement, garage, etc. from the Places overview doc, starting with an empty room and unpacked-boxes starter items), and customize the Place with pets and ambient elements">
+          </div>
+        </div>
+        <div class="cs-flows-col cs-flows-col-right">
+          <div class="cs-flow-img cs-flow-img--2">
+            <img src="Assets/placeful_cs/user_flow2.png" alt="Flow 2: Adding a Memento after an event is completed. Scan QR code, earn Memento and add description, connect to post">
+          </div>
+          <div class="cs-flow-img cs-flow-img--3">
+            <img src="Assets/placeful_cs/user_flow3.png" alt="Flow 3: Messaging people to go to an event. Open chat history or event to open registered people, click on chat or new chat; if clicking an existing chat, send message; if starting a new chat, add people/person then send message">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-key-question-wrap">
+      <div class="cs-key-question">
+        <p class="kq-label">Key Question:</p>
+        <p class="kq-text">How can we drive engagement without over-gamifying the experience?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-final-divider-wrap">
+    <div class="cs-divider"></div>
+  </div>
+
+</section>
+
+<!-- ============ RESEARCH SECTION ============ -->
+<section class="cs-section" id="research">
+
+  <div class="cs-divide-wrap">
+    <h2 class="cs-h1">Divide and Conquer</h2>
+
+    <div class="cs-divide-content">
+      <p class="cs-divide-intro">To tackle the scope of Placeful, we divided the experience into <span class="hl-focus">three focus areas</span>:</p>
+      <div class="cs-focus-row">
+        <div class="cs-focus-col">
+          <p class="cs-focus-title">PROFILE &amp; ONBOARDING</p>
+          <div class="cs-focus-card"><p>Creating an onboarding experience that sets users up for success after they earn a memento.</p></div>
+        </div>
+        <div class="cs-focus-col">
+          <p class="cs-focus-title">SHARING &amp; CUSTOMIZATION</p>
+          <div class="cs-focus-card"><p>Designing a personalized experience where users can curate their Place.</p></div>
+        </div>
+        <div class="cs-focus-col">
+          <p class="cs-focus-title">DISCOVER &amp; COLLECT</p>
+          <div class="cs-focus-card cs-focus-card--active"><p>Verifies visits, crafts a memento-arrival UX, and frames the experience before, during, and after.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-assigned-content">
+      <p class="cs-divide-intro">My design partner and I were assigned to <span class="hl-assigned">Discover &amp; Collect</span>, we focused on:</p>
+      <div class="cs-icon-row">
+        <div class="cs-icon-card">
+          <img src="Assets/placeful_cs/icon_event_discovery.svg" alt="" class="cs-icon-card-icon">
+          <p class="cs-icon-card-title">Event discovery</p>
+        </div>
+        <div class="cs-icon-card">
+          <img src="Assets/placeful_cs/icon_memento_collection.svg" alt="" class="cs-icon-card-icon">
+          <p class="cs-icon-card-title">Memento collection</p>
+        </div>
+        <div class="cs-icon-card">
+          <img src="Assets/placeful_cs/icon_integration.svg" alt="" class="cs-icon-card-icon">
+          <p class="cs-icon-card-title">Integration into existing app flows</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-subproblems-wrap">
+    <h2 class="cs-h1">Sub-Problem Statements</h2>
+    <ul class="cs-subproblems">
+      <li><span class="hl-sub">Verification:</span> How does the system know the user was there across venue types, ranging from a ticketed music festival to a state park with no staff or infrastructure?</li>
+      <li><span class="hl-sub">Timing:</span> When does the &ldquo;memento&rdquo; arrive, and what does the arrival feel like?</li>
+      <li><span class="hl-sub">Framing:</span> Where does the &ldquo;memento&rdquo; appear in the interface before, during, and after the visit?</li>
+    </ul>
+  </div>
+
+  <div class="cs-research-close-wrap">
+    <div class="cs-divider"></div>
+  </div>
+
+</section>
+
+<!-- ============ WIREFRAMES SECTION ============ -->
+<section class="cs-section" id="wireframes">
+
+  <div class="cs-mockups-wrap">
+    <h2 class="cs-h1">Initial Mock-Ups</h2>
+    <div class="cs-wireframe-img cs-wireframe-img--1">
+      <img src="Assets/placeful_cs/wireframes_lofi1.png" alt="Low-fidelity wireframes: memento scanner onboarding screens, QR code scan and camera flow, success/error/duplicate states, and the Discover feed">
+    </div>
+  </div>
+
+  <div class="cs-lofi-wrap">
+    <h2 class="cs-h1">Low-Fidelity Wireframes</h2>
+    <div class="cs-wireframe-img cs-wireframe-img--2">
+      <img src="Assets/placeful_cs/wireframes_lofi2.png" alt="Low-fidelity wireframes: event detail page, QR/NFC scan flow, location verification, memento-collected confirmation, and chest inventory screens">
+    </div>
+  </div>
+
+  <div class="cs-midfi-wrap">
+    <h2 class="cs-h1">Mid-Fidelity Prototype</h2>
+    <div class="cs-midfi-row">
+      <div class="cs-midfi-card">
+        <img src="Assets/placeful_cs/midfi_discover_short.png" alt="Discover page with a modal explaining that some events offer digital mementos, with an icon shown on qualifying event cards">
+        <p class="cs-midfi-caption">Discover Page with Mementos Integration</p>
+      </div>
+      <div class="cs-midfi-card">
+        <img src="Assets/placeful_cs/midfi_memento_collect.png" alt="Event page for Sunset Sounds Festival showing event details, ticket info, and RSVP">
+        <p class="cs-midfi-caption">Memento Event Page Integration &amp; Collection</p>
+      </div>
+      <div class="cs-midfi-card">
+        <img src="Assets/placeful_cs/midfi_full_short.png" alt="Event page bottom section showing RSVP status and a Verify I'm Here button to collect the Sugar Maple memento">
+        <p class="cs-midfi-caption">Memento Verification through Location, NFC, and QR</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-keyflows-wrap">
+    <p class="cs-midfi-intro">The mid-fi prototype explored 5 key flows:</p>
+    <div class="cs-keyflows-card">
+      <ul class="cs-keyflows-list">
+        <li><span class="hl-keyflow">Discover + Filtering</span><span class="hl-keyflow">:</span> Browse and filter events based on user preferences.</li>
+        <li><span class="hl-keyflow">QR Scan</span><span class="hl-keyflow">:</span> Check in by scanning an event QR code to collect a Memento.</li>
+        <li><span class="hl-keyflow">QR Ticket</span><span class="hl-keyflow">:</span> Check in using a personal QR ticket to collect a Memento.</li>
+        <li><span class="hl-keyflow">Location Verification</span><span class="hl-keyflow">:</span> Verify event attendance through location to collect a Memento.</li>
+        <li><span class="hl-keyflow">NFC Tap</span><span class="hl-keyflow">:</span> Verify event attendance through NFC ticket/tap to collect a Memento.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cs-wireframes-close-wrap">
+    <div class="cs-divider"></div>
+  </div>
+
+</section>
+
+<!-- ============ TESTING SECTION ============ -->
+<section class="cs-section" id="testing">
+
+  <div class="cs-usability-wrap">
+    <div class="cs-usability-row">
+      <div class="cs-usability-text">
+        <h2 class="cs-h1">Usability Testing</h2>
+        <p class="cs-usability-intro">We conducted <span class="hl-usability">6 usability tests:</span></p>
+        <ul class="cs-usability-list">
+          <li><strong>2 live</strong>, moderated sessions</li>
+          <li><strong>4 asynchronous</strong>, interaction tests</li>
+        </ul>
+      </div>
+      <div class="cs-usability-img">
+        <img src="Assets/placeful_cs/testing_inna_test.png" alt="Figma prototype testing session showing the Placeful flow with participant video call thumbnails">
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-insights-wrap">
+    <h2 class="cs-h1">Key Insights:</h2>
+
+    <div class="cs-insight-row">
+      <div class="cs-insight-img" style="width:305px;"><img src="Assets/placeful_cs/testing_going_button.png" alt="Are you visiting? section with a Going button above a You can earn a memento here prompt for Sugar Maple"></div>
+      <div class="cs-insight-card">
+        <p class="cs-insight-title">The &ldquo;Going&rdquo; button created ambiguity.</p>
+        <p class="cs-insight-body">Users were unsure whether it meant expressing interest or registering for an event, despite it being required to claim a Memento.</p>
+      </div>
+    </div>
+
+    <div class="cs-insight-row cs-insight-row--reverse">
+      <div class="cs-insight-card" style="width:676px;">
+        <p class="cs-insight-title">The memento states were not clear enough on their own.</p>
+        <p class="cs-insight-body">Users sometimes interpreted the blurred memento as a low-quality image, missed the visual change after unlocking it, or were unsure whether and where their memento had been saved.</p>
+      </div>
+      <div class="cs-insight-img" style="width:362px;"><img src="Assets/placeful_cs/testing_memento_collected.png" alt="Memento collected confirmation screen for Sugar Maple with a description field"></div>
+    </div>
+
+    <div class="cs-insight-row">
+      <div class="cs-insight-img" style="width:270px;"><img src="Assets/placeful_cs/testing_discover_grid.png" alt="Discover feed grid of event cards including Letchworth State Park and Rooftop Social"></div>
+      <div class="cs-insight-card" style="width:747px;">
+        <p class="cs-insight-title">Users gravitated toward familiar event-browsing behaviors.</p>
+        <p class="cs-insight-body">Rather than focusing on the new memento experience, most users were attracted to event details, comments, and other content, causing them to miss memento collection actions.</p>
+      </div>
+    </div>
+
+    <div class="cs-insight-row cs-insight-row--reverse">
+      <div class="cs-insight-card" style="width:689px;">
+        <p class="cs-insight-title">Users relied on the interface rather than written instructions.</p>
+        <p class="cs-insight-body">Although some instruction was provided to user testers, many skimmed or dismissed instructions and instead explored on their own, causing some to miss the memento flow entirely.</p>
+      </div>
+      <div class="cs-insight-img" style="width:302px;"><img src="Assets/placeful_cs/testing_map.png" alt="Map with a location radius around a venue used for location-based memento verification"></div>
+    </div>
+  </div>
+
+  <div class="cs-testing-close-wrap">
+    <div class="cs-divider"></div>
+  </div>
+
+</section>
+
+<!-- ============ FINAL SECTION ============ -->
+<section class="cs-section" id="final">
+
+  <div class="cs-changes-wrap">
+    <h2 class="cs-h1">Key Changes:</h2>
+
+    <!-- Row 1: Changing the memento icon -->
+    <div class="fc-row" style="margin-top:45px; gap:87px;">
+      <div style="width:511.86px; display:flex; flex-direction:column; gap:50px;">
+        <p class="fc-heading">Changing the memento icon</p>
+        <div style="display:flex; align-items:center; gap:31px;">
+          <img class="fc-img" src="Assets/placeful_cs/final_old_disc_modal.png" alt="Old Discover modal using a trophy icon to indicate an event offers a digital memento" style="width:201px; height:301px;">
+          <img class="fc-arrow" src="Assets/placeful_cs/icon_arrow_right.svg" alt="">
+          <img class="fc-img" src="Assets/placeful_cs/final_discover_modal_new.png" alt="New Discover modal using the nenos leaf logo to indicate an event offers a digital memento" style="width:201px; height:301px;">
+        </div>
+      </div>
+      <p class="fc-desc" style="width:511.86px; text-align:right;">Usability testing showed that users interpreted the trophy as an <strong>achievement</strong> rather than an <strong>indicator that an event offered a Memento</strong>, so I introduced a more distinct and <strong>consistent visual cue</strong> (nenos logo).</p>
+    </div>
+
+    <!-- Row 2: Added a permission screen to the location verification flow -->
+    <div class="fc-row" style="margin-top:200px;">
+      <p class="fc-desc" style="width:511.86px;">This made location sharing feel like a <strong>natural next step</strong> rather than a sudden request, while providing access to nenos&rsquo;s <strong>Privacy Policy</strong> for users who wanted more <strong>transparency</strong> before continuing.</p>
+      <div style="width:599px; display:flex; flex-direction:column; align-items:flex-end; gap:50px; margin-left:auto;">
+        <p class="fc-heading" style="text-align:right;">Added a permission screen to the location verification flow</p>
+        <div style="display:flex; align-items:center; gap:61px;">
+          <img class="fc-img" src="Assets/placeful_cs/final_loc_permission.png" alt="Location is the Key screen explaining that location is needed to confirm event attendance and unlock a Memento" style="width:202px; height:437px;">
+          <img class="fc-img" src="Assets/placeful_cs/final_ios_permission_loc.png" alt="iOS system prompt asking to allow Placeful to use your location" style="width:163px; height:163px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: Added a delayed Memento notification -->
+    <div class="fc-row" style="margin-top:200px; gap:42px;">
+      <div style="width:570px; display:flex; flex-direction:column; gap:40px;">
+        <p class="fc-heading" style="width:551px;">Added a delayed Memento notification 1-2 hours after check-in</p>
+        <img class="fc-img" src="Assets/placeful_cs/final_memento_notification.png" alt="Push notification reading Your Memento is Waiting, your latest treasure is safe in your inventory" style="width:380px; height:125px;">
+      </div>
+      <p class="fc-desc" style="width:511.86px; text-align:right;">This lets users stay <strong>focused on enjoying the event</strong> rather than immediately deciding what to do with their Memento, while creating a <strong>natural opportunity to revisit</strong> it afterward.</p>
+    </div>
+
+    <!-- Row 4: Strengthened feedback throughout the memento journey -->
+    <div class="fc-row" style="margin-top:200px; gap:31px;">
+      <p class="fc-desc" style="width:395px; text-align:left;"><strong>Clearer success states</strong> and <strong>visual hierarchy</strong> confirm when verification is complete and when a Memento has been collected, helping users understand <strong>what happened</strong> and <strong>what to do next</strong>.</p>
+      <div style="width:702px; display:flex; flex-direction:column; align-items:flex-end; gap:35px; margin-left:auto;">
+        <p class="fc-heading" style="text-align:right; width:523px;">Strengthened feedback throughout the memento journey.</p>
+        <div style="display:flex; align-items:center; gap:35px;">
+          <div style="display:flex; flex-direction:column; gap:17px; width:165.6px;">
+            <img class="fc-img" src="Assets/placeful_cs/final_old_memento_collected.png" alt="Old memento-collected card" style="width:165.6px; height:245px;">
+            <img class="fc-img" src="Assets/placeful_cs/final_old_chest.png" alt="Old chest inventory screen" style="width:165.6px; height:185px;">
+          </div>
+          <img class="fc-arrow" src="Assets/placeful_cs/icon_arrow_right.svg" alt="" style="width:43.6px; height:43.6px;">
+          <div style="display:flex; align-items:flex-end; gap:19px;">
+            <img class="fc-img" src="Assets/placeful_cs/final_loc_verified_new.png" alt="New You're all set confirmation screen after location verification" style="width:181.6px; height:393px;">
+            <video class="fc-img" src="Assets/placeful_cs/final_animated_memento.mp4" style="width:181.4px; height:392px; object-fit:cover;" autoplay loop muted playsinline></video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 5: Redesigned the event and Discover pages -->
+    <div style="margin-top:200px; display:flex; flex-direction:column; gap:60px;">
+      <p class="fc-heading">Redesigned the event and Discover pages.</p>
+      <div style="display:flex; align-items:flex-start; gap:83px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:flex-start; gap:32px;">
+          <img class="fc-img" src="Assets/placeful_cs/final_old_event_design.png" alt="Old event page design" style="width:156px; height:765px;">
+          <div style="display:flex; align-items:center; gap:32px;">
+            <img class="fc-arrow" src="Assets/placeful_cs/icon_arrow_right.svg" alt="">
+            <img class="fc-img" src="Assets/placeful_cs/final_new_event.png" alt="New event page design with clearer Memento opportunity and registration" style="width:168px; height:556px;">
+          </div>
+        </div>
+        <div style="width:594px; max-width:100%; display:flex; flex-direction:column; align-items:flex-end; gap:74px;">
+          <p class="fc-desc" style="text-align:right;">Reworked both pages to create <strong>clearer information hierarchy</strong>, make Memento opportunities <strong>easier to discover</strong>, and <strong>integrate collection</strong> and registration more naturally into the existing event experience.</p>
+          <div style="display:flex; align-items:flex-start; gap:32px;">
+            <div style="display:flex; align-items:center; gap:32px;">
+              <img class="fc-img" src="Assets/placeful_cs/final_old_design_discover.png" alt="Old Discover page design" style="width:167px; height:442px;">
+              <img class="fc-arrow" src="Assets/placeful_cs/icon_arrow_right.svg" alt="">
+            </div>
+            <img class="fc-img" src="Assets/placeful_cs/final_new_discover.png" alt="New Discover page design with clearer information hierarchy and Memento inventory" style="width:167px; height:776px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-final-close-wrap">
+    <div class="cs-divider"></div>
+  </div>
+
+  <div class="cs-hifi-wrap">
+    <h2 class="cs-problem-title">Final Hi-Fidelity Designs</h2>
+
+    <div class="cs-hifi-bg">
+    <div class="cs-hifi-rows">
+      <!-- Row 1: New Discover Page -->
+      <div class="hifi-row" style="gap:188px;">
+        <div class="hifi-video" style="width:315px; height:623px;">
+          <video src="Assets/placeful_cs/hifi_discover_flow.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="hifi-text" style="width:496px; gap:40px;">
+          <div class="hifi-header">
+            <p class="hifi-title">NEW DISCOVER PAGE</p>
+            <p class="hifi-subtitle">(re-designed and prototyped entirely by me!)</p>
+          </div>
+          <div class="hifi-card">
+            <p>Structured, event-focused discovery</p>
+            <p>Clearer content hierarchy</p>
+            <p>Mementos integrated into Discover</p>
+            <p>Recognizable Memento event indicators</p>
+            <p>Collection and earning opportunities surfaced</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Event Page & Registration -->
+      <div class="hifi-row hifi-row--reverse" style="gap:110px;">
+        <div class="hifi-video" style="width:327px; height:653px;">
+          <video src="Assets/placeful_cs/hifi_event_page.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="hifi-text" style="width:563px; gap:45px;">
+          <div class="hifi-header">
+            <p class="hifi-title">EVENT PAGE &amp; REGISTRATION</p>
+          </div>
+          <div class="hifi-card">
+            <p>Simplified event details with a clearer visual hierarchy</p>
+            <p>Made Memento opportunities immediately recognizable</p>
+            <p>Streamlined the event registration experience</p>
+            <p>Connected registration, attendance, and Memento collection into one cohesive journey</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: NFC-Tap and Post-Memento Notification -->
+      <div class="hifi-row" style="gap:152px;">
+        <div class="hifi-video" style="width:314px; height:620px;">
+          <video src="Assets/placeful_cs/hifi_nfc.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="hifi-text" style="width:531px; gap:40px;">
+          <div class="hifi-header">
+            <p class="hifi-title">NFC-TAP AND POST-MEMENTO NOTIFICATION</p>
+          </div>
+          <div class="hifi-card hifi-card--sm">
+            <p>Connected NFC ticket directly to event check-in and memento collection</p>
+            <p>Used familiar &ldquo;Hold Near Reader&rdquo; interaction patterns</p>
+            <p>Memento collection as a natural reward for attendance</p>
+            <p>Delayed Memento notifications to avoid interrupting the event experience</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Location Verification -->
+      <div class="hifi-row hifi-row--reverse" style="gap:110px;">
+        <div class="hifi-video" style="width:327px; height:653px;">
+          <video src="Assets/placeful_cs/hifi_location_verification.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="hifi-text" style="width:563px; gap:45px;">
+          <div class="hifi-header">
+            <p class="hifi-title">LOCATION VERIFICATION</p>
+          </div>
+          <div class="hifi-card hifi-card--sm">
+            <p>Connected location permission to attendance verification</p>
+            <p>Added privacy policy access for greater transparency</p>
+            <p>Added event-radius visualization and verification animation</p>
+            <p>Strengthened feedback for successful verification</p>
+            <p>Clear communication when a Memento is unlocked</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 5: QR-Code Entry -->
+      <div class="hifi-row" style="gap:152px;">
+        <div class="hifi-video" style="width:310px; height:626px;">
+          <video src="Assets/placeful_cs/hifi_qr_entry.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="hifi-text" style="width:531px; gap:40px;">
+          <div class="hifi-header">
+            <p class="hifi-title">QR-CODE ENTRY</p>
+          </div>
+          <div class="hifi-card hifi-card--sm">
+            <p>Combined scanning and ticket flows into one check-in experience</p>
+            <p>Integrated QR verification directly into event check-in, eliminating a second scan</p>
+            <p>Large, ticket-style QR code for quick and familiar door scanning</p>
+            <p>Added instant check-in confirmation followed by a delayed Memento &ldquo;aha&rdquo; reveal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="cs-hifi-close-wrap">
+    <div class="cs-divider"></div>
+  </div>
+
+  <div class="cs-handoff-wrap">
+    <h2 class="cs-h1">Project Hand-Off</h2>
+
+    <div class="handoff-block">
+      <div class="handoff-fan">
+        <div class="handoff-card handoff-card--feature3">
+          <img src="Assets/placeful_cs/handoff_card_feature3.png" alt="Case study page: Feature 3 Discover events, Event page, and collecting the Memento — context and problem statement">
+        </div>
+        <div class="handoff-card handoff-card--cover">
+          <img src="Assets/placeful_cs/handoff_card_cover.png" alt="Placeful case study cover page for nenos">
+        </div>
+        <div class="handoff-card handoff-card--testing">
+          <img src="Assets/placeful_cs/handoff_card_testing.png" alt="Case study page: lo-fi prototype key flows and user testing summary">
+        </div>
+      </div>
+      <ul class="handoff-caption">
+        <li>Created a comprehensive case study documenting our research, design process, testing, iterations, and final solutions</li>
+      </ul>
+    </div>
+
+    <div class="handoff-block">
+      <div class="handoff-fan handoff-fan--2">
+        <div class="handoff-card handoff-card--prd">
+          <img src="Assets/placeful_cs/handoff_card_prd.png" alt="Product Requirements Document page listing client name, project dates, status, product manager, and designers">
+        </div>
+        <div class="handoff-card handoff-card--handoffdoc">
+          <img src="Assets/placeful_cs/handoff_card_handoffdoc.png" alt="Project Handoff document page with project overview, summary, and scope of what was completed">
+        </div>
+        <div class="handoff-card handoff-card--designfile">
+          <img src="Assets/placeful_cs/handoff_card_designfile.png" alt="Design File Access page with Figma file details and file structure overview">
+        </div>
+      </div>
+      <ul class="handoff-caption">
+        <li>Developed project handoff, requirements, and final designs and documentation to support implementation.</li>
+      </ul>
+    </div>
+
+    <div class="handoff-block">
+      <div class="handoff-fan handoff-fan--3">
+        <div class="handoff-card handoff-card--presentation">
+          <img src="Assets/placeful_cs/handoff_card_presentation.png" alt="Places Feature title slide for nenos Inc, Develop for Good Summer 2026">
+        </div>
+        <div class="handoff-card handoff-card--slidepres">
+          <img src="Assets/placeful_cs/handoff_card_slidepres.png" alt="Event Discovery and Memento Collection flow diagram slide">
+        </div>
+        <div class="handoff-card handoff-card--sum26">
+          <img src="Assets/placeful_cs/handoff_card_sum26.jpeg" alt="Sum26 Demo Day slide with a grid of video call participant thumbnails">
+        </div>
+        <div class="handoff-logos">
+          <div class="handoff-logo-card handoff-logo-card--hpe">
+            <img src="Assets/placeful_cs/handoff_hpe_logo.svg" alt="Hewlett Packard Enterprise logo">
+          </div>
+          <div class="handoff-logo-card handoff-logo-card--bloomberg">
+            <div><img src="Assets/placeful_cs/handoff_card_bloomberg.png" alt="Bloomberg logo"></div>
+          </div>
+        </div>
+      </div>
+      <ul class="handoff-caption">
+        <li>Prepared and presented our final product and design decisions to industry professionals from HPE and Bloomberg.</li>
+      </ul>
+    </div>
+
+    <div class="handoff-block handoff-block--appstore">
+      <div class="handoff-appstore-row">
+        <img class="handoff-img" src="Assets/placeful_cs/handoff_placeful_phones.png" alt="Placeful app screens shown on three phones: a Discover feed post, a Story camera view, and a group chat sharing photos" style="width:428px; height:282px;">
+        <div class="handoff-appstore-shot">
+          <img src="Assets/placeful_cs/handoff_placeful_app_store.png" alt="Placeful is opening by invite landing page showing iOS, Web, and Android availability with a Join the waitlist button">
+        </div>
+      </div>
+      <ul class="handoff-caption">
+        <li>Delivered production-ready designs for Placeful&rsquo;s real mobile app, planned for App Store release later this year.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cs-reflection-close-wrap">
+    <div class="cs-divider"></div>
+  </div>
+
+  <div class="cs-takeaways-wrap">
+    <h2 class="cs-h1" id="reflection-trigger">Key Takeaways</h2>
+
+    <div class="cs-takeaways-bg">
+      <div class="takeaway-card">
+        <ol class="takeaway-title" start="1"><li>Designing within an existing product</li></ol>
+        <ul class="takeaway-body">
+          <li>I learned how to balance integrating a new feature into an established experience while also recognizing when the existing experience needed to evolve.</li>
+          <li>Rather than forcing Mementos into screens that weren&rsquo;t designed for them, I redesigned parts of the surrounding experience when necessary.</li>
+        </ul>
+      </div>
+      <div class="takeaway-card">
+        <ol class="takeaway-title" start="2"><li>Research challenges designer assumptions</li></ol>
+        <ul class="takeaway-body">
+          <li>Usability testing showed me that interactions that felt intuitive to me while designing weren&rsquo;t always what were intuitive to real users.</li>
+          <li>Several users struggled to even enter the intended flows, reinforcing the importance of observing actual behavior rather than relying on designer assumptions.</li>
+        </ul>
+      </div>
+      <div class="takeaway-card">
+        <ol class="takeaway-title" start="3"><li>Communication is part of the design process</li></ol>
+        <ul class="takeaway-body">
+          <li>Working with a real client and presenting our work weekly taught me how important it is to clearly communicate not only what I designed, but why I made particular decisions and how research supported them.</li>
+        </ul>
+      </div>
+      <div class="takeaway-card">
+        <ol class="takeaway-title" start="4"><li>Consistency requires collaboration</li></ol>
+        <ul class="takeaway-body">
+          <li>With our design team divided across three subteams, maintaining a unified design system became essential.</li>
+          <li>Shared typography, colors, components, iconography, and interaction patterns helped three parallel workstreams to ultimately feel like one product.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-final-close-wrap-2">
+    <div class="cs-divider"></div>
+  </div>
+
+</section>
+
+<!-- ============ REFLECTION SECTION ============ -->
+<section class="cs-section" id="reflection">
+
+  <div class="cs-reflection-wrap">
+    <h2 class="cs-h1">Reflection</h2>
+
+    <div class="cs-reflect-photo-group">
+      <div class="cs-reflect-photo">
+        <img src="Assets/placeful_cs/reflect_team_photo.png" alt="Video call grid of the ten-person Develop for Good team during an internal meeting">
+      </div>
+      <div class="cs-reflect-quote">
+        <p>This project pushed me beyond thinking about design as simply creating the best interface&hellip;</p>
+      </div>
+    </div>
+
+    <p class="cs-reflect-italic">I had to learn how to work within an existing product, decide when existing experiences needed to change, communicate my decisions to different stakeholders, and balance exploration with constraint.</p>
+
+    <p class="cs-reflect-body">
+      <span class="hl-ital">One of the most surprising moments</span> came during usability testing. Interactions that had <span class="hl-med">seemed completely intuitive</span> while we were designing them were <span class="hl-med">sometimes overlooked entirely</span> by users&mdash;some didn&rsquo;t even enter the flows we expected them to test. Watching that happen reminded me how easily designers can become too familiar with their own work, and how important it is to let real user behavior <span class="hl-med">challenge our assumptions</span>.
+    </p>
+
+    <p class="cs-reflect-body">
+      Working on a larger cross-functional team also taught me that <span class="hl-ital">good product design rarely happens in isolation</span>. Between coordinating across three design subteams, meeting with our client, collaborating with product managers and developers, and presenting our work to industry professionals, I became much more conscious of <span class="hl-med">how clearly I communicate</span> my reasoning and how my individual decisions <span class="hl-med">contribute to a larger product experience</span>.
+    </p>
+
+    <p class="cs-reflect-body">
+      Most importantly, I learned that <span class="hl-ital">having creative freedom doesn&rsquo;t mean pursuing every possible idea</span>. It means knowing <span class="hl-med">when to explore</span>, <span class="hl-med">when to redesign</span>, and <span class="hl-med">when to constrain an idea</span> so that every decision ultimately serves the user and the product.
+    </p>
+
+    <div class="ty-container">
+      <div class="ty-card-wrap">
+        <div class="ty-card"><p>thank you for your time!</p></div>
+      </div>
+
+      <div class="ty-arrow ty-arrow--right"><img src="Assets/placeful_cs/thankyou_arrow_right.svg" alt=""></div>
+      <div class="ty-arrow ty-arrow--left"><img src="Assets/placeful_cs/thankyou_arrow_left_base.svg" alt=""></div>
+
+      <div class="ty-finergy-wrap">
+        <div class="ty-finergy">
+          <img class="ty-finergy-icon" src="Assets/placeful_cs/thankyou_finergy_leaf.png" alt="Finergy logo, a money tree icon">
+          <p class="ty-finergy-title">Finergy</p>
+          <p class="ty-finergy-tag">Embark on your financial journey&hellip;</p>
+        </div>
+      </div>
+
+      <div class="ty-buzzwalk-wrap">
+        <div class="ty-buzzwalk">
+          <img src="Assets/placeful_cs/thankyou_buzzwalk_badge.png" alt="GT Buzzwalk logo badge">
+        </div>
+      </div>
+
+      <div class="ty-tape ty-tape--1"><img src="Assets/placeful_cs/thankyou_yellow_tape.png" alt=""></div>
+      <div class="ty-tape ty-tape--2"><img src="Assets/placeful_cs/thankyou_yellow_tape.png" alt=""></div>
+    </div>
+
+    <p class="ty-view-more"><a href="index.html">~view my other projects!</a></p>
+  </div>
+
+</section>
+
+<div class="cs-footer-band">
+<div class="cs-footer-anchor">
+  <footer class="site-footer">
+    <p class="footer-title">contact me!</p>
+
+    <div class="sk" style="--l:784.56px;--t:70.39px;--w:269.65px;--h:145.45px;">
+      <div class="sk-i flip" style="--iw:126.8px;--ih:261.13px;--r:-85.83deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:834.6px;--t:113.61px;--w:169.57px;--h:59px;">
+      <div class="sk-i contact-link" style="--iw:166.18px;--ih:43.24px;--r:5.51deg;">
+        <div class="crop" style="width:55.51px;height:39.72px;flex-shrink:0;"><img src="Assets/email_icon.png" alt="" style="left:-23.28%;top:-50.2%;width:143.68%;height:200.8%;"></div>
+        <span>Email</span>
+      </div>
+    </div>
+
+    <div class="sk" style="--l:600.63px;--t:266.2px;--w:302.67px;--h:156.97px;">
+      <div class="sk-i flip" style="--iw:133.09px;--ih:292.62px;--r:94.77deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:638.17px;--t:307.8px;--w:227.6px;--h:73.77px;">
+      <a href="https://www.linkedin.com/in/ananyaba/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="text-decoration:none; color:inherit;">
+      <div class="sk-i contact-link" style="--iw:223.62px;--ih:45.39px;--r:7.39deg;">
+        <img src="Assets/linkedin_icon.png" alt="" class="contact-icon contain" style="width:45px;height:45px;">
+        <span>LinkedIn</span>
+      </div>
+    </div>
+
+    <div class="sk" style="--l:1057.45px;--t:224.78px;--w:300.77px;--h:171.45px;">
+      <div class="sk-i" style="--iw:132.44px;--ih:284.89px;--r:81.86deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1088.65px;--t:268.81px;--w:238.37px;--h:83.39px;">
+      <div class="sk-i contact-link" style="--iw:234.14px;--ih:45.03px;--r:-9.59deg;">
+        <div class="crop" style="width:48px;height:41px;flex-shrink:0;"><img src="Assets/folder_pink.png" alt="" style="left:-14.66%;top:-25%;width:129.31%;height:150%;"></div>
+        <span>Resume</span>
+      </div>
+    </div>
+
+    <div class="sk" style="--l:579px;--t:89px;--w:92.19px;--h:104.3px;">
+      <div class="sk-i shadow-r" style="--iw:76.36px;--ih:91.6px;--r:10.82deg;"><img src="Assets/butterfly_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1200px;--t:132.05px;--w:67.22px;--h:67.22px;">
+      <div class="sk-i shadow-l" style="--iw:54.29px;--ih:54.29px;--r:-16.1deg;"><img src="Assets/heart_gem.png" alt=""></div>
+    </div>
+
+    <div class="sk" style="--l:5.2px;--t:181.07px;--w:463.2px;--h:109.86px;filter:drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.6));"><img src="Assets/blue_tape.png" alt="" style="object-fit:fill;"></div>
+    <p class="footer-tape-text" style="left:80.07px;top:213.59px;width:313.46px;">would love to talk!</p>
+
+    <div class="sk" style="--l:30px;--t:320px;--w:100.88px;--h:100.88px;">
+      <div class="sk-i shadow-l" style="--iw:93.04px;--ih:92.04px;--r:-11deg;"><img src="Assets/star_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:209.58px;--t:307.58px;--w:129.06px;--h:129.06px;">
+      <div class="sk-i shadow-l" style="--iw:110.34px;--ih:110.34px;--r:10.8deg;"><img src="Assets/gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1337px;--t:39px;--w:68.84px;--h:68.84px;">
+      <div class="sk-i shadow-r" style="--iw:55.43px;--ih:55.43px;--r:-16.43deg;"><img src="Assets/lucky_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:434px;--t:320px;--w:68.84px;--h:68.84px;">
+      <div class="sk-i shadow-r" style="--iw:54.59px;--ih:54.59px;--r:-18.09deg;"><img src="Assets/pink_circle_gem.png" alt=""></div>
+    </div>
+
+    <p class="footer-signoff" style="left:528px;top:461px;width:384px;">&#9825; designed + coded + collaged by me!</p>
+  </footer>
+</div>
+</div>
+</main>
+
+<script>
+(function () {
+  var subnavWrap = document.getElementById('cs-subnav-wrap');
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('#cs-subnav button'));
+  // Click still jumps to the top of the actual section, but the scroll-spy
+  // highlight for a couple of buttons should switch on at a specific piece
+  // of content further into the previous section, not the section boundary.
+  var spyOverrides = { research: 'research-trigger', reflection: 'reflection-trigger' };
+  var sections = buttons.map(function (btn) {
+    return document.getElementById(btn.dataset.target);
+  });
+  var spyTargetToId = {};
+  var spyTargets = buttons.map(function (btn) {
+    var id = btn.dataset.target;
+    var spyId = spyOverrides[id] || id;
+    var el = document.getElementById(spyId);
+    if (el) spyTargetToId[spyId] = id;
+    return el;
+  });
+
+  function setActive(id) {
+    buttons.forEach(function (btn) {
+      btn.classList.toggle('active', btn.dataset.target === id);
+    });
+  }
+
+  buttons.forEach(function (btn, i) {
+    btn.addEventListener('click', function () {
+      var target = sections[i];
+      if (!target) return;
+      var offset = subnavWrap.getBoundingClientRect().height;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    var navHeight = subnavWrap.getBoundingClientRect().height;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) setActive(spyTargetToId[entry.target.id]);
+      });
+    }, {
+      rootMargin: '-' + navHeight + 'px 0px -90% 0px',
+      threshold: 0
+    });
+
+    spyTargets.forEach(function (target) {
+      if (target) observer.observe(target);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@500&family=Zalando+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ MAIN SITE NAV ============ -->
+<header class="site-nav" id="site-nav">
+  <div class="nav-logo-cs"><img src="Assets/ab_star.png" alt="AB monogram logo"></div>
+  <ul>
+    <li><a href="index.html">work</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="coming-soon.html?project=Collage">collage</a></li>
+    <li>
+      <a href="https://docs.google.com/document/d/1rjOiWTw3FA5mIrzkZx_TTW7is4Xb-dvMyha_8OCmCT4/edit?usp=sharing"
+         target="_blank"
+         rel="noopener noreferrer">
+        resume
+      </a>
+    </li>
+  </ul>
+</header>
+
+<main class="coming-soon-main">
+  <div class="coming-soon-tape"><img src="Assets/blue_tape.png" alt=""></div>
+  <h1 class="coming-soon-title" id="coming-soon-title">This project</h1>
+
+  <div class="coming-soon-gem coming-soon-gem--1"><img src="Assets/star_gem.png" alt=""></div>
+  <div class="coming-soon-gem coming-soon-gem--2"><img src="Assets/heart_gem.png" alt=""></div>
+
+  <p class="coming-soon-message">still being worked on&nbsp;&mdash; check back soon!</p>
+
+  <p class="ty-view-more"><a href="index.html">~view my other projects!</a></p>
+</main>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var project = (params.get('project') || '').trim();
+  if (project) {
+    document.getElementById('coming-soon-title').textContent = project;
+    document.title = project + ' — Coming Soon';
+  }
+})();
+</script>
+
+</body>
+</html>
