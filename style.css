@@ -197,6 +197,7 @@ img { max-width: none; }
 /* Torn-paper photos read a little washed out against the cream page —
    boost brightness/contrast so the texture and edges show up clearly. */
 .paper { filter: brightness(1.125) contrast(1.08); }
+.site-footer img.paper { scale: .88; transform-origin: center; }
 
 /* drop-shadow (not box-shadow) so the shadow hugs each sticker's actual
    non-transparent pixels (the white die-cut ring included) instead of its
@@ -732,6 +733,18 @@ button:focus-visible {
 }
 .cs-subnav-wrap .cs-subnav {
   pointer-events: auto;
+}
+.cs-subnav-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 -12px;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(255, 255, 255, .78);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 16px), transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 16px), transparent 100%);
 }
 .cs-subnav {
   display: flex;
@@ -2527,4 +2540,296 @@ button:focus-visible {
 .ty-view-more a:hover,
 .ty-view-more a:focus-visible {
   text-decoration: underline;
+}
+
+
+/* Shared Home/About navigation — Figma 375:1079. */
+.nav.portfolio-nav { position: absolute; left: 17px; top: 14px; width: 1359.557px; height: 93px; padding: 0; gap: 0; justify-content: space-between; background: var(--cream); }
+.nav.portfolio-nav .nav-logo { position: relative; width: 109px; height: 93px; flex-shrink: 0; }
+.nav.portfolio-nav .nav-logo img { position: static; width: 100%; height: 100%; object-fit: cover; }
+.nav.portfolio-nav .nav-links { display: flex; margin: 0; width: 612.557px; gap: 42.836px; font-size: 24px; letter-spacing: .48px; }
+.nav.portfolio-nav .nav-links li { flex-shrink: 0; }
+.nav.portfolio-nav .nav-links li:nth-child(1) { width: 99.38px; }
+.nav.portfolio-nav .nav-links li:nth-child(2) { width: 113.944px; }
+.nav.portfolio-nav .nav-links li:nth-child(n+3) { width: 135.362px; }
+.nav.portfolio-nav .nav-links a { display: flex; align-items: center; height: 46.263px; line-height: 45px; }
+/* About hero only; the remaining About sections retain their layout. */
+.about-hero-intro { position: absolute; left: 757px; top: 154px; width: 631px; display: flex; flex-direction: column; gap: 27px; align-items: center; }
+.about-hero-heading { width: 474.871px; display: flex; flex-direction: column; align-items: center; gap: 11.489px; }
+.about-hero-heading .about-name-label { width: 100%; font-size: 30.637px; line-height: 15px; }
+.about-hero-heading .about-name { margin: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 112.016px; font-size: 84.251px; line-height: 14.361px; letter-spacing: 1.685px; }
+.about-hero-note { position: relative; width: 631px; height: 507px; }
+.about-hero-paper { position: absolute; left: 0; top: 80px; width: 631px; height: 427px; }
+.about-hero-paper > img { position: absolute; left: 0; top: 0; width: 631px; height: 423px; object-fit: cover; }
+.about-hero-paper .desc-card { position: absolute; left: 0; top: 0; width: 631px; padding: 31.481px 26.984px; gap: 26.084px; font-weight: 200; font-size: 21.587px; line-height: 30.582px; box-shadow: 0 .899px 2.698px #0008; }
+.about-hero-paper .about-hero-study { width: 481.212px; align-self: center; }
+.about-hero-collage { position: absolute; inset: 0; transform: translateY(-52px); pointer-events: none; }
+.about-hero-photo { position: absolute; display: block; max-width: none; }
+.about-hero-photo-two { overflow: hidden; border-radius: 1.876px; filter: drop-shadow(0 .938px 5.629px #000c); }
+.about-hero-small-shadow { filter: drop-shadow(0 .938px 2.815px #0008); }
+.about-hero-tiny-shadow { filter: drop-shadow(1px 1px 3px #0005); }
+
+
+/* About collage assembles once: photos together, then individual pieces. */
+@keyframes about-collage-arrive {
+  from { opacity: 0; translate: 0 28px; scale: .94; rotate: var(--collage-angle, -3deg); }
+  to { opacity: 1; translate: 0 0; scale: 1; rotate: 0deg; }
+}
+@media (prefers-reduced-motion: no-preference) {
+ .about-hero-collage > [data-collage-stage] {
+   animation: about-collage-arrive 380ms cubic-bezier(.2,.7,.25,1) var(--collage-delay, 0ms) backwards;
+ }
+}
+
+@keyframes about-greeting-pop {
+ from { opacity: 0; translate: 0 8px; scale: .94; }
+ to { opacity: 1; translate: 0 0; scale: 1; }
+}
+@keyframes about-name-stick {
+ 0% { opacity: 0; translate: 0 -28px; scale: 1.13; rotate: -6deg; filter: drop-shadow(0 16px 10px #0005); }
+ 28% { opacity: 1; }
+ 68% { translate: 0 2px; scale: .985; rotate: 1deg; filter: drop-shadow(0 1px 2px #0008); }
+ 85% { translate: 0 -1px; scale: 1.01; rotate: -.4deg; }
+ 100% { opacity: 1; translate: 0 0; scale: 1; rotate: 0deg; filter: drop-shadow(0 1px 3px #000c); }
+}
+@media (prefers-reduced-motion: no-preference) {
+ .about-hero-collage > [data-collage-stage="photos"] { animation-duration: 550ms; }
+ .about-hero-heading .about-name-label { animation: about-greeting-pop 400ms ease-out backwards; }
+ .about-hero-heading .about-name { transform-origin: 45% 65%; animation: about-name-stick 780ms cubic-bezier(.2,.65,.3,1) 460ms backwards; }
+}
+
+/* One shared fold edge keeps the name and its reflected underside attached. */
+@property --name-peel {
+ syntax: '<length>';
+ inherits: true;
+ initial-value: 0px;
+}
+.about-name-peel { --name-peel: 0px; position: relative; display: inline-grid; isolation: isolate; transition: --name-peel 420ms cubic-bezier(.25,.7,.25,1); }
+.about-name-front, .about-name-back { grid-area: 1 / 1; display: flex; align-items: center; height: 112.016px; padding-inline: 14px; font: inherit; line-height: inherit; letter-spacing: inherit; white-space: nowrap; paint-order: stroke fill; -webkit-text-stroke: 24px white; pointer-events: none; }
+.about-name-front { clip-path: polygon(-30px -30px, calc(100% - var(--name-peel)) -30px, calc(100% - var(--name-peel)) calc(100% + 30px), -30px calc(100% + 30px)); }
+.about-name-back { z-index: 2; color: #ddd3c4; -webkit-text-stroke-color: #f4eee4; clip-path: polygon(calc(100% - var(--name-peel)) -30px, 100% -30px, 100% calc(100% + 30px), calc(100% - var(--name-peel)) calc(100% + 30px)); transform-origin: right center; transform: translateX(calc(-2 * var(--name-peel))) scaleX(-1); filter: drop-shadow(-3px 5px 3px #0004); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+ .about-name.is-stuck .about-name-peel { cursor: grab; }
+ .about-name.is-stuck .about-name-peel:hover { --name-peel: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .about-name-peel { --name-peel: 0px; transition: none; }
+}
+
+/* Intro note and clip travel together after the name is placed. */
+@keyframes about-note-slide-in {
+ from { opacity: 0; translate: 95px 0; }
+ to { opacity: 1; translate: 0 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+ .about-hero-note { animation: about-note-slide-in 900ms cubic-bezier(.2,.7,.25,1) 1100ms backwards; }
+}
+
+/* Home hero: introduce the name and tagline, then quickly assemble the trinkets. */
+.home-hero-art .about-name-peel { margin-left: -14px; }
+.home-hero-art .about-name-front, .home-hero-art .about-name-back { height: 159px; -webkit-text-stroke-width: 32px; }
+.home-hero-art [data-hero-stage="decoration"] { rotate: 0deg; transition: rotate 200ms ease-out; }
+@keyframes home-hero-arrive {
+ from { opacity: 0; translate: 0 20px; scale: .92; }
+ to { opacity: 1; translate: 0 0; scale: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+ .home-hero-art .name-text { animation: about-name-stick 720ms cubic-bezier(.2,.65,.3,1) var(--hero-delay, 0ms) backwards; }
+ .home-hero-art [data-hero-stage="intro"] { animation: home-hero-arrive 560ms cubic-bezier(.2,.7,.25,1) var(--hero-delay) backwards; }
+ .home-hero-art [data-hero-stage="decoration"] { animation: home-hero-arrive 500ms cubic-bezier(.2,.7,.25,1) var(--hero-delay) backwards; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+ .home-hero-art .name-text.is-stuck .about-name-peel { cursor: grab; }
+ .home-hero-art .name-text.is-stuck .about-name-peel:hover { --name-peel: 64px; }
+ .home-hero-art [data-hero-stage="decoration"]:hover { rotate: var(--hero-hover-angle); }
+}
+@media (prefers-reduced-motion: reduce) {
+ .home-hero-art [data-hero-stage="decoration"] { rotate: none; transition: none; }
+}
+
+/* The CD spins independently; butterfly flight overlays escape the canvas crop. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+ .home-hero-art [data-hero-cd]:hover { rotate: 0deg; }
+}
+.home-hero-art [data-hero-flight] { cursor: pointer; }
+.home-hero-art [data-hero-flight]:focus-visible { outline: 3px solid #006c84; outline-offset: 6px; border-radius: 12px; }
+.home-hero-art .hero-is-flying > * { visibility: hidden; }
+a.nav-logo, a.nav-logo-cs { display: block; }
+a.nav-logo:focus-visible, a.nav-logo-cs:focus-visible { outline: 3px solid #006c84; outline-offset: 5px; }
+
+/* Each label and paper shares one hover transform and one entrance. */
+.home-tag-group { position: absolute; rotate: 0deg; translate: 0 0; transform-origin: center; transition: rotate 240ms ease-out, translate 240ms ease-out; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+ .home-tag-designer:hover { rotate: -12deg; translate: 8px 0; }
+ .home-tag-student:hover, .home-tag-creative:hover { rotate: -12deg; translate: -8px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .home-tag-group { transition: none; }
+}
+
+/* Match the work tape’s left edge to the hero’s purple heart, across both scales. */
+.home-work-marker { position: relative; height: 0; top: 80px; z-index: 1; }
+.home-work-tape { left: calc(68px * var(--home-hero-scale, 1)); transform: scale(var(--home-content-scale, .65)); transform-origin: top left; }
+.home-work-peel { --name-peel: 0px; overflow: visible; transition: --name-peel 420ms cubic-bezier(.25,.7,.25,1); }
+.home-work-face { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.home-work-front { clip-path: polygon(-5px -5px, calc(100% - var(--name-peel)) -5px, calc(100% - var(--name-peel)) calc(100% + 5px), -5px calc(100% + 5px)); }
+.home-work-back { pointer-events: none; clip-path: polygon(calc(100% - var(--name-peel)) -5px, 100% -5px, 100% calc(100% + 5px), calc(100% - var(--name-peel)) calc(100% + 5px)); transform-origin: right center; transform: translateX(calc(-2 * var(--name-peel))) scaleX(-1); filter: brightness(1.08) saturate(.35) drop-shadow(-3px 5px 3px #0004); }
+.home-work-back .work-title { color: #d5b7c5; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .home-work-peel:hover { --name-peel: 70px; } }
+@media (prefers-reduced-motion: reduce) { .home-work-peel { transition: none; } }
+
+/* Project artwork moves independently of its existing click-through links. */
+.home-finergy-cluster { position: absolute; left: 78px; top: 2118px; width: 636.19px; height: 607.85px; }
+.project-hover { rotate: 0deg; translate: 0 0; transform-origin: center; transition: rotate 240ms ease-out, translate 240ms ease-out; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+ .project-hover:hover, a:focus-visible > .project-hover { rotate: var(--project-turn, 4deg); translate: var(--project-x, 0px) var(--project-y, 0px); }
+ .site-footer .footer-title .about-name-peel:hover { --name-peel: 64px; cursor: grab; }
+}
+.site-footer .footer-title .about-name-peel { margin-left: -14px; }
+.site-footer .footer-title .about-name-front, .site-footer .footer-title .about-name-back { height: 68px; -webkit-text-stroke-width: 20px; }
+@media (prefers-reduced-motion: reduce) { .project-hover { transition: none; } }
+
+/* About uses the same compact contact composition as Home. */
+.about-page .home-contact-band { position: relative; width: 100%; margin-top: 40px; background: var(--cream); }
+.about-page .home-contact-anchor { position: relative; height: 100%; margin-inline: auto; }
+.about-page .home-contact-anchor .site-footer { top: 0; bottom: auto; height: 523px; transform: scale(var(--about-contact-scale, .65)); transform-origin: top left; }
+.about-page .home-contact-anchor .site-footer a { color: inherit; text-decoration: none; }
+.about-page .home-contact-anchor .site-footer a:hover span { text-decoration: underline; }
+.about-page .home-contact-anchor .site-footer a:focus-visible { outline: 3px solid #006c84; outline-offset: 6px; }
+.finergy-butterfly { border: 0; padding: 0; background: none; cursor: pointer; }
+.finergy-butterfly .sk-i { transition: rotate 180ms ease-out; rotate: 0deg; }
+@media (hover: hover) { .finergy-butterfly:hover .sk-i { rotate: 9deg; } }
+.finergy-butterfly:focus-visible { outline: 3px solid #006c84; outline-offset: 5px; border-radius: 12px; }
+.finergy-butterfly:focus-visible .sk-i { rotate: 9deg; }
+.finergy-butterfly.is-flying .sk-i { opacity: 0; }
+.finergy-contact-tape { position: absolute; left: 18px; top: 178px; width: 464px; height: 110px; display: grid; place-items: center; }
+.finergy-contact-tape > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; filter: drop-shadow(0 1px 2px #0009); pointer-events: none; }
+.finergy-contact-tape .footer-tape-text { position: relative; left: auto; top: auto; margin: 0; width: 100%; line-height: 1.3; text-align: center; }
+@media (prefers-reduced-motion: reduce) { .finergy-butterfly .sk-i { rotate: none; transition: none; } }
+
+/* Independent rotate/translate properties preserve the authored collage angles. */
+.collage-turn { transition: rotate 320ms cubic-bezier(.2,.7,.2,1); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .collage-turn:hover { rotate: var(--hover-turn, 8deg); }
+}
+.collage-turn:focus-within { rotate: var(--hover-turn, 8deg); }
+.about-hero-collage > .collage-turn { pointer-events: auto; }
+.album-spotify-link { display: block; width: 100%; height: 100%; }
+.album-spotify-link:focus-visible { outline: 4px solid #006c84; outline-offset: 6px; }
+.scroll-reveal {
+  opacity: 0; translate: 0 22px; scale: .94;
+  transition: opacity 650ms ease var(--reveal-delay, 0ms), translate 650ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms), scale 650ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms), rotate 320ms ease;
+}
+.scroll-reveal.reveal-fade { translate: 0 0; scale: 1; transition-duration: 1000ms; }
+.scroll-reveal.is-revealed { opacity: 1; translate: 0 0; scale: 1; }
+.experience-assembly.scroll-reveal { opacity: 1; translate: none; scale: 1; box-shadow: none; }
+.experience-assembly > img.bg, .experience-assembly .exp-panel, .experience-assembly .exp-list {
+  opacity: 0; translate: 0 12px; transition: opacity 650ms ease, translate 650ms ease;
+}
+.experience-assembly.is-revealed > img.bg,
+.experience-assembly.is-revealed .exp-panel,
+.experience-assembly.is-revealed .exp-list { opacity: 1; translate: 0 0; }
+.experience-assembly .exp-panel { transition-delay: 250ms; }
+.experience-assembly .exp-list { transition-delay: 550ms; }
+@media (prefers-reduced-motion: reduce) {
+  .collage-turn, .scroll-reveal, .experience-assembly > img.bg, .experience-assembly .exp-panel, .experience-assembly .exp-list { transition: none; rotate: none; translate: none; scale: 1; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) { .collage-turn:hover, .collage-turn:focus-within { rotate: none; } }
+
+/* About: exact Figma album and fashion layers; links never change image bounds. */
+.about-detail-piece { transform-origin: center; }
+.about-detail-piece .about-detail-image { display: block; }
+.about-detail-piece > .album-spotify-link { position: absolute; inset: 0; width: 100%; height: 100%; }
+.about-detail-piece > .album-spotify-link > img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
+.about-detail-heading { position: absolute; margin: 0; padding: 15px 20px; background: white; font: italic 300 36px/45px 'Zalando Sans', sans-serif; filter: drop-shadow(1px 2px 1.5px #0008); }
+.about-detail-piece[data-album-cover] { z-index: 1; }
+.about-detail-piece[data-album-cover]:focus-within { z-index: 2; }
+
+/* A soft cursor-sized fade affects only the hovered part of the greenery/piano. */
+@property --garden-fade-alpha { syntax: '<number>'; inherits: false; initial-value: 1; }
+.garden-fade {
+  --garden-x: 50%; --garden-y: 50%;
+  -webkit-mask-image: radial-gradient(circle 150px at var(--garden-x) var(--garden-y), rgba(0, 0, 0, var(--garden-fade-alpha)) 25%, #000 100%);
+  mask-image: radial-gradient(circle 150px at var(--garden-x) var(--garden-y), rgba(0, 0, 0, var(--garden-fade-alpha)) 25%, #000 100%);
+  transition: --garden-fade-alpha 280ms ease, opacity 1000ms ease;
+}
+/* Keyboard focus keeps interactive content available even during an entrance. */
+.scroll-reveal:focus-within { opacity: 1; scale: 1; translate: 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .garden-fade { mask-image: none; -webkit-mask-image: none; transition: none; }
+}
+
+/* Case studies share the Work/About navigation, outside the content's .65 zoom. */
+.site-nav.case-main-nav { position: relative; display: block; padding: 0; width: 100%; height: calc(107px * var(--case-nav-scale, 1)); zoom: calc(1 / .65); }
+.case-main-nav-canvas { position: relative; width: 1440px; height: 107px; transform: scale(var(--case-nav-scale, 1)); transform-origin: top left; }
+/* The logo remains a native Home link; the alternate artwork never intercepts clicks. */
+a.nav-logo, a.nav-logo-cs { position: relative; z-index: 2; pointer-events: auto; }
+a.nav-logo::after, a.nav-logo-cs::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: url('Assets/ab_pink_star.png') center / contain no-repeat;
+  opacity: 0; transition: opacity 200ms ease;
+}
+a.nav-logo img, a.nav-logo-cs img { transition: opacity 200ms ease; }
+@media (hover: hover) {
+  a.nav-logo:hover::after, a.nav-logo-cs:hover::after { opacity: 1; }
+  a.nav-logo:hover img, a.nav-logo-cs:hover img { opacity: 0; }
+}
+a.nav-logo:focus-visible::after, a.nav-logo-cs:focus-visible::after,
+a.nav-logo:active::after, a.nav-logo-cs:active::after { opacity: 1; }
+a.nav-logo:focus-visible img, a.nav-logo-cs:focus-visible img,
+a.nav-logo:active img, a.nav-logo-cs:active img { opacity: 0; }
+
+/* Keep the scissors on links, buttons, text and empty space alike. */
+@media (any-hover: hover) and (any-pointer: fine) {
+  html, html *, html *::before, html *::after {
+    cursor: url('Assets/scissors_closed_cursor.png') 9 3, auto !important;
+  }
+  html.scissors-pressed, html.scissors-pressed *, html.scissors-pressed *::before, html.scissors-pressed *::after {
+    cursor: url('Assets/scissors_open_cursor.png') 11 4, auto !important;
+  }
+}
+
+/* Keep the main navigation above the decorative collage hit areas. */
+.home-nav-wrap { position: relative; z-index: 20; }
+.nav.portfolio-nav, .site-nav { z-index: 20; }
+
+/* Placeful's decorative artwork has white pixels; blend them into the hero cream. */
+.intro-hero { isolation: isolate; }
+.intro-hero .intro-bg-r, .intro-hero .intro-bg-tl,
+.intro-hero .intro-bg-bl, .intro-hero .intro-leaf { mix-blend-mode: multiply; }
+/* Keep the Resume label centered as a single unit on its contact paper. */
+.cs-footer-anchor .contact-link { text-decoration: none; color: inherit; }
+
+/* Match Home/About's compact contact composition on both case studies. */
+.cs-body .cs-footer-band { zoom: calc(1 / .65); margin-top: 40px; }
+.cs-body .cs-footer-anchor { height: 100%; max-width: none; }
+.cs-body .cs-footer-anchor .site-footer { top: 0; bottom: auto; height: 523px; transform: scale(var(--case-contact-scale, .65)); transform-origin: top left; }
+.cs-body .cs-footer-anchor .site-footer a { color: inherit; text-decoration: none; }
+.cs-body .cs-footer-anchor .site-footer a:hover span { text-decoration: underline; }
+.cs-body .cs-footer-anchor .site-footer a:focus-visible { outline: 3px solid #006c84; outline-offset: 6px; }
+.site-nav.case-main-nav, .case-main-nav .nav.portfolio-nav { background: #fff; }
+
+/* Placeful's next-project links share Finergy's gentle turns. */
+.placeful-thankyou a { color: inherit; text-decoration: none; }
+.placeful-thankyou .ty-finergy-wrap,
+.placeful-thankyou .ty-buzzwalk-wrap,
+.placeful-thankyou .ty-arrow { rotate: 0deg; transform-origin: center; transition: rotate 200ms ease-out; }
+.placeful-thankyou .ty-card { transition: translate 180ms ease-out; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .placeful-thankyou .ty-finergy-wrap:hover { rotate: -4deg; }
+  .placeful-thankyou .ty-arrow--left:hover { rotate: 3deg; }
+  .placeful-thankyou .ty-buzzwalk-wrap:hover { rotate: 4deg; }
+  .placeful-thankyou .ty-arrow--right:hover { rotate: -3deg; }
+  .placeful-thankyou .ty-card:hover { translate: 8px 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .placeful-thankyou .ty-finergy-wrap:focus-visible { rotate: -4deg; }
+  .placeful-thankyou .ty-arrow--left:focus-visible { rotate: 3deg; }
+  .placeful-thankyou .ty-buzzwalk-wrap:focus-visible { rotate: 4deg; }
+  .placeful-thankyou .ty-arrow--right:focus-visible { rotate: -3deg; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .placeful-thankyou .ty-finergy-wrap, .placeful-thankyou .ty-buzzwalk-wrap,
+  .placeful-thankyou .ty-arrow, .placeful-thankyou .ty-card { transition: none; }
 }

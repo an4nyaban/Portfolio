@@ -8,21 +8,53 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@600;700&family=Tillana:wght@500&family=Zalando+Sans:ital,wght@0,300;0,400;1,300&family=Zalando+Sans+Expanded:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="preload" href="Assets/ab_pink_star.png" as="image">
+<style>
+
+/* Home artwork shares the case-study footer’s desktop scale and side space. */
+.home-page .home-nav-wrap { width: 100%; overflow: hidden; }
+.home-page .home-nav-canvas { position: relative; width: 1440px; height: 107px; transform: scale(var(--home-nav-scale, 1)); transform-origin: top left; }
+.home-page .home-collage-wrap { margin-inline: auto; overflow: hidden; }
+.home-page .home-collage { height: 3720px; transform: scale(var(--home-content-scale, .65)) translateY(-1203.66px); transform-origin: top left; }
+.home-contact-band { position: relative; width: 100%; margin-top: 40px; background: var(--cream); }
+.home-contact-anchor { position: relative; height: 100%; margin-inline: auto; }
+.home-contact-anchor .site-footer { top: 0; bottom: auto; height: 523px; transform: scale(var(--home-content-scale, .65)); transform-origin: top left; }
+.home-contact-anchor .site-footer a { color: inherit; text-decoration: none; }
+.home-contact-anchor .site-footer a:hover span { text-decoration: underline; }
+.home-contact-anchor .site-footer a:focus-visible { outline: 3px solid #006c84; outline-offset: 6px; }
+.finergy-butterfly { border: 0; padding: 0; background: none; cursor: pointer; }
+.finergy-butterfly .sk-i { transition: rotate 180ms ease-out; rotate: 0deg; }
+@media (hover: hover) { .finergy-butterfly:hover .sk-i { rotate: 9deg; } }
+.finergy-butterfly:focus-visible { outline: 3px solid #006c84; outline-offset: 5px; border-radius: 12px; }
+.finergy-butterfly:focus-visible .sk-i { rotate: 9deg; }
+.finergy-butterfly.is-flying .sk-i { opacity: 0; }
+.finergy-contact-tape { position: absolute; left: 18px; top: 178px; width: 464px; height: 110px; display: grid; place-items: center; }
+.finergy-contact-tape > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; filter: drop-shadow(0 1px 2px #0009); pointer-events: none; }
+.finergy-contact-tape .footer-tape-text { position: relative; left: auto; top: auto; margin: 0; width: 100%; line-height: 1.3; text-align: center; }
+@media (prefers-reduced-motion: reduce) { .finergy-butterfly .sk-i { rotate: none; transition: none; } }
+
+/* Homepage Frame 1 and hero title, matched to Figma 374:923 / 374:1002. */
+.home-hero-wrap { display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: calc(10px * var(--home-hero-scale, 1)); }
+.home-hero-stage { position: relative; flex: none; overflow: hidden; }
+.home-hero-art { position: relative; width: 1440px; height: 775px; transform: scale(var(--home-hero-scale, 1)); transform-origin: top left; }
+.home-page .home-collage-wrap { margin-top: 80px; }
+
+.home-hero-art .name-text { font-size: 96px; letter-spacing: 1.92px; line-height: 15px; }
+</style>
+<link rel="icon" type="image/png" href="/Assets/ab_pink_star.png">
 </head>
-<body>
+<body class="home-page">
 
-<div class="canvas-wrap">
-  <div class="page">
-
+<div class="home-nav-wrap"><div class="home-nav-canvas">
     <!-- ============ NAV ============ -->
-    <nav class="nav">
-      <div class="nav-logo"><img src="Assets/ab_star.png" alt="AB monogram logo"></div>
+    <nav class="nav portfolio-nav">
+      <a class="nav-logo" href="index.html" aria-label="Go to home page"><img src="Assets/ab_star.png" alt="AB monogram logo"></a>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-current">work</a></li>
         <li><a href="about.html">about</a></li>
         <li><a href="coming-soon.html?project=Collage">collage</a></li>
         <li>
-          <a href="https://docs.google.com/document/d/1rjOiWTw3FA5mIrzkZx_TTW7is4Xb-dvMyha_8OCmCT4/edit?usp=sharing"
+          <a href="https://docs.google.com/document/d/1TirXVIre3TSZLm0B2PwHUFP9qbT0IzNKVS-qZgrSqyw/edit?usp=sharing"
              target="_blank"
              rel="noopener noreferrer">
             resume
@@ -31,101 +63,44 @@
       </ul>
     </nav>
 
-    <!-- ============ HERO: name ============ -->
-    <h1 class="name-text" style="--l:58px;--t:607px;--w:492px;--h:159px;">ananya</h1>
-    <p class="name-text" style="--l:466px;--t:783px;--w:602px;--h:159px;">banerjee</p>
+</div></div>
 
-    <!-- ============ HERO: torn paper scraps + tagline words (each pair
-         verified by containment: word AABB must sit fully inside its
-         paper's AABB) ============ -->
-    <!-- paper_scrap_3 backs "designer" -->
-    <div class="sk" style="--l:538.81px;--t:346.4px;--w:307.5px;--h:172.31px;">
-      <div class="sk-i" style="--iw:134.09px;--ih:292.07px;--r:82.24deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+<section class="home-hero-wrap" aria-label="Ananya Banerjee — designer, student, creative"><div class="home-hero-stage"><div class="home-hero-art">
+    <h1 class="name-text" style="--l:119px;--t:357px;--w:492px;--h:159px;--hero-delay:0ms;"><span class="about-name-peel"><span class="about-name-front">ananya</span><span class="about-name-back" aria-hidden="true">ananya</span></span></h1>
+    <p class="name-text" style="--l:519px;--t:506px;--w:602px;--h:159px;--hero-delay:140ms;"><span class="about-name-peel"><span class="about-name-front">banerjee</span><span class="about-name-back" aria-hidden="true">banerjee</span></span></p>
+    <div class="home-tag-group home-tag-creative" data-hero-stage="intro" style="left:1030px;top:137px;width:340px;height:169.331px;--hero-delay:320ms;"><div class="sk" style="--hero-delay:320ms;--l:0.0000px;--t:0.0000px;--w:340px;--h:169.331px;"><div class="sk-i" style="--iw:130.619px;--ih:326.548px;--r:-83.02deg;"><img src="Assets/my own photos:assets/paper_scrap_1.png" alt=""></div></div><div class="sk" style="--hero-delay:320ms;--l:85.0500px;--t:60.0690px;--w:181.004px;--h:62.262px;"><p class="tag-word" style="--iw:177.335px;--ih:42.258px;--r:6.57deg;font-size:30.333px;letter-spacing:0.6067px;">creative</p></div></div>
+    <div class="home-tag-group home-tag-student" data-hero-stage="intro" style="left:820px;top:320px;width:306px;height:136.93px;--hero-delay:420ms;"><div class="sk" style="--hero-delay:420ms;--l:0.0000px;--t:0.0000px;--w:306px;--h:136.93px;"><div class="sk-i" style="--iw:131.809px;--ih:303.813px;--r:90.97deg;"><img src="Assets/my own photos:assets/paper_scrap_2.png" alt=""></div></div><div class="sk" style="--hero-delay:420ms;--l:65.4500px;--t:46.3610px;--w:175.807px;--h:43.798px;"><p class="tag-word" style="--iw:174.947px;--ih:39.834px;--r:-1.3deg;font-size:28.593px;letter-spacing:0.5719px;">student</p></div></div>
+    <div class="home-tag-group home-tag-designer" data-hero-stage="intro" style="left:523px;top:164px;width:326px;height:182.684px;--hero-delay:220ms;"><div class="sk" style="--hero-delay:220ms;--l:0.0000px;--t:0.0000px;--w:326px;--h:182.684px;"><div class="sk-i" style="--iw:142.165px;--ih:309.635px;--r:82.24deg;"><img src="Assets/my own photos:assets/paper_scrap_3.png" alt=""></div></div><div class="sk" style="--hero-delay:220ms;--l:76.2400px;--t:54.1555px;--w:171.353px;--h:72.249px;"><p class="tag-word" style="--iw:166.269px;--ih:43.599px;--r:-10.16deg;font-size:31.296px;letter-spacing:0.6259px;">designer</p></div></div>
+    <div class="sk shadow-r" data-hero-stage="decoration" style="--hero-delay:1000ms;--hero-hover-angle:45deg;--l:336px;--t:197px;--w:105px;--h:113px;"><img src="Assets/star_light_pink.png" alt=""></div>
+    <div class="sk" data-hero-stage="decoration" style="--hero-delay:1045ms;--hero-hover-angle:45deg;--l:260px;--t:543px;--w:180.513px;--h:180.513px;"><div class="sk-i shadow-l" style="--iw:134.998px;--ih:134.998px;--r:-26deg;"><img src="Assets/star_gem.png" alt=""></div></div>
+    <div class="sk" data-hero-stage="decoration" data-hero-flight="click" data-flight-direction="left" tabindex="0" role="button" aria-label="Let the gem butterfly fly" style="--hero-delay:1090ms;--hero-hover-angle:-45deg;--l:1192px;--t:325px;--w:167.335px;--h:165.658px;"><div class="sk-i shadow-l" style="--iw:126.084px;--ih:110.022px;--r:-40.77deg;"><img src="Assets/butterfly_gem.png" alt=""></div></div>
+    <div class="sk" data-hero-stage="decoration" style="--hero-delay:1135ms;--hero-hover-angle:-45deg;--l:921.62px;--t:16.69px;--w:115.112px;--h:113.96px;"><div class="sk-i shadow-l" style="--iw:90.021px;--ih:88.06px;--r:20.45deg;"><img src="Assets/music_double.png" alt=""></div></div>
+    <div class="sk shadow-r" data-hero-stage="decoration" style="--hero-delay:1180ms;--hero-hover-angle:45deg;--l:708px;--t:42px;--w:81px;--h:81px;"><img src="Assets/lucky_gem.png" alt=""></div>
+    <div class="sk shadow-r" data-hero-stage="decoration" style="--hero-delay:1225ms;--hero-hover-angle:45deg;--l:1187px;--t:29.17px;--w:87px;--h:86px;"><img src="Assets/button.png" alt=""></div>
+    <div class="sk shadow-l" data-hero-stage="decoration" data-hero-cd style="--hero-delay:1270ms;--hero-hover-angle:45deg;--l:607px;--t:353px;--w:130px;--h:126px;"><img src="Assets/cd.png" alt=""></div>
+    <div class="sk" data-hero-stage="decoration" style="--hero-delay:1315ms;--hero-hover-angle:45deg;--l:277px;--t:25px;--w:94.381px;--h:98.385px;"><div class="sk-i shadow-r" style="--iw:60.271px;--ih:77.84px;--r:-144.27deg;"><div class="crop"><img src="Assets/gem.png" alt="" style="left:-41.7%;top:-24.57%;width:184.5%;height:142.86%;"></div></div></div>
+    <div class="sk" data-hero-stage="decoration" style="--hero-delay:1360ms;--hero-hover-angle:-45deg;--l:1242px;--t:572px;--w:128.324px;--h:128.344px;"><div class="sk-i shadow-l" style="--iw:90.996px;--ih:90.693px;--r:-47.67deg;"><img src="Assets/purp_button.png" alt=""></div></div>
+    <div class="sk" data-hero-stage="decoration" style="--hero-delay:1405ms;--hero-hover-angle:-45deg;--l:905px;--t:192px;--w:107.383px;--h:88.049px;"><div class="sk-i shadow-r" style="--iw:95.832px;--ih:71.625px;--r:10.61deg;"><img src="Assets/lips.png" alt=""></div></div>
+    <div class="sk shadow-l" data-hero-stage="decoration" style="--hero-delay:1450ms;--hero-hover-angle:-45deg;--l:1052px;--t:506px;--w:95px;--h:91px;"><div class="crop"><img src="Assets/green_heart.png" alt="" style="left:-50%;top:-51.04%;width:198.41%;height:207.47%;"></div></div>
+    <div class="sk shadow-r" data-hero-stage="decoration" style="--hero-delay:1495ms;--hero-hover-angle:45deg;--l:81px;--t:245px;--w:95px;--h:85px;"><div class="crop"><img src="Assets/pink_gem.png" alt="" style="left:-44.11%;top:-56.17%;width:190.11%;height:212.77%;"></div></div>
+    <div class="sk shadow-l" data-hero-stage="decoration" data-hero-flight="click" data-flight-direction="right" tabindex="0" role="button" aria-label="Let the pink butterfly fly" style="--hero-delay:1540ms;--hero-hover-angle:45deg;--l:58px;--t:47px;--w:122px;--h:107px;"><img src="Assets/pink_butterfly.png" alt=""></div>
+    <div class="sk" data-hero-stage="decoration" style="--hero-delay:1585ms;--hero-hover-angle:-45deg;--l:68px;--t:553.93px;--w:114.917px;--h:114.917px;"><div class="sk-i shadow-r" style="--iw:92.822px;--ih:92.822px;--r:-16.1deg;"><img src="Assets/heart_gem.png" alt=""></div></div>
+</div></div></section>
+
+<div class="home-work-marker">
+  <div class="sk home-work-tape" style="--l:0px;--t:0px;--w:427.57px;--h:175.73px;">
+    <div class="sk-i work-banner shadow-l home-work-peel" style="--iw:417.93px;--ih:145px;--r:-4.27deg;">
+      <div class="home-work-face home-work-front"><img src="Assets/my_work_banner.png" alt="" class="banner-bg"><span class="work-title">my work:</span></div>
+      <div class="home-work-face home-work-back" aria-hidden="true"><img src="Assets/my_work_banner.png" alt="" class="banner-bg"><span class="work-title">my work:</span></div>
     </div>
-    <div class="sk" style="--l:594px;--t:391px;--w:197.11px;--h:83.11px;">
-      <p class="tag-word" style="--iw:191.26px;--ih:50.15px;--r:-10.16deg;">designer</p>
-    </div>
-
-    <!-- paper_scrap_1 backs "creative" -->
-    <div class="sk" style="--l:1026.78px;--t:367.91px;--w:281.26px;--h:140.08px;">
-      <div class="sk-i" style="--iw:108.05px;--ih:270.13px;--r:-83.02deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_1_cropped.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:1060px;--t:401px;--w:214.82px;--h:73.9px;">
-      <p class="tag-word" style="--iw:210.47px;--ih:50.15px;--r:6.57deg;">creative</p>
-    </div>
-
-    <!-- paper_scrap_2 backs "student" -->
-    <div class="sk" style="--l:814.6px;--t:591.18px;--w:360.8px;--h:134.64px;">
-      <div class="sk-i" style="--iw:128.57px;--ih:358.6px;--r:90.97deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_2_cropped.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:889px;--t:645.35px;--w:221.35px;--h:55.14px;">
-      <p class="tag-word" style="--iw:220.27px;--ih:50.15px;--r:-1.3deg;">student</p>
-    </div>
-
-    <!-- ============ HERO: trinkets / stickers ============ -->
-    <div class="sk shadow-r" style="--l:381px;--t:470.17px;--w:105px;--h:113px;"><img src="Assets/star_light_pink.png" alt=""></div>
-
-    <div class="sk" style="--l:237px;--t:769px;--w:204.04px;--h:204.04px;">
-      <div class="sk-i shadow-l" style="--iw:152.6px;--ih:152.6px;--r:-26deg;"><img src="Assets/star_gem.png" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:474.32px;--t:200px;--w:157.36px;--h:157.36px;">
-      <div class="sk-i shadow-l" style="--iw:111.27px;--ih:111.27px;--r:-45.54deg;"><img src="Assets/peace_zebra.png" alt=""></div>
-    </div>
-
-    <!-- pink_butterfly 1 -> uses the gem-textured butterfly asset (distinct from the photographic one used twice elsewhere) -->
-    <div class="sk" style="--l:1192.48px;--t:529.03px;--w:167.34px;--h:165.66px;">
-      <div class="sk-i shadow-l" style="--iw:126.08px;--ih:110.02px;--r:-40.77deg;"><img src="Assets/butterfly_gem.png" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:921.62px;--t:231.69px;--w:115.11px;--h:113.96px;">
-      <div class="sk-i shadow-l" style="--iw:90.02px;--ih:88.06px;--r:20.45deg;"><img src="Assets/music_double.png" alt=""></div>
-    </div>
-
-    <div class="sk shadow-r" style="--l:708px;--t:234px;--w:81px;--h:81px;"><img src="Assets/lucky_gem.png" alt=""></div>
-
-    <div class="sk shadow-r" style="--l:1187px;--t:261.17px;--w:87px;--h:86px;"><img src="Assets/button.png" alt=""></div>
-
-    <div class="sk shadow-l" style="--l:607px;--t:548.17px;--w:130px;--h:126px;"><img src="Assets/cd.png" alt=""></div>
-
-    <!-- gem.png: cropped/zoomed per Figma's own treatment so the faceted crystal fills its sticker instead of floating in padding -->
-    <div class="sk" style="--l:294.56px;--t:302.16px;--w:113.26px;--h:118.06px;">
-      <div class="sk-i shadow-r" style="--iw:72.32px;--ih:93.41px;--r:-144.27deg;">
-        <div class="crop"><img src="Assets/gem.png" alt="" style="left:-41.7%;top:-24.57%;width:184.5%;height:142.86%;"></div>
-      </div>
-    </div>
-
-    <div class="sk" style="--l:1230.63px;--t:797.1px;--w:128.32px;--h:128.34px;">
-      <div class="sk-i shadow-l" style="--iw:90.99px;--ih:90.69px;--r:-47.67deg;"><img src="Assets/purp_button.png" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:848.53px;--t:465.41px;--w:124.18px;--h:101.82px;">
-      <div class="sk-i shadow-r" style="--iw:110.82px;--ih:82.83px;--r:10.61deg;"><img src="Assets/lips.png" alt=""></div>
-    </div>
-
-    <div class="sk shadow-l" style="--l:1053px;--t:764px;--w:95px;--h:91px;">
-      <div class="crop"><img src="Assets/green_heart.png" alt="" style="left:-50%;top:-51.04%;width:198.41%;height:207.47%;"></div>
-    </div>
-
-    <!-- pink_gem.png: same crop treatment, makes the heart read bigger/bolder like its neighbors -->
-    <div class="sk shadow-r" style="--l:204px;--t:470px;--w:95px;--h:85px;">
-      <div class="crop"><img src="Assets/pink_gem.png" alt="" style="left:-44.11%;top:-56.17%;width:190.11%;height:212.77%;"></div>
-    </div>
-
-    <div class="sk shadow-l" style="--l:93px;--t:289px;--w:122px;--h:107px;"><img src="Assets/pink_butterfly.png" alt=""></div>
-    <div class="sk" style="--l:789px;--t:868px;--w:25px;--h:32px;background:#fff;"></div>
-
-    <!-- ============ MY WORK banner ============ -->
-    <div class="sk" style="--l:53.11px;--t:1203.66px;--w:427.57px;--h:175.73px;">
-      <div class="sk-i work-banner shadow-l" style="--iw:417.93px;--ih:145px;--r:-4.27deg;">
-        <img src="Assets/my_work_banner.png" alt="" class="banner-bg">
-        <span class="work-title">my work:</span>
-      </div>
-    </div>
+  </div>
+</div>
+<main class="canvas-wrap home-collage-wrap">
+  <div class="page home-collage">
 
     <!-- ============ PLACEFUL (peach board) ============ -->
     <a href="placeful.html" aria-label="View the Placeful case study" style="display:contents;">
-    <div class="sk" style="--l:709px;--t:1513px;--w:646.27px;--h:504.04px;">
+    <div class="sk project-hover" style="--project-turn:4deg;--project-x:0px;--project-y:0px;--l:709px;--t:1513px;--w:646.27px;--h:504.04px;">
       <div class="sk-i project-board shadow-card" style="--iw:610px;--ih:454px;--r:4.86deg;background:#FFDCBD;">
         <div class="crop" style="position:absolute;left:153.85px;top:31.08px;width:301.62px;height:390.98px;">
           <img src="Assets/iphone16_placeful.png" alt="Placeful app screenshots on iPhone" style="left:-48.95%;top:-6.57%;width:194.57%;height:112.57%;">
@@ -140,20 +115,21 @@
       <div class="sk-i shadow-td" style="--iw:185.39px;--ih:73.64px;--r:161.4deg;"><img src="Assets/yellow_tape.png" alt=""></div>
     </div>
     <a href="placeful.html" aria-label="View the Placeful case study" style="display:contents;">
-    <div class="sk contain shadow-tu" style="--l:78px;--t:1513px;--w:504px;--h:142px;">
+    <div class="sk contain shadow-tu project-hover" style="--project-turn:-4deg;--project-x:0px;--project-y:0px;--l:78px;--t:1513px;--w:504px;--h:142px;">
       <div class="crop"><img src="Assets/placeful_logo.png" alt="Placeful logo" style="left:-28.05%;top:-93.37%;width:237.51%;height:281.28%;"></div>
     </div>
     </a>
     <div class="quote-box shadow-quote" style="left:82px;top:1693px;width:559px;">
       <p>~ A social experience that makes discovering your community feel more personal, intentional, and worth remembering.</p>
     </div>
-    <div class="sk shadow-card" style="--l:507px;--t:1475px;--w:162px;--h:218px;">
+    <div class="sk shadow-card project-hover" style="--project-turn:5deg;--project-x:0px;--project-y:6px;--l:507px;--t:1475px;--w:162px;--h:218px;">
       <div class="crop"><img src="Assets/eiffel.png" alt="" style="left:-30.22%;top:-26.39%;width:141.04%;height:183.06%;"></div>
     </div>
 
     <!-- ============ FINERGY (green board) ============ -->
-    <a href="coming-soon.html?project=Finergy" aria-label="View the Finergy project (coming soon)" style="display:contents;">
-    <div class="sk" style="--l:78px;--t:2236px;--w:636.19px;--h:489.85px;">
+    <div class="home-finergy-cluster project-hover" style="--project-turn:5deg;">
+    <a href="finergy.html" aria-label="View the Finergy case study" style="display:contents;">
+    <div class="sk" style="--l:0px;--t:118px;--w:636.19px;--h:489.85px;">
       <div class="sk-i project-board shadow-card" style="--iw:610px;--ih:454px;--r:-3.45deg;background:#E3F9E1;">
         <div class="crop" style="position:absolute;left:55.34px;top:95.73px;width:497.46px;height:303.33px;">
           <img src="Assets/portfolio_cover_finergy.png" alt="Finergy app screenshots" style="left:-8.87%;top:-17.7%;width:115.66%;height:135%;">
@@ -161,11 +137,12 @@
       </div>
     </div>
     </a>
-    <div class="sk" style="--l:224px;--t:2118px;--w:275.76px;--h:186.99px;">
+    <div class="sk" style="--l:146px;--t:0px;--w:275.76px;--h:186.99px;">
       <div class="sk-i shadow-tu" style="--iw:265.94px;--ih:171.3px;--r:-3.45deg;"><img src="Assets/olive_clip.png" alt=""></div>
     </div>
-    <a href="coming-soon.html?project=Finergy" aria-label="View the Finergy project (coming soon)" style="display:contents;">
-    <div class="sk" style="--l:776px;--t:2225px;--w:556.72px;--h:220.01px;">
+    </div>
+    <a href="finergy.html" aria-label="View the Finergy case study" style="display:contents;">
+    <div class="sk project-hover" style="--project-turn:-3deg;--project-x:6px;--project-y:0px;--l:776px;--t:2225px;--w:556.72px;--h:220.01px;">
       <div class="sk-i project-card shadow-td" style="--iw:551px;--ih:204px;--r:1.67deg;">
         <img src="Assets/finergy_tree_icon.png" alt="" class="proj-icon contain" style="left:23px;top:12px;width:158px;height:163px;">
         <p class="proj-brand-title" style="left:186px;top:51px;width:265.28px;">Finergy</p>
@@ -176,16 +153,16 @@
     <div class="quote-box shadow-quote" style="left:774px;top:2501px;width:581px;text-align:right;">
       <p>~ A financial literacy experience helping young adults build confidence around budgeting, saving, and their financial future.</p>
     </div>
-    <div class="sk" style="--l:766.8px;--t:2434.2px;--w:91.95px;--h:178.04px;">
+    <div class="sk project-hover" style="--project-turn:8deg;--project-x:0px;--project-y:0px;--l:766.8px;--t:2434.2px;--w:91.95px;--h:178.04px;">
       <div class="sk-i shadow-tu" style="--iw:82.5px;--ih:173.75px;--r:3.16deg;"><img src="Assets/half_paperclip.png" alt=""></div>
     </div>
-    <div class="sk" style="--l:1202px;--t:2171px;--w:183.99px;--h:186.97px;">
+    <div class="sk project-hover" style="--project-turn:-7deg;--project-x:0px;--project-y:0px;--l:1202px;--t:2171px;--w:183.99px;--h:186.97px;">
       <div class="sk-i shadow-card" style="--iw:117px;--ih:146px;--r:-40.83deg;"><img src="Assets/money.png" alt=""></div>
     </div>
 
     <!-- ============ GT BUZZWALK (blue board) ============ -->
     <a href="coming-soon.html?project=GT%20Buzzwalk" aria-label="View the GT Buzzwalk project (coming soon)" style="display:contents;">
-    <div class="sk" style="--l:687px;--t:3007.09px;--w:646.27px;--h:504.04px;">
+    <div class="sk project-hover" style="--project-turn:-4deg;--project-x:0px;--project-y:0px;--l:687px;--t:3007.09px;--w:646.27px;--h:504.04px;">
       <div class="sk-i project-board shadow-card" style="--iw:610px;--ih:454px;--r:4.86deg;background:#BDD0FF;">
         <div class="crop" style="position:absolute;left:61.01px;top:47.91px;width:490px;height:380px;">
           <img src="Assets/portfolio_cover_buzzwalk.png" alt="GT Buzzwalk app screenshots" style="left:-23.61%;top:-17.33%;width:147.84%;height:135.45%;">
@@ -194,7 +171,7 @@
     </div>
     </a>
     <a href="coming-soon.html?project=GT%20Buzzwalk" aria-label="View the GT Buzzwalk project (coming soon)" style="display:contents;">
-    <div class="sk" style="--l:132px;--t:2950px;--w:343.58px;--h:309.3px;">
+    <div class="sk project-hover" style="--project-turn:5deg;--project-x:0px;--project-y:0px;--l:132px;--t:2950px;--w:343.58px;--h:309.3px;">
       <div class="sk-i project-card shadow-td" style="--iw:324px;--ih:287px;--r:-4.08deg;">
         <div class="crop" style="position:absolute;left:27px;top:10px;width:270px;height:267px;">
           <img src="Assets/buzzwalk_icon.png" alt="GT Buzzwalk logo" style="left:-64.89%;top:-12.13%;width:227.56%;height:125.62%;">
@@ -215,110 +192,227 @@
     <div class="sk" style="--l:1266px;--t:3472px;--w:77.61px;--h:77.61px;">
       <div class="sk-i flip shadow-td" style="--iw:63px;--ih:63px;--r:-15.58deg;"><img src="Assets/white_push.png" alt=""></div>
     </div>
-    <div class="sk" style="--l:352.62px;--t:3169.53px;--w:301.03px;--h:184.9px;">
+    <div class="sk project-hover" style="--project-turn:0deg;--project-x:-12px;--project-y:0px;--l:352.62px;--t:3169.53px;--w:301.03px;--h:184.9px;">
       <div class="sk-i flip shadow-card" style="--iw:282.58px;--ih:144.04px;--r:-171.35deg;">
         <div class="crop"><img src="Assets/converse.png" alt="" style="left:-36.36%;top:-112.74%;width:162.34%;height:318.47%;"></div>
       </div>
     </div>
 
-    <!-- ============ FOOTER / CONTACT ============ -->
-    <footer class="site-footer">
-      <p class="footer-title">contact me!</p>
 
-      <div class="sk" style="--l:784.56px;--t:70.39px;--w:269.65px;--h:145.45px;">
-        <div class="sk-i flip" style="--iw:126.8px;--ih:261.13px;--r:-85.83deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:834.6px;--t:113.61px;--w:169.57px;--h:59px;">
-        <div class="sk-i contact-link" style="--iw:166.18px;--ih:43.24px;--r:5.51deg;">
-          <div class="crop" style="width:55.51px;height:39.72px;flex-shrink:0;"><img src="Assets/email_icon.png" alt="" style="left:-23.28%;top:-50.2%;width:143.68%;height:200.8%;"></div>
-          <span>Email</span>
-        </div>
-      </div>
 
-      <div class="sk" style="--l:600.63px;--t:266.2px;--w:302.67px;--h:156.97px;">
-        <div class="sk-i flip" style="--iw:133.09px;--ih:292.62px;--r:94.77deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:638.17px;--t:307.8px;--w:227.6px;--h:73.77px;">
-        <a href="https://www.linkedin.com/in/ananyaba/"
+  </div>
+</main>
+
+<div class="home-contact-band">
+<div class="home-contact-anchor">
+  <footer class="site-footer">
+    <p class="footer-title"><span class="about-name-peel"><span class="about-name-front">contact me!</span><span class="about-name-back" aria-hidden="true">contact me!</span></span></p>
+
+    <div class="sk" style="--l:799px;--t:64px;--w:315.384px;--h:170.124px;">
+      <div class="sk-i flip" style="--iw:148.305px;--ih:305.407px;--r:-85.83deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:864.6px;--t:113.61px;--w:169.57px;--h:59px;">
+      <a href="mailto:ananyaban06@gmail.com" class="sk-i contact-link" style="--iw:166.18px;--ih:43.24px;--r:5.51deg;">
+        <div class="crop" style="width:55.51px;height:39.72px;flex-shrink:0;"><img src="Assets/email_icon.png" alt="" style="left:-23.28%;top:-50.2%;width:143.68%;height:200.8%;"></div>
+        <span>Email</span>
+      </a>
+    </div>
+
+    <div class="sk" style="--l:590px;--t:224px;--w:354px;--h:183.588px;">
+      <div class="sk-i flip" style="--iw:155.66px;--ih:342.238px;--r:94.77deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:638.17px;--t:282.8px;--w:227.6px;--h:73.77px;">
+      <a href="https://www.linkedin.com/in/ananyaba/"
            target="_blank"
            rel="noopener noreferrer"
            style="text-decoration:none; color:inherit;">
-        <div class="sk-i contact-link" style="--iw:223.62px;--ih:45.39px;--r:7.39deg;">
-          <img src="Assets/linkedin_icon.png" alt="" class="contact-icon contain" style="width:45px;height:45px;">
-          <span>LinkedIn</span>
-        </div>
+      <div class="sk-i contact-link" style="--iw:223.62px;--ih:45.39px;--r:7.39deg;">
+        <img src="Assets/linkedin_icon.png" alt="" class="contact-icon contain" style="width:45px;height:45px;">
+        <span>LinkedIn</span>
       </div>
+      </a>
+    </div>
 
-      <div class="sk" style="--l:1057.45px;--t:224.78px;--w:300.77px;--h:171.45px;">
-        <div class="sk-i" style="--iw:132.44px;--ih:284.89px;--r:81.86deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:1088.65px;--t:268.81px;--w:238.37px;--h:83.39px;">
-        <div class="sk-i contact-link" style="--iw:234.14px;--ih:45.03px;--r:-9.59deg;">
-          <div class="crop" style="width:48px;height:41px;flex-shrink:0;"><img src="Assets/folder_pink.png" alt="" style="left:-14.66%;top:-25%;width:129.31%;height:150%;"></div>
-          <span>Resume</span>
-        </div>
-      </div>
+    <div class="sk" style="--l:1024px;--t:207px;--w:351.782px;--h:200.53px;">
+      <div class="sk-i" style="--iw:154.894px;--ih:333.201px;--r:81.86deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1088.65px;--t:268.81px;--w:238.37px;--h:83.39px;">
+      <a href="https://docs.google.com/document/d/1TirXVIre3TSZLm0B2PwHUFP9qbT0IzNKVS-qZgrSqyw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="sk-i contact-link" style="--iw:234.14px;--ih:45.03px;--r:-9.59deg;">
+        <div class="crop" style="width:48px;height:41px;flex-shrink:0;"><img src="Assets/folder_pink.png" alt="" style="left:-14.66%;top:-25%;width:129.31%;height:150%;"></div>
+        <span>Resume</span>
+      </a>
+    </div>
 
-      <div class="sk" style="--l:579px;--t:89px;--w:92.19px;--h:104.3px;">
-        <div class="sk-i shadow-r" style="--iw:76.36px;--ih:91.6px;--r:10.82deg;"><img src="Assets/butterfly_gem.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:1200px;--t:132.05px;--w:67.22px;--h:67.22px;">
-        <div class="sk-i shadow-l" style="--iw:54.29px;--ih:54.29px;--r:-16.1deg;"><img src="Assets/heart_gem.png" alt=""></div>
-      </div>
+    <button type="button" class="sk finergy-butterfly" aria-label="Let the butterfly fly" style="--l:579px;--t:89px;--w:92.19px;--h:104.3px;">
+      <span class="sk-i shadow-r" style="--iw:76.36px;--ih:91.6px;--r:10.82deg;"><img src="Assets/butterfly_gem.png" alt=""></span>
+    </button>
+    <div class="sk" style="--l:1200px;--t:132.05px;--w:67.22px;--h:67.22px;">
+      <div class="sk-i shadow-l" style="--iw:54.29px;--ih:54.29px;--r:-16.1deg;"><img src="Assets/heart_gem.png" alt=""></div>
+    </div>
 
-      <div class="sk" style="--l:5.2px;--t:181.07px;--w:463.2px;--h:109.86px;filter:drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.6));"><img src="Assets/blue_tape.png" alt="" style="object-fit:fill;"></div>
-      <p class="footer-tape-text" style="left:80.07px;top:213.59px;width:313.46px;">would love to talk!</p>
+    <div class="finergy-contact-tape">
+      <img src="Assets/blue_tape.png" alt="">
+      <p class="footer-tape-text">would love to talk!</p>
+    </div>
 
-      <div class="sk" style="--l:30px;--t:320px;--w:100.88px;--h:100.88px;">
-        <div class="sk-i shadow-l" style="--iw:93.04px;--ih:92.04px;--r:-11deg;"><img src="Assets/star_gem.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:209.58px;--t:307.58px;--w:129.06px;--h:129.06px;">
-        <div class="sk-i shadow-l" style="--iw:110.34px;--ih:110.34px;--r:10.8deg;"><img src="Assets/gem.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:1337px;--t:39px;--w:68.84px;--h:68.84px;">
-        <div class="sk-i shadow-r" style="--iw:55.43px;--ih:55.43px;--r:-16.43deg;"><img src="Assets/lucky_gem.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:434px;--t:320px;--w:68.84px;--h:68.84px;">
-        <div class="sk-i shadow-r" style="--iw:54.59px;--ih:54.59px;--r:-18.09deg;"><img src="Assets/pink_circle_gem.png" alt=""></div>
-      </div>
+    <div class="sk" style="--l:30px;--t:320px;--w:100.88px;--h:100.88px;">
+      <div class="sk-i shadow-l" style="--iw:93.04px;--ih:92.04px;--r:-11deg;"><img src="Assets/star_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:218px;--t:316px;--w:112.233px;--h:112.233px;">
+      <div class="sk-i shadow-l" style="--iw:95.951px;--ih:95.951px;--r:10.8deg;"><img src="Assets/gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1337px;--t:39px;--w:68.84px;--h:68.84px;">
+      <div class="sk-i shadow-r" style="--iw:55.43px;--ih:55.43px;--r:-16.43deg;"><img src="Assets/lucky_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:434px;--t:320px;--w:68.84px;--h:68.84px;">
+      <div class="sk-i shadow-r" style="--iw:54.59px;--ih:54.59px;--r:-18.09deg;"><img src="Assets/pink_circle_gem.png" alt=""></div>
+    </div>
 
-      <p class="footer-signoff" style="left:528px;top:461px;width:384px;">&#9825; designed + coded + collaged by me!</p>
-    </footer>
-
-  </div>
+    <p class="footer-signoff" style="left:528px;top:458px;width:384px;">&#9825; designed + coded + collaged by me!</p>
+  </footer>
+</div>
 </div>
 
 <script>
 (function () {
-  // Uniform desktop/laptop canvas scaling: keeps every collage element at
-  // its exact relative position/spacing regardless of monitor width, by
-  // scaling the whole fixed 1440x4215 canvas to match the viewport width.
-  // This is layout math, not a UI feature — the drag/hover/shuffle
-  // interactivity pass is separate. Below 768px this is skipped entirely;
-  // that range gets its own restack/thin-density mobile treatment later.
   var DESIGN_WIDTH = 1440;
-  var DESIGN_HEIGHT = 4215;
-  var MOBILE_BREAKPOINT = 768;
-  var wrap = document.querySelector('.canvas-wrap');
-
+  var COLLAGE_HEIGHT = 3720 - 1203.66;
+  var HERO_HEIGHT = 775;
+  var MAX_CONTENT_SCALE = 0.65;
+  var wrap = document.querySelector('.home-collage-wrap');
+  var navWrap = document.querySelector('.home-nav-wrap');
+  var contact = document.querySelector('.home-contact-band');
+  var heroWrap = document.querySelector('.home-hero-wrap');
+  var heroStage = document.querySelector('.home-hero-stage');
   function applyCanvasScale() {
-    var vw = window.innerWidth;
-    if (vw < MOBILE_BREAKPOINT) {
-      document.documentElement.style.removeProperty('--canvas-scale');
-      wrap.style.height = '';
-      wrap.style.overflow = '';
-      return;
-    }
-    var scale = vw / DESIGN_WIDTH;
-    document.documentElement.style.setProperty('--canvas-scale', scale);
-    wrap.style.height = Math.round(DESIGN_HEIGHT * scale) + 'px';
-    wrap.style.overflow = 'hidden';
+    var vw = document.documentElement.clientWidth;
+    var gutter = vw >= 768 ? 48 : 16;
+    var navHeight = 107 * vw / DESIGN_WIDTH;
+    // Restore the hero’s original viewport-wide scale independently of the projects.
+    var heroScale = vw / DESIGN_WIDTH;
+    document.documentElement.style.setProperty('--home-hero-scale', heroScale);
+    heroWrap.style.height = HERO_HEIGHT * heroScale + 'px';
+    heroStage.style.width = DESIGN_WIDTH * heroScale + 'px';
+    heroStage.style.height = HERO_HEIGHT * heroScale + 'px';
+    var scale = Math.min(MAX_CONTENT_SCALE, Math.max(0, vw - gutter * 2) / DESIGN_WIDTH);
+    document.documentElement.style.setProperty('--home-content-scale', scale);
+    document.documentElement.style.setProperty('--home-nav-scale', vw / DESIGN_WIDTH);
+    wrap.style.width = DESIGN_WIDTH * scale + 'px';
+    wrap.style.height = COLLAGE_HEIGHT * scale + 'px';
+    navWrap.style.height = navHeight + 'px';
+    contact.style.height = 523 * scale + 'px';
+    document.querySelector('.home-contact-anchor').style.width = DESIGN_WIDTH * scale + 'px';
   }
-
   applyCanvasScale();
   window.addEventListener('resize', applyCanvasScale);
 })();
 </script>
 
+<script>
+(function () {
+  var button = document.querySelector('.finergy-butterfly');
+  var flying = false;
+  button.addEventListener('click', async function () {
+    if (flying) return;
+    flying = true;
+    var sticker = button.querySelector('.sk-i');
+    var rect = sticker.getBoundingClientRect();
+    var flyer = sticker.querySelector('img').cloneNode(true);
+    flyer.alt = '';
+    flyer.setAttribute('aria-hidden', 'true');
+    // Use a viewport overlay so the footer’s clipping and page zoom do not trap it.
+    Object.assign(flyer.style, {
+      position: 'fixed', left: rect.left + 'px', top: rect.top + 'px',
+      width: rect.width + 'px', height: rect.height + 'px', objectFit: 'contain',
+      pointerEvents: 'none', zIndex: '1000', filter: 'drop-shadow(4px 0 3px #0008)'
+    });
+    document.documentElement.appendChild(flyer);
+    button.classList.add('is-flying');
+    try {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var rise = -(rect.top + rect.height + 40);
+      var frames = reduced ? [{ opacity: 1 }, { opacity: 0 }] : [
+        { transform: 'translate(0, 0) rotate(20deg)', opacity: 1 },
+        { transform: 'translate(35px, ' + rise * 0.25 + 'px) rotate(-8deg)', opacity: 1, offset: 0.25 },
+        { transform: 'translate(-25px, ' + rise * 0.55 + 'px) rotate(12deg)', opacity: 1, offset: 0.55 },
+        { transform: 'translate(20px, ' + rise + 'px) rotate(-5deg)', opacity: 0 }
+      ];
+      await flyer.animate(frames, { duration: reduced ? 160 : 1600, easing: 'ease-in-out', fill: 'forwards' }).finished;
+    } catch (error) {
+      // Restore the original even if an animation is interrupted or unavailable.
+    } finally {
+      flyer.remove();
+      button.classList.remove('is-flying');
+      flying = false;
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.home-hero-art .name-text').forEach(function (name) {
+    function ready() { name.classList.add('is-stuck'); }
+    name.addEventListener('animationend', function (event) {
+      if (event.target === name && event.animationName === 'about-name-stick') ready();
+    });
+    name.addEventListener('animationcancel', ready);
+    window.requestAnimationFrame(function () {
+      var entrance = name.getAnimations().find(function (animation) {
+        return animation.animationName === 'about-name-stick';
+      });
+      if (entrance) entrance.finished.then(ready, ready);
+      else ready();
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var cd = document.querySelector('[data-hero-cd]');
+  var spin = cd.querySelector('img').animate([{ rotate: '0deg' }, { rotate: '360deg' }], { duration: 2200, iterations: Infinity, easing: 'linear' });
+  spin.pause();
+  cd.addEventListener('pointerenter', function () { if (!reduced.matches) spin.play(); });
+  cd.addEventListener('pointerleave', function () { spin.pause(); });
+  reduced.addEventListener('change', function () { if (reduced.matches) spin.pause(); });
+  document.querySelectorAll('[data-hero-flight]').forEach(function (butterfly) {
+    var flying = false;
+    async function fly() {
+      if (flying || reduced.matches) return;
+      flying = true;
+      var image = butterfly.querySelector('img');
+      var rect = butterfly.getBoundingClientRect();
+      var flyer = image.cloneNode(true);
+      flyer.alt = '';
+      flyer.setAttribute('aria-hidden', 'true');
+      Object.assign(flyer.style, { position: 'fixed', left: rect.left + 'px', top: rect.top + 'px', width: rect.width + 'px', height: rect.height + 'px', objectFit: 'contain', pointerEvents: 'none', zIndex: '1000', filter: 'drop-shadow(0 3px 4px #0004)' });
+      document.documentElement.appendChild(flyer);
+      butterfly.classList.add('hero-is-flying');
+      var distance = butterfly.dataset.flightDirection === 'left'
+        ? -(rect.left + rect.width + 40)
+        : window.innerWidth - rect.left + rect.width + 40;
+      try {
+        await flyer.animate([
+          { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+          { transform: 'translate(' + distance * .3 + 'px, -45px) rotate(-12deg) scaleX(.7)', opacity: 1, offset: .3 },
+          { transform: 'translate(' + distance * .65 + 'px, -10px) rotate(9deg) scaleX(1)', opacity: 1, offset: .65 },
+          { transform: 'translate(' + distance + 'px, -65px) rotate(-5deg)', opacity: 0 }
+        ], { duration: 1800, easing: 'ease-in-out', fill: 'forwards' }).finished;
+      } catch (error) {
+        // Always restore the source if a flight is interrupted.
+      } finally {
+        flyer.remove(); butterfly.classList.remove('hero-is-flying'); flying = false;
+      }
+    }
+    butterfly.addEventListener('click', fly);
+    butterfly.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); fly(); }
+    });
+  });
+})();
+</script>
+<script src="portfolio-interactions.js"></script>
 </body>
 </html>

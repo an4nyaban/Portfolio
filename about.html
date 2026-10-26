@@ -8,21 +8,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tillana:wght@500&family=Zalando+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,500;1,600&family=Zalando+Sans+Expanded:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="preload" href="Assets/ab_pink_star.png" as="image">
+<link rel="icon" type="image/png" href="/Assets/ab_pink_star.png">
 </head>
-<body>
+<body class="about-page">
 
 <div class="canvas-wrap">
-  <div class="page" style="--page-h:6378;">
+  <div class="page" style="--page-h:5883;">
 
     <!-- ============ NAV ============ -->
-    <nav class="nav">
-      <div class="nav-logo"><img src="Assets/ab_star.png" alt="AB monogram logo"></div>
+    <nav class="nav portfolio-nav">
+      <a class="nav-logo" href="index.html" aria-label="Go to home page"><img src="Assets/ab_star.png" alt="AB monogram logo"></a>
       <ul class="nav-links">
         <li><a href="index.html">work</a></li>
         <li><a href="about.html" class="nav-current">about</a></li>
         <li><a href="coming-soon.html?project=Collage">collage</a></li>
         <li>
-          <a href="https://docs.google.com/document/d/1rjOiWTw3FA5mIrzkZx_TTW7is4Xb-dvMyha_8OCmCT4/edit?usp=sharing"
+          <a href="https://docs.google.com/document/d/1TirXVIre3TSZLm0B2PwHUFP9qbT0IzNKVS-qZgrSqyw/edit?usp=sharing"
              target="_blank"
              rel="noopener noreferrer">
             resume
@@ -31,89 +33,45 @@
       </ul>
     </nav>
 
-    <!-- ============ INTRO: name + description ============ -->
-    <div style="position:absolute;left:744px;top:241px;width:644px;display:flex;flex-direction:column;align-items:center;gap:105px;">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0px;">
-        <p class="about-name-label">hey i&rsquo;m</p>
-        <p class="about-name">Ananya</p>
-      </div>
-      <div style="position:relative;width:641px;height:502px;">
-        <img src="Assets/crinkled_paper.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-        <div class="desc-card" style="position:absolute;inset:0;width:100%;height:100%;">
-          <p>I&rsquo;m a <span class="med">UX designer</span> based in <span class="med">Atlanta, GA</span> with a passion for finding clarity within chaos and complexity.</p>
-          <p style="margin-left:20px;margin-right:20px;">I&rsquo;m currently an undergrad student at <span class="med">Georgia Tech</span> studying <span class="med">Computational Media</span> (Human-Computer Interaction and Interaction Design) and <span class="med">Industrial Design.</span></p>
-          <p style="margin-left:-33px;margin-right:-33px;">Much like making a collage, my approach to design starts with a collection of seemingly disconnected pieces&mdash;people, perspectives, problems, ideas&mdash;and asks: <span class="accent">what's the bigger picture?</span></p>
-        </div>
+    <!-- ============ About hero: Figma 150:840 ============ -->
+    <div class="about-hero-intro">
+      <div class="about-hero-heading"><p class="about-name-label">hey i’m</p><h1 class="about-name"><span class="about-name-peel"><span class="about-name-front">Ananya</span><span class="about-name-back" aria-hidden="true">Ananya</span></span></h1></div>
+      <div class="about-hero-note">
+        <div class="about-hero-paper"><img src="Assets/crinkled_paper.png" alt=""><div class="desc-card">
+          <p>I’m a <span class="med">UX designer</span> based in <span class="med">Atlanta, GA</span> with a passion for finding clarity within chaos and complexity.</p>
+          <p class="about-hero-study">I’m currently an undergrad student at <span class="med">Georgia Tech</span> studying <span class="med">Computational Media</span> (Human-Computer Interaction and Interaction Design) and <span class="med">Industrial Design.</span></p>
+          <p>Much like making a collage, my approach to design starts with a collection of seemingly disconnected pieces—people, perspectives, problems, ideas—and asks: <span class="accent">what's the bigger picture?</span></p>
+        </div></div>
+        <div class="sk" style="--l:270px;--t:0px;--w:86.013px;--h:101.806px;"><div class="sk-i about-hero-tiny-shadow" style="--iw:74.912px;--ih:93.138px;--r:-7.21deg;"><img src="Assets/green_clip.png" alt=""></div></div>
       </div>
     </div>
-
-    <!-- ============ INTRO: photo collage + decorative ephemera ============ -->
-    <div class="photo-frame" style="left:112.09px;top:290.54px;width:236.539px;height:236.539px;"><img src="Assets/about_img1.png" alt="Ananya at night"></div>
-    <div class="sk" style="--l:207.75px;--t:725px;--w:386.985px;--h:99.138px;"><img src="Assets/pianO_basic.jpg" alt=""></div>
-    <div class="photo-frame rounded" style="left:230.36px;top:487.95px;width:236.974px;height:236.974px;filter:drop-shadow(0px 1px 6px rgba(0,0,0,0.8));"><img src="Assets/about_img2.png" alt="Ananya photo" style="object-position:50% 30%;"></div>
-    <div class="photo-frame" style="left:80.35px;top:693.79px;width:236.539px;height:236.539px;"><img src="Assets/about_img3.png" alt="Ananya photo"></div>
-
-    <div class="sk shadow-sm" style="--l:355px;--t:309px;--w:123.487px;--h:123.487px;"><img src="Assets/about_match.png" alt=""></div>
-
-    <div class="sk" style="--l:460.64px;--t:375.42px;--w:169.403px;--h:169.403px;">
-      <div class="sk-i shadow-sm" style="--iw:123.487px;--ih:123.487px;--r:30.94deg;"><img src="Assets/about_brat.png" alt=""></div>
+    <div class="about-hero-collage">
+<div class="sk about-hero-small-shadow" data-collage-stage="large" style="--collage-delay:360ms;--collage-angle:-3deg;--l:352.6px;--t:242.4px;--w:115.858px;--h:115.858px;"><img src="Assets/about_match.png" alt=""></div>
+<div class="sk" data-collage-stage="large" style="--collage-delay:592ms;--collage-angle:3deg;--l:209.76px;--t:629.162px;--w:374.336px;--h:104.272px;"><img src="Assets/about_hero/piano.png" alt=""></div>
+<img class="about-hero-photo" src="Assets/about_hero/photo-1.png" alt="Ananya at night" data-collage-stage="photos" style="--collage-delay:0ms;--collage-angle:-3deg;left:120.01px;top:220.397px;width:233.185px;height:233.185px;">
+<div class="about-hero-photo about-hero-photo-two" data-collage-stage="photos" style="--collage-delay:0ms;--collage-angle:3deg;left:236.6px;top:410.29px;width:222.334px;height:222.334px;"><img src="Assets/about_hero/photo-2.png" alt="Ananya" style="position:absolute;width:168.11%;height:126.03%;left:-34.26%;top:-8.99%;"></div>
+<div class="sk" data-collage-stage="large" style="--collage-delay:824ms;--collage-angle:-3deg;--l:452.65px;--t:304.72px;--w:158.937px;--h:158.937px;"><div class="sk-i about-hero-small-shadow" style="--iw:115.858px;--ih:115.858px;--r:30.94deg;"><img src="Assets/about_brat.png" alt=""></div></div>
+<div class="sk" data-collage-stage="large" style="--collage-delay:1056ms;--collage-angle:3deg;--l:118.05px;--t:446.93px;--w:119.282px;--h:157.452px;"><div class="sk-i about-hero-small-shadow" style="--iw:119.282px;--ih:157.452px;--r:0deg;"><div class="crop"><img src="Assets/india_stamp_flower.jpg" alt="" style="width:103.2%;height:102.77%;left:-3.2%;top:-2.6%;"></div></div></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:1984ms;--collage-angle:-3deg;--l:436.1px;--t:458.19px;--w:91.925px;--h:90.246px;"><div class="sk-i about-hero-small-shadow" style="--iw:76.942px;--ih:74.692px;--r:-13.16deg;"><img src="Assets/hk_stra.png" alt=""></div></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:2216ms;--collage-angle:3deg;--l:340.4px;--t:350.3px;--w:141.549px;--h:88.547px;"><div class="sk-i about-hero-small-shadow" style="--iw:131.483px;--ih:63.375px;--r:-11.61deg;"><div class="crop"><img src="Assets/2006.png" alt="" style="width:100%;height:207.47%;left:0;top:-53.94%;"></div></div></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:2448ms;--collage-angle:-3deg;--l:423.44px;--t:568.58px;--w:69.979px;--h:40.129px;"><div class="sk-i about-hero-small-shadow" style="--iw:66.904px;--ih:33.452px;--r:5.88deg;"><img src="Assets/blue_mustache.jpg" alt=""></div></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:2680ms;--collage-angle:3deg;--l:197.44px;--t:385.82px;--w:107.946px;--h:53.051px;"><div class="sk-i" style="--iw:103.955px;--ih:29.358px;--r:-13.64deg;"><img src="Assets/bandage.png" alt=""></div></div>
+<div class="sk about-hero-small-shadow" data-collage-stage="large" style="--collage-delay:1288ms;--collage-angle:-3deg;--l:515.48px;--t:388.67px;--w:152.719px;--h:154.875px;"><img src="Assets/A_curvy.png" alt=""></div>
+<div class="sk about-hero-small-shadow" data-collage-stage="stickers" style="--collage-delay:2912ms;--collage-angle:-3deg;--l:520.54px;--t:517.18px;--w:97.243px;--h:102.645px;"><img src="Assets/pomegranate.png" alt=""></div>
+<div class="sk about-hero-small-shadow" data-collage-stage="stickers" style="--collage-delay:3144ms;--collage-angle:3deg;--l:118.3px;--t:190px;--w:48.003px;--h:119.458px;"><img src="Assets/star_clip.png" alt=""></div>
+<div class="sk about-hero-small-shadow" data-collage-stage="large" style="--collage-delay:1520ms;--collage-angle:3deg;--l:378.87px;--t:740.6px;--w:88.118px;--h:88.118px;"><img src="Assets/ilyny.jpg" alt=""></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:3376ms;--collage-angle:-3deg;--l:62.69px;--t:328.72px;--w:102.915px;--h:109.56px;"><div class="sk-i about-hero-small-shadow" style="--iw:79.291px;--ih:89.582px;--r:17.83deg;"><img src="Assets/music.png" alt=""></div></div>
+<div class="sk about-hero-small-shadow" data-collage-stage="stickers" style="--collage-delay:3608ms;--collage-angle:3deg;--l:483.01px;--t:689.33px;--w:74.125px;--h:74.37px;"><img src="Assets/orange.png" alt=""></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:3840ms;--collage-angle:-3deg;--l:318.19px;--t:696.68px;--w:60.977px;--h:60.946px;"><div class="sk-i flip about-hero-small-shadow" style="--iw:41.763px;--ih:44.453px;--r:134.54deg;"><img src="Assets/dark_pink_star.png" alt=""></div></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:4072ms;--collage-angle:3deg;--l:58px;--t:528.56px;--w:60.105px;--h:60.105px;"><div class="sk-i about-hero-small-shadow" style="--iw:45.136px;--ih:45.136px;--r:-25.32deg;"><img src="Assets/star_gem.png" alt=""></div></div>
+<div class="sk about-hero-small-shadow" data-collage-stage="stickers" style="--collage-delay:4304ms;--collage-angle:-3deg;--l:485.83px;--t:286.5px;--w:45.901px;--h:41.347px;"><img src="Assets/pink_gem.png" alt=""></div>
+<img class="about-hero-photo" src="Assets/about_hero/photo-3.png" alt="Ananya" data-collage-stage="photos" style="--collage-delay:0ms;--collage-angle:-3deg;left:90.23px;top:600.607px;width:233.185px;height:233.185px;">
+<div class="sk" data-collage-stage="large" style="--collage-delay:1752ms;--collage-angle:-3deg;--l:66.45px;--t:596.11px;--w:63.064px;--h:239.468px;"><div class="sk-i about-hero-small-shadow" style="--iw:58.813px;--ih:238.455px;--r:1.02deg;"><img src="Assets/pink_lace.png" alt=""></div></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:4536ms;--collage-angle:3deg;--l:245.17px;--t:756.24px;--w:93.13px;--h:95.031px;"><div class="sk-i about-hero-small-shadow" style="--iw:72.188px;--ih:75.302px;--r:19.43deg;"><div class="crop"><img src="Assets/mh_logo.png" alt="" style="width:126.9%;height:121.65%;left:-14.47%;top:-10.95%;"></div></div></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:4768ms;--collage-angle:-3deg;--l:244.72px;--t:588.6px;--w:97.399px;--h:49.38px;"><div class="sk-i" style="--iw:94.349px;--ih:41.985px;--r:4.58deg;"><img src="Assets/white_black_polka_tape.png" alt=""></div></div>
+<div class="sk" data-collage-stage="stickers" style="--collage-delay:5000ms;--collage-angle:3deg;--l:71.13px;--t:476.02px;--w:34.096px;--h:32.896px;"><div class="sk-i about-hero-small-shadow" style="--iw:33.714px;--ih:32.5px;--r:-0.68deg;"><div class="crop"><img src="Assets/green_heart.png" alt="" style="width:200%;height:207.47%;left:-48.8%;top:-51.87%;"></div></div></div>
     </div>
 
-    <div class="sk shadow-sm" style="--l:100px;--t:515px;--w:142px;--h:183px;"><img src="Assets/india_stamp_flower.jpg" alt=""></div>
-
-    <div class="sk" style="--l:443px;--t:539px;--w:97.978px;--h:96.189px;">
-      <div class="sk-i shadow-sm" style="--iw:82.009px;--ih:79.61px;--r:-13.16deg;"><img src="Assets/hk_stra.png" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:341px;--t:424px;--w:150.87px;--h:94.377px;">
-      <div class="sk-i shadow-sm" style="--iw:140.141px;--ih:67.548px;--r:-11.61deg;"><img src="Assets/2006.png" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:429.51px;--t:660.66px;--w:70.587px;--h:47.771px;">
-      <div class="sk-i shadow-sm" style="--iw:81.31px;--ih:45.655px;--r:5.88deg;"><img src="Assets/blue_mustache.jpg" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:188.62px;--t:461.86px;--w:115.054px;--h:56.544px;">
-      <div class="sk-i" style="--iw:110.8px;--ih:31.291px;--r:-13.64deg;"><img src="Assets/bandage.png" alt=""></div>
-    </div>
-
-    <div class="sk shadow-sm" style="--l:527.6px;--t:464.9px;--w:162.775px;--h:165.073px;"><img src="Assets/A_curvy.png" alt=""></div>
-
-    <div class="sk shadow-sm" style="--l:532.99px;--t:601.87px;--w:103.646px;--h:109.404px;"><img src="Assets/pomegranate.png" alt=""></div>
-
-    <div class="sk shadow-sm" style="--l:115.27px;--t:255.15px;--w:51.164px;--h:127.324px;"><img src="Assets/star_clip.png" alt=""></div>
-
-    <div class="sk shadow-sm" style="--l:382px;--t:810px;--w:93.92px;--h:93.92px;"><img src="Assets/ilyny.jpg" alt=""></div>
-
-    <div class="sk" style="--l:45px;--t:401px;--w:135.691px;--h:116.774px;">
-      <div class="sk-i shadow-sm" style="--iw:84.512px;--ih:95.481px;--r:17.83deg;"><img src="Assets/music.png" alt=""></div>
-    </div>
-
-    <div class="sk shadow-sm" style="--l:492.99px;--t:785.36px;--w:79.005px;--h:79.267px;"><img src="Assets/orange.png" alt=""></div>
-
-    <div class="sk" style="--l:317.32px;--t:793.19px;--w:64.992px;--h:64.959px;">
-      <div class="sk-i flip shadow-sm" style="--iw:44.513px;--ih:47.38px;--r:134.54deg;"><img src="Assets/dark_pink_star.png" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:40px;--t:614.577px;--w:54.063px;--h:64.063px;">
-      <div class="sk-i shadow-sm" style="--iw:58.109px;--ih:58.109px;--r:-25.32deg;"><img src="Assets/star_gem.png" alt=""></div>
-    </div>
-
-    <div class="sk shadow-card" style="--l:480px;--t:320px;--w:104px;--h:104px;"><img src="Assets/pink_gem.png" alt=""></div>
-
-    <div class="sk shadow-sm" style="--l:49px;--t:686px;--w:67.216px;--h:255.236px;"><img src="Assets/pink_lace.png" alt=""></div>
-
-    <div class="sk" style="--l:239.49px;--t:856.67px;--w:99.263px;--h:101.289px;">
-      <div class="sk-i shadow-sm" style="--iw:76.941px;--ih:80.261px;--r:19.43deg;"><img src="Assets/mh_logo.png" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:239px;--t:678px;--w:103.272px;--h:52.836px;">
-      <div class="sk-i" style="--iw:100px;--ih:45px;--r:4.58deg;"><img src="Assets/white_black_polka_tape.png" alt=""></div>
-    </div>
-
-    <div class="sk" style="--l:54px;--t:558.424px;--w:30px;--h:35.062px;">
-      <div class="sk-i shadow-sm" style="--iw:84.934px;--ih:64.64px;--r:-0.68deg;"><img src="Assets/green_heart.png" alt=""></div>
-    </div>
 
     <!-- ============ decorative vines (metro_24) + piano ============ -->
     <div class="sk" style="--l:851px;--t:1255px;--w:304px;--h:826px;">
@@ -239,164 +197,325 @@
     <div class="sk" style="--l:51.03px;--t:2339.57px;--w:189.188px;--h:105.891px;">
       <div class="sk-i" style="--iw:179.475px;--ih:61px;--r:-15.19deg;"><img src="Assets/ginghamtape.png" alt=""></div>
     </div>
-    <div class="sk" style="--l:1022.01px;--t:363.33px;--w:86.013px;--h:180.806px;">
-      <div class="sk-i" style="--iw:74.912px;--ih:93.138px;--r:-7.21deg;"><img src="Assets/green_clip.png" alt=""></div>
-    </div>
 
-    <!-- ============ FAVORITE ALBUMS ============ -->
-    <p class="label-italic" style="left:64px;top:4077px;">some of my favorite albums:</p>
 
-    <div class="sk shadow-card" style="--l:78px;--t:4218px;--w:171px;--h:170px;"><img src="Assets/era_extrana.png" alt=""></div>
-    <div class="sk shadow-card" style="--l:308px;--t:4191px;--w:205px;--h:205px;"><img src="Assets/eyelid_movies.jpg" alt=""></div>
-    <div class="sk shadow-card" style="--l:549px;--t:4222px;--w:209px;--h:209px;"><img src="Assets/innerspeaker.webp" alt=""></div>
-    <div class="sk shadow-card" style="--l:78px;--t:4426px;--w:195px;--h:195px;"><img src="Assets/sweet_trip.png" alt=""></div>
-    <div class="sk shadow-card" style="--l:335px;--t:4457px;--w:190px;--h:189px;"><img src="Assets/discovery.jpg" alt=""></div>
-    <div class="sk shadow-card" style="--l:574px;--t:4473px;--w:205px;--h:204px;"><img src="Assets/mgna_crrrta.webp" alt=""></div>
-
-    <div class="sk" style="--l:715px;--t:4064px;--w:97.631px;--h:95.954px;">
-      <div class="sk-i shadow-r" style="--iw:86px;--ih:84px;--r:-8.63deg;"><img src="Assets/music_double.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:854px;--t:4167px;--w:144.688px;--h:147.147px;">
-      <div class="sk-i shadow-r" style="--iw:108.818px;--ih:113.491px;--r:23.16deg;"><img src="Assets/headphones.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:1010px;--t:4040px;--w:156.593px;--h:113.147px;">
-      <div class="sk-i shadow-r" style="--iw:142.658px;--ih:88.054px;--r:-10.76deg;"><img src="Assets/ipod.jpg" alt=""></div>
-    </div>
-    <div class="sk" style="--l:852px;--t:4337px;--w:296.06px;--h:429.051px;">
-      <div class="sk-i shadow-r" style="--iw:245px;--ih:400px;--r:7.65deg;"><img src="Assets/wired_head.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:1116px;--t:4220.99px;--w:83.77px;--h:126.673px;">
-      <div class="sk-i shadow-l" style="--iw:59.485px;--ih:116.394px;--r:-12.79deg;"><img src="Assets/treble.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:1159.97px;--t:4474.88px;--w:153.87px;--h:168.796px;">
-      <div class="sk-i shadow-r" style="--iw:130.377px;--ih:148.704px;--r:9.84deg;"><img src="Assets/cat_headphones.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:1237px;--t:4337px;--w:92.208px;--h:109.873px;">
-      <div class="sk-i shadow-r" style="--iw:66.7px;--ih:94px;--r:17.77deg;"><img src="Assets/eighth_note.png" alt=""></div>
-    </div>
-
-    <!-- ============ FASHION & MODELING ============ -->
-    <p class="label-italic" style="left:64px;top:4897px;">fashion &amp; modeling:</p>
-
-    <div class="photo-frame" style="left:380px;top:5184px;width:270px;height:379px;transform:rotate(7.19deg);"><img src="fotos of meee/IMG_8413.jpg" alt=""></div>
-    <div class="photo-frame" style="left:1070px;top:5193px;width:308.37px;height:381.935px;transform:rotate(9.23deg);"><img src="Assets/converted/IMG_4389.jpg" alt=""></div>
-    <div class="photo-frame" style="left:55px;top:5204px;width:255px;height:383px;transform:rotate(-6.9deg);"><img src="fotos of meee/IMG_8799.JPG" alt=""></div>
-    <div class="photo-frame" style="left:727px;top:5405px;width:283.727px;height:221.763px;transform:rotate(-5.58deg);"><img src="fotos of meee/102_2650.JPG" alt=""></div>
-    <div class="photo-frame" style="left:731px;top:5133px;width:288.268px;height:228.287px;transform:rotate(7.07deg);"><img src="fotos of meee/100_1731.jpg" alt=""></div>
-
-    <div class="sk" style="--l:170px;--t:5189px;--w:60.719px;--h:54.889px;">
-      <div class="sk-i" style="--iw:49.992px;--ih:35.062px;--r:151.03deg;"><img src="Assets/gold_pin.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:651px;--t:5144px;--w:35px;--h:72px;"><img src="Assets/half_paperclip.png" alt="" style="object-fit:contain;"></div>
-    <div class="sk" style="--l:894px;--t:5093px;--w:131.168px;--h:131.168px;">
-      <div class="sk-i" style="--iw:93.39px;--ih:93.39px;--r:38.29deg;"><img src="Assets/blue_gingham.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:820px;--t:5393px;--w:90.183px;--h:52.843px;">
-      <div class="sk-i" style="--iw:84.625px;--ih:37.633px;--r:-10.82deg;"><img src="Assets/pink_polka.png" alt="" style="object-fit:contain;"></div>
-    </div>
-    <div class="sk" style="--l:1200px;--t:5139px;--w:107.989px;--h:107.989px;">
-      <div class="sk-i" style="--iw:94.112px;--ih:94.112px;--r:9.23deg;"><img src="Assets/light_pink_clip.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:579px;--t:4980px;--w:145.729px;--h:93.615px;">
-      <div class="sk-i shadow-l" style="--iw:135px;--ih:95px;--r:-11.06deg;"><img src="Assets/fashion.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:78px;--t:5040px;--w:155.595px;--h:110.846px;">
-      <div class="sk-i shadow-l" style="--iw:147.32px;--ih:52.552px;--r:-25.5deg;"><img src="Assets/sunglasses.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:131px;--t:5663px;--w:113.61px;--h:94.827px;">
-      <div class="sk-i shadow-r" style="--iw:98.554px;--ih:72.292px;--r:14.62deg;"><img src="Assets/vw.png" alt=""></div>
-    </div>
-    <div class="sk shadow-r" style="--l:280px;--t:5030px;--w:115px;--h:115px;"><img src="Assets/fash_weird.png" alt=""></div>
-    <div class="sk" style="--l:1122px;--t:5612px;--w:131.696px;--h:118.523px;">
-      <div class="sk-i shadow-r" style="--iw:111px;--ih:92px;--r:-15.64deg;"><img src="Assets/dior.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:824px;--t:4932px;--w:134.471px;--h:133.233px;">
-      <div class="sk-i shadow-r" style="--iw:99px;--ih:95px;--r:-32.36deg;"><img src="Assets/zebra_star.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:1107px;--t:5019px;--w:93.267px;--h:91.315px;">
-      <div class="sk-i shadow-r" style="--iw:75px;--ih:72px;--r:17.61deg;"><img src="Assets/pink_gem.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:383px;--t:5601px;--w:102.105px;--h:84.472px;">
-      <div class="sk-i shadow-l" style="--iw:90px;--ih:67px;--r:12.17deg;"><img src="Assets/lips.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:606px;--t:5635px;--w:96.076px;--h:96.076px;">
-      <div class="sk-i shadow-r" style="--iw:78.011px;--ih:78.011px;--r:-15.56deg;"><img src="Assets/peace_zebra.png" alt=""></div>
-    </div>
-    <div class="sk" style="--l:894px;--t:5665px;--w:116.912px;--h:115.592px;">
-      <div class="sk-i" style="--iw:88px;--ih:77px;--r:-40.13deg;"><img src="Assets/pink_butterfly.png" alt=""></div>
-    </div>
-
-    <!-- ============ FOOTER / CONTACT (identical to home page) ============ -->
-    <footer class="site-footer">
-      <p class="footer-title">contact me!</p>
-
-      <div class="sk" style="--l:769.58px;--t:70.39px;--w:269.65px;--h:145.45px;">
-        <div class="sk-i flip" style="--iw:126.8px;--ih:261.13px;--r:-85.83deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    <!-- ============ FAVORITE ALBUMS (Figma 150:840) ============ -->
+    <!-- ALBUMS -->
+<div class="about-detail-piece detail-reveal" data-detail="albums" data-album-cover style="position:absolute;height:170px;left:78px;filter:drop-shadow(0px 1px 6px rgba(0,0,0,0.8));top:4218px;width:171px" data-node-id="171:1345" data-name="era_extrana 1">
+        <a class="album-spotify-link" href="https://open.spotify.com/album/56Lg5XPUaUSgPjaOy99ZYX" target="_blank" rel="noopener noreferrer" aria-label="Listen to Era Extraña — Neon Indian on Spotify"><img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/EraExtrana1.png" /></a>
       </div>
-      <div class="sk" style="--l:834.6px;--t:113.61px;--w:169.57px;--h:59px;">
-        <div class="sk-i contact-link" style="--iw:166.18px;--ih:43.24px;--r:5.51deg;">
-          <div class="crop" style="width:55.51px;height:39.72px;flex-shrink:0;"><img src="Assets/email_icon.png" alt="" style="left:-23.28%;top:-50.2%;width:143.68%;height:200.8%;"></div>
-          <span>Email</span>
+<div class="about-detail-piece detail-reveal" data-detail="albums" data-album-cover style="position:absolute;left:308px;filter:drop-shadow(0px 1px 6px rgba(0,0,0,0.8));width:205px;height:205px;top:4191px" data-node-id="171:1346" data-name="eyelid_movies 1">
+        <a class="album-spotify-link" href="https://open.spotify.com/album/0PyB13CCXHczFLrOIk43oD" target="_blank" rel="noopener noreferrer" aria-label="Listen to Eyelid Movies — Phantogram on Spotify"><img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/EyelidMovies1.png" /></a>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" data-album-cover style="position:absolute;left:549px;filter:drop-shadow(0px 1px 6px rgba(0,0,0,0.8));width:209px;height:209px;top:4222px" data-node-id="171:1347" data-name="innerspeaker 1">
+        <a class="album-spotify-link" href="https://open.spotify.com/album/1DNSmmRLfv97Yjq7MTFWng" target="_blank" rel="noopener noreferrer" aria-label="Listen to InnerSpeaker — Tame Impala on Spotify"><img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Innerspeaker1.png" /></a>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" data-album-cover style="position:absolute;left:78px;filter:drop-shadow(0px 1px 6px rgba(0,0,0,0.8));width:195px;height:195px;top:4426px" data-node-id="171:1348" data-name="sweet_trip 1">
+        <a class="album-spotify-link" href="https://open.spotify.com/album/0eUUQ4rly8Q8PyJPWLgde2" target="_blank" rel="noopener noreferrer" aria-label="Listen to Velocity: Design: Comfort. — Sweet Trip on Spotify"><img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/SweetTrip1.png" /></a>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" data-album-cover style="position:absolute;height:189px;left:335px;filter:drop-shadow(0px 1px 6px rgba(0,0,0,0.8));top:4457px;width:190px" data-node-id="171:1349" data-name="discovery 1">
+        <a class="album-spotify-link" href="https://open.spotify.com/album/2noRn2Aes5aoNVsU6iWThc" target="_blank" rel="noopener noreferrer" aria-label="Listen to Discovery — Daft Punk on Spotify"><img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Discovery1.png" /></a>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" data-album-cover style="position:absolute;height:204px;left:574px;filter:drop-shadow(0px 1px 6px rgba(0,0,0,0.8));top:4473px;width:205px" data-node-id="171:1350" data-name="mgna_crrrta 1">
+        <a class="album-spotify-link" href="https://open.spotify.com/album/2QzilKeFlINfqFZZWzgv0J" target="_blank" rel="noopener noreferrer" aria-label="Listen to Beautiful Disaster — MGNA Crrrta on Spotify"><img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/MgnaCrrrta1.png" /></a>
+      </div>
+<h2 class="about-detail-heading detail-reveal" data-node-id="171:1351" style="left:64px;top:4077px;width:541px">some of my favorite albums:</h2>
+<div class="about-detail-piece detail-reveal" data-detail="albums" style="position:absolute;display:flex;height:95.954px;align-items:center;justify-content:center;left:715px;top:4064px;width:97.631px" data-node-id="171:1353">
+        <div style="flex:none;transform:rotate(-8.63deg)">
+          <div style="height:84px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:86px" data-name="music_double 2">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/MusicDouble2.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" style="position:absolute;display:flex;height:147.147px;align-items:center;justify-content:center;left:854px;top:4167px;width:144.688px" data-node-id="171:1355">
+        <div style="flex:none;transform:rotate(23.16deg)">
+          <div style="height:113.491px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:108.818px" data-name="headphones 1">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Headphones1.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" style="position:absolute;display:flex;height:113.147px;align-items:center;justify-content:center;left:1010px;top:4040px;width:156.593px" data-node-id="171:1356">
+        <div style="flex:none;transform:rotate(-10.76deg)">
+          <div style="height:88.054px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:142.658px" data-name="ipod 1">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Ipod1.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" style="position:absolute;display:flex;height:429.051px;align-items:center;justify-content:center;left:852px;top:4337px;width:296.06px" data-node-id="171:1357">
+        <div style="flex:none;transform:rotate(7.65deg)">
+          <div style="height:400px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:245px" data-name="wired_head 1">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/WiredHead1.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" style="position:absolute;display:flex;height:126.673px;align-items:center;justify-content:center;left:1116px;top:4220.99px;width:83.77px" data-node-id="171:1358">
+        <div style="flex:none;transform:rotate(-12.79deg)">
+          <div style="height:116.394px;position:relative;filter:drop-shadow(-4px 0px 3px rgba(0,0,0,0.67));width:59.485px" data-name="treble 1">
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+              <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;height:110.62%;left:-54.11%;max-width:none;top:-5.31%;width:216.45%" src="Assets/about_details/Treble1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" style="position:absolute;display:flex;height:168.796px;align-items:center;justify-content:center;left:1159.97px;top:4474.88px;width:153.87px" data-node-id="171:1364">
+        <div style="flex:none;transform:rotate(9.84deg)">
+          <div style="height:148.704px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:130.377px" data-name="cat_headphones 1">
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+              <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;height:136.69%;left:-32.27%;max-width:none;top:-18.49%;width:163.26%" src="Assets/about_details/CatHeadphones1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="albums" style="position:absolute;display:flex;height:109.873px;align-items:center;justify-content:center;left:1237px;top:4337px;width:92.208px" data-node-id="171:1378">
+        <div style="flex:none;transform:rotate(17.77deg)">
+          <div style="height:94px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:66.7px" data-name="eighth_note 1">
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+              <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;height:100%;left:-25.68%;max-width:none;width:140.93%" src="Assets/about_details/EighthNote1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- FASHION -->
+<h2 class="about-detail-heading detail-reveal" data-node-id="171:1379" style="left:64px;top:4897px;width:416px">fashion &amp; modeling:</h2>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" data-fashion-photo style="position:absolute;left:394px;top:5134px;width:315.321px;height:409.818px">
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;height:409.818px;align-items:center;justify-content:center;left:0px;top:0px;width:315.321px" data-node-id="171:1383">
+        <div style="flex:none;transform:rotate(7.19deg)">
+          <div style="height:379px;position:relative;filter:drop-shadow(1px 2px 3px rgba(0,0,0,0.5));width:270px" data-name="IMG_8413 1">
+            <img class="about-detail-image" alt="Fashion and modeling photograph" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Img84131.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;height:72px;left:257px;top:10px;width:35px" data-node-id="171:1392" data-name="half_paperclip 2">
+        <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+          <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;height:140.85%;left:-95.91%;max-width:none;top:-26.2%;width:292.4%" src="Assets/about_details/HalfPaperclip2.png" />
+        </div>
+      </div>
+</div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" data-fashion-photo style="position:absolute;left:1059px;top:5139px;width:318.37px;height:445.935px">
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;height:391.935px;align-items:center;justify-content:center;left:0px;top:54px;width:318.37px" data-node-id="171:1384">
+        <div style="flex:none;transform:rotate(9.23deg)">
+          <div style="height:354px;position:relative;filter:drop-shadow(1px 2px 3px rgba(0,0,0,0.5));width:265px" data-name="IMG_4389 1">
+            <img class="about-detail-image" alt="Fashion and modeling photograph" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Img43891.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;align-items:center;justify-content:center;left:141px;width:107.989px;height:107.989px;top:0px" data-node-id="171:1395">
+        <div style="flex:none;transform:rotate(9.23deg)">
+          <div style="position:relative;width:94.112px;height:94.112px" data-name="light_pink_clip 1">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/LightPinkClip1.png" />
+          </div>
+        </div>
+      </div>
+</div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" data-fashion-photo style="position:absolute;left:64px;top:5189px;width:299.17px;height:425.864px">
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;height:410.864px;align-items:center;justify-content:center;left:0px;top:15px;width:299.17px" data-node-id="171:1385">
+        <div style="flex:none;transform:rotate(-6.9deg)">
+          <div style="height:383px;position:relative;filter:drop-shadow(1px 2px 3px rgba(0,0,0,0.5));width:255px" data-name="IMG_8799 1">
+            <img class="about-detail-image" alt="Fashion and modeling photograph" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Img87991.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;height:54.889px;align-items:center;justify-content:center;left:106px;top:0px;width:60.719px" data-node-id="171:1391">
+        <div style="flex:none;transform:rotate(151.03deg)">
+          <div style="height:35.062px;position:relative;width:49.992px" data-name="gold_pin 2">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/GoldPin2.png" />
+          </div>
+        </div>
+      </div>
+</div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" data-fashion-photo style="position:absolute;left:727px;top:5393px;width:293.727px;height:243.763px">
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;height:231.763px;align-items:center;justify-content:center;left:0px;top:12px;width:293.727px" data-node-id="171:1386">
+        <div style="flex:none;transform:rotate(-5.58deg)">
+          <div style="height:206px;position:relative;filter:drop-shadow(1px 2px 3px rgba(0,0,0,0.5));width:275px" data-name="102_2650 1">
+            <img class="about-detail-image" alt="Fashion and modeling photograph" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/10226501.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;height:52.843px;align-items:center;justify-content:center;left:93px;top:0px;width:90.183px" data-node-id="171:1394">
+        <div style="flex:none;transform:rotate(-10.82deg)">
+          <div style="height:37.633px;position:relative;width:84.625px" data-name="pink_polka 1">
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+              <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;height:259.07%;left:-7.14%;max-width:none;top:-82.38%;width:115.21%" src="Assets/about_details/PinkPolka1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" data-fashion-photo style="position:absolute;left:731px;top:5093px;width:298.268px;height:278.287px">
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;height:238.287px;align-items:center;justify-content:center;left:0px;top:40px;width:298.268px" data-node-id="171:1389">
+        <div style="flex:none;transform:rotate(7.07deg)">
+          <div style="height:206px;position:relative;filter:drop-shadow(1px 2px 3px rgba(0,0,0,0.5));width:275px" data-name="100_1731 1">
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+              <img class="about-detail-image" alt="Fashion and modeling photograph" loading="lazy" decoding="async" style="position:absolute;height:203.88%;left:-10.18%;max-width:none;top:-29.73%;width:114.55%" src="Assets/about_details/10017311.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="about-fashion-layer" data-detail="fashion" style="position:absolute;display:flex;align-items:center;justify-content:center;left:163px;width:131.168px;height:131.168px;top:0px" data-node-id="171:1393">
+        <div style="flex:none;transform:rotate(38.29deg)">
+          <div style="position:relative;width:93.39px;height:93.39px" data-name="blue_gingham 1">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/BlueGingham1.png" />
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;height:93.615px;align-items:center;justify-content:center;left:579px;top:4998px;width:145.729px" data-node-id="171:1398">
+        <div style="flex:none;transform:rotate(-11.06deg)">
+          <div style="height:69px;position:relative;filter:drop-shadow(-4px 0px 3px rgba(0,0,0,0.67));width:135px" data-name="fashion 1">
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+              <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;height:146.94%;max-width:none;top:-46.94%;width:100%" src="Assets/about_details/Fashion1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;height:110.846px;align-items:center;justify-content:center;left:78px;top:5040px;width:155.595px" data-node-id="174:1401">
+        <div style="flex:none;transform:rotate(-25.5deg)">
+          <div style="height:52.552px;position:relative;filter:drop-shadow(-4px 0px 3px rgba(0,0,0,0.67));width:147.32px" data-name="sunglasses 1">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Sunglasses1.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;height:94.827px;align-items:center;justify-content:center;left:131px;top:5663px;width:113.61px" data-node-id="174:1402">
+        <div style="flex:none;transform:rotate(14.62deg)">
+          <div style="height:72.292px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:98.554px" data-name="vw 1">
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+              <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;height:157.42%;left:-7.74%;max-width:none;top:-30.08%;width:115.47%" src="Assets/about_details/Vw1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;left:295px;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:115px;height:115px;top:5045px" data-node-id="174:1403" data-name="fash_weird 1">
+        <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/FashWeird1.png" />
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;height:118.523px;align-items:center;justify-content:center;left:1122px;top:5612px;width:131.696px" data-node-id="174:1404">
+        <div style="flex:none;transform:rotate(-15.64deg)">
+          <div style="height:92px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:111px" data-name="dior 1">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Dior1.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;height:133.233px;align-items:center;justify-content:center;left:824px;top:4932px;width:134.471px" data-node-id="175:1406">
+        <div style="flex:none;transform:rotate(-32.36deg)">
+          <div style="height:95px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:99px" data-name="zebra_star 1">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/ZebraStar1.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;height:91.315px;align-items:center;justify-content:center;left:1107px;top:5019px;width:93.267px" data-node-id="175:1407">
+        <div style="flex:none;transform:rotate(17.61deg)">
+          <div style="height:72px;position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:75px" data-name="pink_gem 5">
+            <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+              <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;height:210.97%;left:-50.2%;max-width:none;top:-53.16%;width:202.43%" src="Assets/about_details/PinkGem5.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;height:84.472px;align-items:center;justify-content:center;left:383px;top:5601px;width:102.105px" data-node-id="175:1408">
+        <div style="flex:none;transform:rotate(12.17deg)">
+          <div style="height:67px;position:relative;filter:drop-shadow(-4px 0px 3px rgba(0,0,0,0.67));width:90px" data-name="lips 3">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/Lips2.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;align-items:center;justify-content:center;left:606px;width:96.076px;height:96.076px;top:5635px" data-node-id="175:1409">
+        <div style="flex:none;transform:rotate(-15.56deg)">
+          <div style="position:relative;filter:drop-shadow(4px 0px 3px rgba(0,0,0,0.67));width:78.011px;height:78.011px" data-name="peace_zebra 2">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/PeaceZebra2.png" />
+          </div>
+        </div>
+      </div>
+<div class="about-detail-piece detail-reveal" data-detail="fashion" style="position:absolute;display:flex;height:115.592px;align-items:center;justify-content:center;left:894px;top:5665px;width:116.912px" data-node-id="175:1410">
+        <div style="flex:none;transform:rotate(-40.13deg)">
+          <div style="height:77px;position:relative;width:88px" data-name="pink_butterfly 3">
+            <img class="about-detail-image" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%" src="Assets/about_details/PinkButterfly3.png" />
+          </div>
         </div>
       </div>
 
-      <div class="sk" style="--l:600.63px;--t:266.2px;--w:302.67px;--h:156.97px;">
-        <div class="sk-i flip" style="--iw:133.09px;--ih:292.62px;--r:94.77deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:638.17px;--t:307.8px;--w:227.6px;--h:73.77px;">
-        <a href="https://www.linkedin.com/in/ananyaba/"
+
+
+  </div>
+</div>
+
+<div class="home-contact-band">
+<div class="home-contact-anchor">
+  <footer class="site-footer">
+    <p class="footer-title"><span class="about-name-peel"><span class="about-name-front">contact me!</span><span class="about-name-back" aria-hidden="true">contact me!</span></span></p>
+
+    <div class="sk" style="--l:799px;--t:64px;--w:315.384px;--h:170.124px;">
+      <div class="sk-i flip" style="--iw:148.305px;--ih:305.407px;--r:-85.83deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:864.6px;--t:113.61px;--w:169.57px;--h:59px;">
+      <a href="mailto:ananyaban06@gmail.com" class="sk-i contact-link" style="--iw:166.18px;--ih:43.24px;--r:5.51deg;">
+        <div class="crop" style="width:55.51px;height:39.72px;flex-shrink:0;"><img src="Assets/email_icon.png" alt="" style="left:-23.28%;top:-50.2%;width:143.68%;height:200.8%;"></div>
+        <span>Email</span>
+      </a>
+    </div>
+
+    <div class="sk" style="--l:590px;--t:224px;--w:354px;--h:183.588px;">
+      <div class="sk-i flip" style="--iw:155.66px;--ih:342.238px;--r:94.77deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:638.17px;--t:282.8px;--w:227.6px;--h:73.77px;">
+      <a href="https://www.linkedin.com/in/ananyaba/"
            target="_blank"
            rel="noopener noreferrer"
            style="text-decoration:none; color:inherit;">
-        <div class="sk-i contact-link" style="--iw:223.62px;--ih:45.39px;--r:7.39deg;">
-          <img src="Assets/linkedin_icon.png" alt="" class="contact-icon contain" style="width:45px;height:45px;">
-          <span>LinkedIn</span>
-        </div>
+      <div class="sk-i contact-link" style="--iw:223.62px;--ih:45.39px;--r:7.39deg;">
+        <img src="Assets/linkedin_icon.png" alt="" class="contact-icon contain" style="width:45px;height:45px;">
+        <span>LinkedIn</span>
       </div>
+      </a>
+    </div>
 
-      <div class="sk" style="--l:1057.45px;--t:224.78px;--w:300.77px;--h:171.45px;">
-        <div class="sk-i" style="--iw:132.44px;--ih:284.89px;--r:81.86deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:1088.65px;--t:268.81px;--w:238.37px;--h:83.39px;">
-        <div class="sk-i contact-link" style="--iw:234.14px;--ih:45.03px;--r:-9.59deg;">
-          <div class="crop" style="width:48px;height:41px;flex-shrink:0;"><img src="Assets/folder_pink.png" alt="" style="left:-14.66%;top:-25%;width:129.31%;height:150%;"></div>
-          <span>Resume</span>
-        </div>
-      </div>
+    <div class="sk" style="--l:1024px;--t:207px;--w:351.782px;--h:200.53px;">
+      <div class="sk-i" style="--iw:154.894px;--ih:333.201px;--r:81.86deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1088.65px;--t:268.81px;--w:238.37px;--h:83.39px;">
+      <a href="https://docs.google.com/document/d/1TirXVIre3TSZLm0B2PwHUFP9qbT0IzNKVS-qZgrSqyw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="sk-i contact-link" style="--iw:234.14px;--ih:45.03px;--r:-9.59deg;">
+        <div class="crop" style="width:48px;height:41px;flex-shrink:0;"><img src="Assets/folder_pink.png" alt="" style="left:-14.66%;top:-25%;width:129.31%;height:150%;"></div>
+        <span>Resume</span>
+      </a>
+    </div>
 
-      <div class="sk" style="--l:579px;--t:89px;--w:92.19px;--h:104.3px;">
-        <div class="sk-i shadow-r" style="--iw:76.36px;--ih:91.6px;--r:10.82deg;"><img src="Assets/butterfly_gem.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:1200px;--t:132.05px;--w:67.22px;--h:67.22px;">
-        <div class="sk-i shadow-l" style="--iw:54.29px;--ih:54.29px;--r:-16.1deg;"><img src="Assets/heart_gem.png" alt=""></div>
-      </div>
+    <button type="button" class="sk finergy-butterfly" aria-label="Let the butterfly fly" style="--l:579px;--t:89px;--w:92.19px;--h:104.3px;">
+      <span class="sk-i shadow-r" style="--iw:76.36px;--ih:91.6px;--r:10.82deg;"><img src="Assets/butterfly_gem.png" alt=""></span>
+    </button>
+    <div class="sk" style="--l:1200px;--t:132.05px;--w:67.22px;--h:67.22px;">
+      <div class="sk-i shadow-l" style="--iw:54.29px;--ih:54.29px;--r:-16.1deg;"><img src="Assets/heart_gem.png" alt=""></div>
+    </div>
 
-      <div class="sk" style="--l:5.2px;--t:181.07px;--w:463.2px;--h:109.86px;filter:drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.6));"><img src="Assets/blue_tape.png" alt="" style="object-fit:fill;"></div>
-      <p class="footer-tape-text" style="left:80.07px;top:213.59px;width:313.46px;">would love to talk!</p>
+    <div class="finergy-contact-tape">
+      <img src="Assets/blue_tape.png" alt="">
+      <p class="footer-tape-text">would love to talk!</p>
+    </div>
 
-      <div class="sk" style="--l:30px;--t:320px;--w:100.88px;--h:100.88px;">
-        <div class="sk-i" style="--iw:93.04px;--ih:92.04px;--r:-11deg;"><img src="Assets/star_gem.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:218px;--t:316px;--w:112.23px;--h:112.23px;">
-        <div class="sk-i shadow-l" style="--iw:95.95px;--ih:95.95px;--r:10.8deg;"><img src="Assets/gem.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:1337px;--t:39px;--w:68.84px;--h:68.84px;">
-        <div class="sk-i shadow-r" style="--iw:55.43px;--ih:55.43px;--r:-16.43deg;"><img src="Assets/lucky_gem.png" alt=""></div>
-      </div>
-      <div class="sk" style="--l:434px;--t:320px;--w:68.84px;--h:68.84px;">
-        <div class="sk-i shadow-r" style="--iw:54.59px;--ih:54.59px;--r:-18.09deg;"><img src="Assets/pink_circle_gem.png" alt=""></div>
-      </div>
+    <div class="sk" style="--l:30px;--t:320px;--w:100.88px;--h:100.88px;">
+      <div class="sk-i shadow-l" style="--iw:93.04px;--ih:92.04px;--r:-11deg;"><img src="Assets/star_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:218px;--t:316px;--w:112.233px;--h:112.233px;">
+      <div class="sk-i shadow-l" style="--iw:95.951px;--ih:95.951px;--r:10.8deg;"><img src="Assets/gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1337px;--t:39px;--w:68.84px;--h:68.84px;">
+      <div class="sk-i shadow-r" style="--iw:55.43px;--ih:55.43px;--r:-16.43deg;"><img src="Assets/lucky_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:434px;--t:320px;--w:68.84px;--h:68.84px;">
+      <div class="sk-i shadow-r" style="--iw:54.59px;--ih:54.59px;--r:-18.09deg;"><img src="Assets/pink_circle_gem.png" alt=""></div>
+    </div>
 
-      <p class="footer-signoff" style="left:528px;top:461px;width:384px;">&#9825; designed + coded + collaged by me!</p>
-    </footer>
-
-  </div>
+    <p class="footer-signoff" style="left:528px;top:458px;width:384px;">&#9825; designed + coded + collaged by me!</p>
+  </footer>
+</div>
 </div>
 
 <script>
 (function () {
   var DESIGN_WIDTH = 1440;
-  var DESIGN_HEIGHT = 6378;
+  var DESIGN_HEIGHT = 5883;
   var MOBILE_BREAKPOINT = 768;
   var wrap = document.querySelector('.canvas-wrap');
 
@@ -419,5 +538,69 @@
 })();
 </script>
 
+
+<script>
+(function () {
+  var name = document.querySelector('.about-hero-heading .about-name');
+  var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function ready() { name.classList.add('is-stuck'); }
+  name.addEventListener('animationend', function (event) {
+    if (event.target === name && event.animationName === 'about-name-stick') ready();
+  });
+  name.addEventListener('animationcancel', ready);
+  // Handle a cached/fast entrance that completed before these listeners attached.
+  window.requestAnimationFrame(function () {
+    var entrance = name.getAnimations().find(function (animation) {
+      return animation.animationName === 'about-name-stick';
+    });
+    if (entrance) entrance.finished.then(ready, ready);
+    else ready();
+  });
+  // No entrance animation runs for reduced motion; keep the complete name visible.
+  if (motion.matches) ready();
+  motion.addEventListener('change', function () { if (motion.matches) ready(); });
+})();
+</script>
+<script>
+(function () {
+  var button = document.querySelector('.finergy-butterfly');
+  var flying = false;
+  button.addEventListener('click', async function () {
+    if (flying) return;
+    flying = true;
+    var sticker = button.querySelector('.sk-i');
+    var rect = sticker.getBoundingClientRect();
+    var flyer = sticker.querySelector('img').cloneNode(true);
+    flyer.alt = '';
+    flyer.setAttribute('aria-hidden', 'true');
+    // Use a viewport overlay so the footer’s clipping and page zoom do not trap it.
+    Object.assign(flyer.style, {
+      position: 'fixed', left: rect.left + 'px', top: rect.top + 'px',
+      width: rect.width + 'px', height: rect.height + 'px', objectFit: 'contain',
+      pointerEvents: 'none', zIndex: '1000', filter: 'drop-shadow(4px 0 3px #0008)'
+    });
+    document.documentElement.appendChild(flyer);
+    button.classList.add('is-flying');
+    try {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var rise = -(rect.top + rect.height + 40);
+      var frames = reduced ? [{ opacity: 1 }, { opacity: 0 }] : [
+        { transform: 'translate(0, 0) rotate(20deg)', opacity: 1 },
+        { transform: 'translate(35px, ' + rise * 0.25 + 'px) rotate(-8deg)', opacity: 1, offset: 0.25 },
+        { transform: 'translate(-25px, ' + rise * 0.55 + 'px) rotate(12deg)', opacity: 1, offset: 0.55 },
+        { transform: 'translate(20px, ' + rise + 'px) rotate(-5deg)', opacity: 0 }
+      ];
+      await flyer.animate(frames, { duration: reduced ? 160 : 1600, easing: 'ease-in-out', fill: 'forwards' }).finished;
+    } catch (error) {
+      // Restore the original even if an animation is interrupted or unavailable.
+    } finally {
+      flyer.remove();
+      button.classList.remove('is-flying');
+      flying = false;
+    }
+  });
+})();
+</script>
+<script src="portfolio-interactions.js"></script>
 </body>
 </html>

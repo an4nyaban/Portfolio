@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finergy Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@500&family=Onest:wght@400;600;700&family=Zalando+Sans:wght@300;400;500;600&family=Zalando+Sans+Expanded:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="preload" href="Assets/ab_pink_star.png" as="image">
+<style>
+.finergy-page { --finergy-green: #006d2c; }
+.finergy-page .cs-subnav-wrap { padding-top: 24px; }
+.finergy-page .cs-subnav { background: #fff; max-width: min(1133px, 100%); }
+.finergy-page .cs-subnav button.active { color: var(--finergy-green); }
+.finergy-page .cs-subnav button:focus-visible { outline-color: var(--finergy-green); }
+@media (max-width: 767px) {
+        .finergy-page .cs-subnav { gap: 28px; padding-inline: 24px; }
+}
+
+/* Finergy intro and Background; measurements follow the 1440px Figma frame. */
+.finergy-content { font-family: var(--font-body); }
+.finergy-content p, .finergy-content h1, .finergy-content h2, .finergy-content h3,
+.finergy-content dl, .finergy-content dd { margin: 0; }
+.finergy-intro { max-width: 1210px; margin: 81px auto 0; }
+.finergy-hero { position: relative; width: 100%; aspect-ratio: 1210 / 657; overflow: hidden; border-radius: 20px; background: white; box-shadow: 0 1px 6px #000c; }
+.finergy-hero-glow { position: absolute; left: 32.3967%; top: 17.656%; width: 35.2066%; aspect-ratio: 1; }
+.finergy-hero-glow img { position: absolute; left: -45.77%; top: -45.77%;  }
+.finergy-phones { position: absolute; left: 22.4793%; top: 13.242%; width: 55.0413%; height: 81.7352%; overflow: hidden; }
+.finergy-phones img { position: absolute; left: -40.09%; top: -12.67%; width: 179.13%; height: 120.13%; }
+.finergy-intro h1 { margin-top: 64px; font: 400 32px/45px var(--font-accent); letter-spacing: .64px; text-align: center; }
+.finergy-meta { display: flex; justify-content: center; align-items: flex-start; gap: 125px; margin-top: 45px !important; }
+.finergy-meta > div:nth-child(1) { width: 175px; }
+.finergy-meta > div:nth-child(2) { width: 122px; }
+.finergy-meta > div:nth-child(3) { width: 182px; }
+.finergy-meta > div:nth-child(4) { width: 134px; }
+.finergy-meta dt { font: 600 24px/45px var(--font-accent); letter-spacing: .48px; }
+.finergy-meta dd { margin-top: 7px; font: 300 20px/40px var(--font-body); color: var(--finergy-green); letter-spacing: .4px; }
+.finergy-meta .finergy-duration { width: 173px; line-height: 35px; }
+.finergy-background { max-width: 1210px; margin: 91px auto 0; padding: 0 0 150px !important; }
+.finergy-divider { display: block; width: 100%; height: 1px; }
+.finergy-background h2 { margin: 66px 28px 0; font: 400 32px/45px var(--font-accent); letter-spacing: .64px; }
+.finergy-problem-grid { display: grid; grid-template-columns: 385.052px 400.983px; gap: 125px; width: 911.035px; margin: 91px auto 0; }
+.finergy-problem-grid h3, .finergy-solution h3 { font: 600 32px/45px var(--font-body); text-align: center; }
+.finergy-card { background: #f7fcf5; border-radius: 15.878px; box-shadow: 0 2.382px 8.733px #006d2c8a; }
+.finergy-stat { width: 385.052px; height: 288.99px; margin: 40px auto 0; padding: 36.917px 23.818px 0; text-align: center; }
+.finergy-stat strong { display: flex; align-items: center; justify-content: center; height: 78.598px; font: 600 76.217px/35.726px var(--font-body); color: #00441b; }
+.finergy-stat p { margin-top: 7.939px; font: 400 23.024px/35.726px var(--font-body); }
+.finergy-stat small { display: block; margin-top: 14.291px; font: 400 12.703px/19.054px var(--font-body); color: #7d7d7d; }
+.finergy-consequences .finergy-stat { margin-top: 42px; padding-top: 40.49px; }
+.finergy-consequences .finergy-stat p { max-width: 265.964px; margin-inline: auto; font-size: 25.406px; }
+.finergy-consequences .finergy-stat small { max-width: 217.535px; margin-inline: auto; }
+.finergy-points { width: 385.052px; height: 354.089px; margin: 56.368px 0 0; padding: 30.169px 21.436px; font: 300 19.054px/27.787px var(--font-body); letter-spacing: .3811px; list-style-position: inside; }
+.finergy-problem-grid > div:first-child .finergy-points { padding-left: 36px; }
+.finergy-points li + li { margin-top: 15.878px; }
+.finergy-points strong { font-weight: 600; font-size: 26.199px; color: #238b45; letter-spacing: .524px; }
+.finergy-consequences .finergy-points { margin: 55.579px auto 0; height: 354.883px; text-align: right; }
+.finergy-solution { width: min(786px, 100%); margin: 209.611px auto 0; }
+.finergy-solution h3 { letter-spacing: .64px; }
+.finergy-tree { position: relative; width: 499.807px; height: 546.198px; margin: 78px auto 0; }
+.finergy-tree-glow { position: absolute; top: 35.013px; left: 0; width: 499.807px; height: 499.807px; }
+.finergy-tree-glow img { position: absolute; left: -16.64%; top: -16.64%;  }
+.finergy-tree-image { position: absolute; top: 0; left: 52.957px; width: 394.81px; height: 474.372px; object-position: bottom; }
+.finergy-tree-name { position: absolute; top: 474.422px; left: 135.237px; width: 230.209px; text-align: center; color: #00441b; font: 700 56.02px/normal Onest, sans-serif; letter-spacing: -.2626px; text-shadow: 0 3.501px 3.501px #0d350b40; }
+.finergy-solution > p { max-width: 688px; margin: 79.654px auto 0; color: #56875c; font: 400 28px/39.389px var(--font-body); text-align: center; }
+@media (max-width: 900px) {
+  .finergy-intro, .finergy-background { margin-inline: 24px; }
+  .finergy-meta { gap: 45px; flex-wrap: wrap; }
+  .finergy-problem-grid { width: 100%; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 50px; }
+  .finergy-stat, .finergy-points { width: 100%; height: auto; min-height: 289px; }
+  .finergy-points, .finergy-consequences .finergy-points { height: auto; min-height: 355px; }
+}
+@media (max-width: 600px) {
+  .finergy-intro h1 { font-size: 28px; }
+  .finergy-problem-grid { grid-template-columns: minmax(0, 401px); justify-content: center; gap: 70px; }
+  .finergy-solution { margin-top: 130px; }
+  .finergy-tree { transform: scale(.8); transform-origin: top center; margin-bottom: -109px; }
+}
+
+/* User Research */
+.finergy-research { font: 300 20px/40px var(--font-body); letter-spacing: .4px; }
+.finergy-research-inner { width: min(1210px, calc(100% - 48px)); margin-inline: auto; }
+.finergy-research h2 { margin: 109px 28px 0; font: 400 32px/45px var(--font-accent); letter-spacing: .64px; }
+.finergy-research h3 { font: 600 32px/45px var(--font-body); text-align: center; letter-spacing: .64px; }
+.finergy-research strong { font-weight: 600; }
+.finergy-content .finergy-research-copy { width: min(1006px, 100%); margin-inline: auto; }
+.finergy-enlarge-hint { font: 300 20px/40px var(--font-body); text-align: right; }
+.finergy-map-hint { margin: 28px 76px 15px !important; }
+.finergy-image-button { display: block; padding: 0; border: 0; background: transparent; cursor: zoom-in; max-width: 100%; }
+.finergy-image-button:focus-visible { outline: 3px solid var(--finergy-green); outline-offset: 7px; }
+.finergy-image-button img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.finergy-research-diagram { width: 1006px; aspect-ratio: 1006 / 683; margin-inline: auto; border-radius: 10px; box-shadow: 0 1px 3px #0008; overflow: hidden; }
+.finergy-mind-map-copy { margin-top: 49px !important; }
+.finergy-competitor-diagram { aspect-ratio: 1006 / 481; margin-top: 110px; }
+.finergy-audit-intro { margin-top: 49px !important; }
+.finergy-audit-points { margin: 32px auto 0; padding: 0; list-style-position: inside; }
+.finergy-audit-points li + li { margin-top: 22px; }
+.finergy-primary-band { margin-top: 149px; padding: 130px 24px 132px; background: #f7fcf5; border-block: .5px solid #56875c; }
+.finergy-primary-band h3 { color: #006d2c; font-weight: 400; }
+.finergy-research-counts { display: flex; flex-direction: column; align-items: center; gap: 58px; margin-top: 63px; filter: drop-shadow(0 1px 1.5px #0008); }
+.finergy-research-counts p { background: #e5f5e0; border-radius: 10px; text-align: center; color: #56875c; font-weight: 600; line-height: 45px; }
+.finergy-research-counts p:nth-child(1) { width: 236px; padding: 5px 0; font-size: 36px; }
+.finergy-research-counts p:nth-child(2) { width: 301px; padding: 10px 0; font-size: 40px; }
+.finergy-research-counts p:nth-child(3) { width: 355px; padding: 14px 0; font-size: 44px; }
+.finergy-questions { width: min(1009px, calc(100% - 48px)); margin: 115px auto 0; }
+.finergy-questions ol { margin: 63px 0 0; padding: 0; list-style: none; counter-reset: research-question; display: flex; flex-direction: column; gap: 60px; }
+.finergy-questions li { counter-increment: research-question; position: relative; padding: 15px 21px 15px 55px; color: #00441b; background: white; border-radius: 15px; box-shadow: 0 3px 11px #006d2c8a; font: 400 28px/50px Onest, sans-serif; letter-spacing: 0; }
+.finergy-questions li::before { content: counter(research-question) "."; position: absolute; left: 20px; }
+.finergy-questions strong, .finergy-interview-groups strong, .finergy-insight-cards strong { font-weight: 700; }
+.finergy-interviews-divider { margin-top: 115px; border: 0; border-top: .5px solid #56875c; }
+.finergy-interviews { width: min(1026px, calc(100% - 48px)); margin: 114px auto 0; }
+.finergy-interview-groups { display: grid; grid-template-columns: 278fr 326fr 346fr; gap: 38px; margin-top: 63px; filter: drop-shadow(0 1px 1.5px #0008); }
+.finergy-interview-groups p { display: flex; align-items: center; min-height: 248px; padding: 20px 20px 20px 35px; border-radius: 12px; background: #e5f5e0; color: #00441b; font: 400 24px/normal Onest, sans-serif; letter-spacing: .56px; }
+.finergy-interview-groups .participant-name { font-size: 28px; }
+.finergy-interview-details { width: min(1078px, calc(100% - 48px)); margin: 173px auto 0; }
+.finergy-interview-row { display: grid; grid-template-columns: 657fr 372fr; gap: 31px; align-items: center; }
+.finergy-interview-row .finergy-image-button { width: 100%; aspect-ratio: 657 / 421; }
+.finergy-interview-image { min-width: 0; margin: 0; }
+.finergy-interview-image figcaption { margin-top: 14px; font: 300 18px/28px var(--font-body); color: #56875c; text-align: center; }
+.finergy-interview-row p { text-align: center; line-height: 37px; }
+.finergy-interview-row strong { color: #56875c; font-size: 24px; }
+.finergy-interview-details .finergy-enlarge-hint { width: 657px; max-width: 100%; margin: 40px 0 17px; text-align: center; }
+.finergy-interview-row-younger { grid-template-columns: 402fr 573fr; gap: 81px; }
+.finergy-interview-row-younger .finergy-image-button { aspect-ratio: 573 / 552; }
+.finergy-insights-band { margin-top: 172px; padding: 104px 24px 111px; background: #e5f5e0; border-block: .5px solid #56875c; }
+.finergy-insights-inner { width: min(1071px, 100%); margin-inline: auto; }
+.finergy-insight-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; margin-top: 59px; }
+.finergy-insight-card { min-height: 360px; padding: 19px 34px; border: .5px solid #56875c; border-radius: 12px; background: #f7fcf5; }
+.finergy-insight-icon { position: relative; width: 132px; height: 132px; margin: 0 auto 10px; }
+.finergy-insight-icon img { position: absolute; }
+.finergy-insight-world img { left: 13.5px; top: 13.5px; }
+.finergy-insight-family img { left: 11.625px; top: 32.25px; }
+.finergy-insight-card p { color: #00441b; font: 400 28px/normal Onest, sans-serif; letter-spacing: 0; }
+/* Native modal keeps focus inside the viewer and restores it on close. */
+.finergy-image-viewer { zoom: calc(1 / 0.65); position: fixed; inset: 0; width: 96vw; max-width: 96vw; height: 96dvh; max-height: 96dvh; overflow: hidden; margin: auto; padding: 20px; border: 0; border-radius: 16px; background: white; color: #00441b; box-shadow: 0 20px 80px #0005; font: 400 16px/1.5 var(--font-body); }
+.finergy-image-viewer::backdrop { background: #10231999; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.finergy-viewer-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 16px; }
+.finergy-viewer-toolbar h2 { margin: 0; font-size: 18px; }
+.finergy-viewer-close { flex: none; min-width: 44px; min-height: 44px; padding: 8px 16px; border: 1px solid #56875c; border-radius: 24px; background: #f7fcf5; color: #00441b; font: inherit; cursor: pointer; }
+.finergy-viewer-close:focus-visible { outline: 3px solid #006d2c; outline-offset: 3px; }
+.finergy-image-viewer[open] { display: flex; flex-direction: column; }
+.finergy-viewer-toolbar { flex: 0 0 auto; }
+.finergy-viewer-scroll { flex: 1 1 0; min-height: 0; min-width: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.finergy-viewer-scroll img { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; max-width: 100%; max-height: 100%; margin: 0; object-fit: contain; }
+html.finergy-viewer-open { overflow: hidden; }
+@media (max-width: 900px) {
+ .finergy-insight-cards { gap: 24px; }
+ .finergy-insight-card { padding-inline: 20px; }
+ .finergy-interview-groups { gap: 20px; }
+ .finergy-interview-row, .finergy-interview-row-younger { gap: 30px; }
+}
+@media (max-width: 600px) {
+ .finergy-interview-groups, .finergy-insight-cards, .finergy-interview-row, .finergy-interview-row-younger { grid-template-columns: 1fr; }
+ .finergy-interview-row-younger p { order: 2; }
+ .finergy-interview-details .finergy-enlarge-hint { width: 100%; }
+ .finergy-interview-groups p { min-height: auto; padding: 30px; }
+ .finergy-insight-card { max-width: 400px; margin-inline: auto; }
+ .finergy-map-hint { margin-inline: 0 !important; }
+ .finergy-questions li { font-size: 24px; line-height: 42px; }
+}
+
+/* Wireframes: ideation, user flows, and mid-fidelity screens. */
+.finergy-wireframes { font: 300 20px/40px var(--font-body); letter-spacing: .4px; padding-bottom: 85px; }
+.finergy-wireframe-inner { width: min(1210px, calc(100% - 48px)); margin-inline: auto; }
+.finergy-wireframes h2, .finergy-wireframes h3 { font: 400 32px/45px var(--font-accent); letter-spacing: .64px; }
+.finergy-wireframes h2 { margin: 174px 28px 0; }
+.finergy-wireframes h3 { margin: 89px 28px 0; }
+.finergy-ideation-intro { width: min(1081px, 100%); margin: 82px auto 0 !important; padding: 18px 30px; border-radius: 15px; background: #f7fcf5; box-shadow: 0 3px 5px #006d2c59; color: #56875c; font: 400 28px/39.389px var(--font-body); letter-spacing: 0; }
+.finergy-lowfi-layout { display: grid; grid-template-columns: 563fr 477fr; align-items: start; gap: 54px; width: min(1094px, 100%); margin: 103px auto 0; }
+.finergy-lowfi-first { margin-top: 12px; }
+.finergy-lowfi-crop { position: relative; width: 100%; aspect-ratio: 563 / 704; overflow: hidden; border-radius: 4px; background: white; box-shadow: 0 1px 3px #0008; }
+.finergy-lowfi-crop img { position: absolute; left: 0; top: 0; width: 114.39%; height: 118.15%; max-width: none; }
+.finergy-lowfi-second img { width: 113.55%; height: 116.59%; }
+.finergy-wireframe-features { margin: 0; padding: 0 28px; display: flex; flex-direction: column; gap: 40px; }
+.finergy-wireframe-features li { padding-left: 0; }
+.finergy-wireframes strong { font-weight: 600; font-size: 24px; color: #006d2c; letter-spacing: .48px; }
+.finergy-wireframe-features li:last-child { font-weight: 400; }
+.finergy-lowfi-bottom { display: grid; grid-template-columns: 413fr 563fr; gap: 90px; align-items: center; width: min(1066px, 100%); margin: 98px auto 0; }
+.finergy-lowfi-simulator { width: 100%; aspect-ratio: 413 / 574; }
+.finergy-wireframe-hint { margin: 20px auto 0 !important; font: 300 20px/40px var(--font-body); text-align: center; color: #56875c; }
+.finergy-flows { margin-top: 89px; }
+.finergy-flow-images { display: grid; grid-template-columns: 675fr 486fr; gap: 17px; align-items: center; width: min(1178px, 100%); margin: 40px auto 0; }
+.finergy-flow-images .finergy-image-button { width: 100%; }
+.finergy-flow-images .finergy-image-button:first-child { aspect-ratio: 675 / 441; }
+.finergy-flow-images .finergy-image-button:last-child { aspect-ratio: 486 / 576; }
+.finergy-wireframe-copy { width: min(1006px, 100%); margin: 24px auto 0; }
+.finergy-wireframe-copy strong { color: #56875c; }
+.finergy-wireframe-copy ul { padding-left: 30px; margin: 22px 0 0; }
+.finergy-midfi { margin-top: 89px; }
+.finergy-midfi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 59px 50px; width: min(847px, 100%); margin: 89px auto 0; align-items: center; }
+.finergy-midfi-grid .finergy-image-button { width: 100%; aspect-ratio: 174 / 379; border: .5px solid black; }
+.finergy-midfi-copy { margin-top: 50px; }
+.finergy-midfi-copy ul { margin-top: 30px; padding-left: 60px; }
+.finergy-midfi-copy li + li { margin-top: 28px; }
+.finergy-midfi-copy li strong { color: #006d2c; }
+.finergy-midfi-copy li:last-child strong { color: #238b45; }
+@media (max-width: 900px) {
+ .finergy-lowfi-layout { gap: 35px; }
+ .finergy-lowfi-bottom { gap: 45px; }
+ .finergy-wireframe-features { padding-inline: 24px 0; }
+ .finergy-midfi-grid { gap: 40px 30px; }
+}
+@media (max-width: 600px) {
+ .finergy-lowfi-layout, .finergy-lowfi-bottom, .finergy-flow-images { grid-template-columns: 1fr; gap: 45px; }
+ .finergy-lowfi-simulator { max-width: 413px; margin-inline: auto; }
+ .finergy-midfi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .finergy-wireframes h2, .finergy-wireframes h3 { margin-inline: 0; font-size: 28px; }
+ .finergy-midfi-copy ul { padding-left: 30px; }
+}
+
+/* Usability Testing and Key Changes. */
+.finergy-testing { font: 300 20px/40px var(--font-body); letter-spacing: .4px; }
+.finergy-testing-inner { width: min(1210px, calc(100% - 48px)); margin-inline: auto; }
+.finergy-testing h2 { margin: 86px 28px 0; font: 400 32px/45px var(--font-accent); letter-spacing: .64px; }
+.finergy-testing-intro { width: min(1006px, 100%); margin: 34px auto 0 !important; }
+.finergy-testing-intro strong { color: #56875c; font-size: 24px; font-weight: 600; letter-spacing: .48px; }
+.finergy-testing-changes-divider { margin-top: 86px; }
+.finergy-testing h3 { margin-top: 85px; font: 600 32px/45px var(--font-body); text-align: center; letter-spacing: .64px; }
+.finergy-changes { width: min(1164px, 100%); margin: 92px auto 0; display: flex; flex-direction: column; gap: 161px; }
+.finergy-change { display: grid; grid-template-columns: 582fr 447fr; column-gap: 112px; align-items: center; }
+.finergy-change:nth-child(2) { grid-template-columns: 447fr 580fr; column-gap: 113px; }
+.finergy-change-comparison { min-width: 0; margin: 0; }
+.finergy-change-screens { display: grid; grid-template-columns: minmax(0, 251fr) 40px minmax(0, 251fr); gap: 20px; align-items: center; }
+.finergy-change-screens .finergy-image-button { width: 100%; aspect-ratio: 251 / 547; }
+.finergy-change-screens .finergy-image-button:first-child { border: .5px solid black; }
+.finergy-change-screens .finergy-image-button img { object-fit: cover; }
+.finergy-comparison-arrow { display: block; width: 40px; height: 22.0919px; }
+.finergy-change:nth-child(2) .finergy-image-button { aspect-ratio: 250 / 544; }
+.finergy-change:nth-child(2) .finergy-image-button:first-child { border: 0; }
+.finergy-change:nth-child(3) .finergy-image-button { aspect-ratio: 250 / 543; }
+.finergy-change-comparison figcaption { margin-top: 16px; color: #56875c; text-align: center; font: 300 20px/40px var(--font-body); }
+.finergy-change-copy { min-width: 0; }
+.finergy-change h4 { position: relative; margin: 0; padding-left: 42px; color: #56875c; font: 400 28px/39.389px var(--font-body); letter-spacing: 0; }
+.finergy-change h4::before { content: attr(data-number) "."; position: absolute; left: 0; }
+.finergy-change-copy ul { margin: 35px 0 0; padding-left: 30px; }
+.finergy-change-copy li + li { margin-top: 35px; }
+.finergy-testing-end-divider { margin-top: 169px; }
+@media (max-width: 900px) {
+ .finergy-change, .finergy-change:nth-child(2) { column-gap: 45px; }
+ .finergy-change-screens { grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr); gap: 15px; }
+ .finergy-comparison-arrow { width: 30px; overflow: visible; }
+ .finergy-comparison-arrow img { transform: scale(.75); transform-origin: left center; }
+}
+@media (max-width: 600px) {
+ .finergy-change, .finergy-change:nth-child(2) { grid-template-columns: 1fr; gap: 40px; }
+ .finergy-change:nth-child(2) .finergy-change-copy { order: 2; }
+ .finergy-change-comparison { width: min(582px, 100%); margin-inline: auto; }
+ .finergy-changes { gap: 100px; }
+ .finergy-testing h2 { margin-inline: 0; font-size: 28px; }
+}
+
+/* Final prototype demos and the opening Reflection takeaways. */
+.finergy-final, .finergy-reflection { font: 300 20px/40px var(--font-body); letter-spacing: .4px; }
+.finergy-final-inner, .finergy-reflection-inner { width: min(1210px, calc(100% - 48px)); margin-inline: auto; }
+.finergy-final h2 { margin: 128px 28px 0; font: 700 32px/45px var(--font-accent); letter-spacing: .64px; }
+.finergy-final-showcase { margin-top: 56px; padding: 130px 105px; border-radius: 20px; background: #e5f5e0; box-shadow: 0 3px 11px #b157278a; display: flex; flex-direction: column; gap: 160px; }
+.finergy-final-row { display: grid; align-items: center; }
+.finergy-final-row:nth-child(1) { grid-template-columns: 319fr 496fr; gap: 188px; }
+.finergy-final-row:nth-child(2) { grid-template-columns: 563fr 329fr; gap: 110px; }
+.finergy-final-row:nth-child(3) { grid-template-columns: 328fr 531fr; gap: 142px; }
+.finergy-final-row:nth-child(4) { grid-template-columns: 563fr 327fr; gap: 110px; }
+.finergy-final-video { display: block; width: 100%; aspect-ratio: 702 / 1448; height: auto; object-fit: contain; border-radius: 39px; background: #e5f5e0; }
+.finergy-final-copy { min-width: 0; }
+.finergy-final-copy h3 { margin: 0 0 40px; font: 400 32px/45px var(--font-body); letter-spacing: 0; }
+.finergy-final-row:nth-child(odd) .finergy-final-copy { text-align: right; }
+.finergy-final-description { display: flex; flex-direction: column; gap: 10px; padding: 30px 25px; border-radius: 20px; background: #fffc; box-shadow: 0 3px 11px #006d2c8a; }
+.finergy-final-row:nth-child(even) .finergy-final-copy h3 { margin-bottom: 45px; }
+.finergy-final-row:nth-child(even) .finergy-final-description { background: white; }
+.finergy-final-row:nth-child(2) .finergy-final-description { gap: 20px; padding-inline: 30px; line-height: 35px; }
+.finergy-final-row:nth-child(n+3) .finergy-final-description { font-size: 18px; line-height: 33px; letter-spacing: .36px; }
+.finergy-final-row:nth-child(3) .finergy-final-description p:nth-child(2) { line-height: 40px; }
+.finergy-reflection { margin-top: 170px; padding-bottom: 100px; }
+.finergy-reflection h2 { margin: 128px 28px 0; font: 400 32px/45px var(--font-accent); letter-spacing: .64px; }
+.finergy-takeaways { width: min(1008px, 100%); margin: 78px auto 0; padding: 0; list-style: none; counter-reset: takeaway; display: flex; flex-direction: column; gap: 65px; }
+.finergy-takeaways > li { counter-increment: takeaway; padding: 20px; border-radius: 10px; background: #f7fcf5; box-shadow: 0 3px 11px #006d2c8a; }
+.finergy-takeaways h3 { margin: 0; padding-left: 36px; position: relative; font: 500 24px/40px var(--font-body); color: #56875c; letter-spacing: .48px; }
+.finergy-takeaways h3::before { position: absolute; left: 6px; content: counter(takeaway) "."; }
+.finergy-takeaways ul { margin: 15px 0 0; padding-left: 30px; color: #424242; }
+@media (max-width: 900px) {
+ .finergy-final-showcase { padding: 80px 50px; }
+ .finergy-final-row:nth-child(n) { gap: 70px; }
+ .finergy-final-copy h3 { font-size: 28px; }
+}
+@media (max-width: 600px) {
+ .finergy-final-showcase { padding: 60px 24px; gap: 100px; }
+ .finergy-final-row:nth-child(n) { grid-template-columns: 1fr; gap: 40px; }
+ .finergy-final-video { width: min(329px, 100%); margin-inline: auto; }
+ .finergy-final-row:nth-child(even) .finergy-final-copy { order: 2; }
+ .finergy-final-row:nth-child(odd) .finergy-final-copy { text-align: left; }
+ .finergy-final h2, .finergy-reflection h2 { margin-inline: 0; font-size: 28px; }
+}
+
+/* Closing reflection and shared contact footer. */
+.finergy-final-reflection { margin-top: 136px; }
+.finergy-final-reflection h2 { margin-top: 135px; }
+.finergy-reflection-photos { width: min(1102px, 100%); margin: 74px auto 0; display: grid; grid-template-columns: minmax(0, 568fr) minmax(0, 382fr); padding-right: 91px; gap: 60px 61px; align-items: center; }
+.finergy-reflection-photos .finergy-image-button { position: relative; width: 100%; overflow: hidden; border-radius: 15px; }
+.finergy-reflection-presentation { aspect-ratio: 568 / 618; }
+.finergy-reflection-presentation img { position: absolute; width: 100%; height: 122.61%; left: 0; top: -7.02%; }
+.finergy-reflection-certificate { aspect-ratio: 382 / 479; }
+.finergy-reflection-certificate img { position: absolute; width: 110.24%; height: 117.23%; left: -6.01%; top: -6.93%; }
+.finergy-reflection-group { grid-column: 1 / -1; width: 72.107% !important; justify-self: start; margin-left: 20.079%; aspect-ratio: 729 / 547; }
+.finergy-closing-copy { width: min(1018px, 100%); margin: 54px auto 0; display: flex; flex-direction: column; gap: 39px; }
+.finergy-closing-copy strong { font-weight: 600; font-size: 24px; line-height: 40px; letter-spacing: .48px; color: #56875c; }
+.finergy-closing-copy .finergy-closing-brand { font-size: 32px; color: #00441b; letter-spacing: .64px; }
+.finergy-thankyou { width: min(1032px, calc(100% - 48px)); margin: 150px auto 0; }
+.finergy-thankyou .ty-container { margin-top: 0; }
+.finergy-thankyou .ty-finergy-title { top: 18.49px; font-size: 23.2px; line-height: normal; letter-spacing: -.1088px; }
+.finergy-thankyou .ty-finergy-tag { top: 52.2px; font-size: 7.25px; line-height: normal; letter-spacing: -.1088px; }
+.finergy-thankyou .ty-view-more { margin-top: 40px; }
+.finergy-thankyou .ty-card { box-shadow: none; filter: drop-shadow(1px 2px 1.5px #0008); }
+.finergy-page .site-footer { height: 523px; }
+.finergy-page .site-footer a { color: inherit; text-decoration: none; }
+.finergy-page .site-footer a:hover span { text-decoration: underline; }
+.finergy-page .site-footer a:focus-visible { outline: 3px solid #006d2c; outline-offset: 6px; }
+@media (max-width: 600px) {
+ .finergy-reflection-photos { gap: 35px; grid-template-columns: 1fr; padding-right: 0; }
+ .finergy-reflection-certificate { max-width: 382px; justify-self: center; }
+ .finergy-reflection-group { width: 100% !important; margin-left: 0; }
+ .finergy-thankyou .ty-container { width: 100%; height: 390px; }
+ .finergy-thankyou .ty-card-wrap { left: 50%; top: 115px; transform: translateX(-50%); width: min(456px, 95%); }
+ .finergy-thankyou .ty-card p { width: auto; font-size: 40px; }
+ .finergy-thankyou .ty-buzzwalk-wrap { left: auto; right: 0; }
+ .finergy-thankyou .ty-arrow { display: none; }
+ .finergy-thankyou .ty-tape--1 { left: auto; right: 0; top: 295px; }
+ .finergy-thankyou .ty-tape--2 { left: 0; top: 115px; }
+}
+
+.finergy-thankyou .ty-placeful-link { position: absolute; left: -18px; top: 32px; width: 231px; height: 65px; overflow: hidden; background: white; filter: drop-shadow(1px 2px 3px #0008); }
+.finergy-thankyou .ty-placeful-link img { position: absolute; left: -28.05%; top: -93.37%; width: 237.51%; height: 281.28%; }
+.finergy-thankyou .ty-buzzwalk-wrap { width: 169px; height: 153px; left: 872px; top: -24px; }
+.finergy-thankyou .ty-buzzwalk { width: 160px; height: 142px; }
+.finergy-thankyou .ty-buzzwalk img { width: 100%; height: 100%; transform: scale(1.9); }
+.finergy-thankyou a:focus-visible { outline: 3px solid #006c84; outline-offset: 6px; }
+@media (max-width: 600px) {
+ .finergy-thankyou .ty-buzzwalk-wrap { left: auto; right: 0; }
+ .finergy-thankyou .ty-placeful-link { left: 0; }
+}
+
+/* Gentle rotations on project links; retain the thank-you card’s nudge. */
+.finergy-thankyou .ty-arrow--right { top: 175px; }
+.finergy-thankyou .ty-placeful-link,
+.finergy-thankyou .ty-buzzwalk-wrap,
+.finergy-thankyou .ty-arrow { rotate: 0deg; transform-origin: center; transition: rotate 200ms ease-out; }
+.finergy-thankyou .ty-card { translate: 0 0; transition: translate 180ms ease-out; }
+@media (hover: hover) {
+ .finergy-thankyou .ty-placeful-link:hover { rotate: -4deg; }
+ .finergy-thankyou .ty-arrow--left:hover { rotate: 3deg; }
+ .finergy-thankyou .ty-buzzwalk-wrap:hover { rotate: 4deg; }
+ .finergy-thankyou .ty-arrow--right:hover { rotate: -3deg; }
+ .finergy-thankyou .ty-card:hover { translate: 8px 0; }
+}
+.finergy-thankyou .ty-placeful-link:focus-visible { rotate: -4deg; }
+.finergy-thankyou .ty-arrow--left:focus-visible { rotate: 3deg; }
+.finergy-thankyou .ty-buzzwalk-wrap:focus-visible { rotate: 4deg; }
+.finergy-thankyou .ty-arrow--right:focus-visible { rotate: -3deg; }
+@media (prefers-reduced-motion: reduce) {
+ .finergy-thankyou .ty-placeful-link,
+ .finergy-thankyou .ty-buzzwalk-wrap,
+ .finergy-thankyou .ty-arrow,
+ .finergy-thankyou .ty-card { rotate: none; translate: none; transition: none; }
+}
+
+.finergy-butterfly { border: 0; padding: 0; background: none; cursor: pointer; }
+.finergy-butterfly .sk-i { transition: rotate 180ms ease-out; rotate: 0deg; }
+@media (hover: hover) { .finergy-butterfly:hover .sk-i { rotate: 9deg; } }
+.finergy-butterfly:focus-visible { outline: 3px solid #006c84; outline-offset: 5px; border-radius: 12px; }
+.finergy-butterfly:focus-visible .sk-i { rotate: 9deg; }
+.finergy-butterfly.is-flying .sk-i { opacity: 0; }
+.finergy-contact-tape { position: absolute; left: 18px; top: 178px; width: 464px; height: 110px; display: grid; place-items: center; }
+.finergy-contact-tape > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; filter: drop-shadow(0 1px 2px #0009); pointer-events: none; }
+.finergy-contact-tape .footer-tape-text { position: relative; left: auto; top: auto; margin: 0; width: 100%; line-height: 1.3; text-align: center; }
+@media (prefers-reduced-motion: reduce) { .finergy-butterfly .sk-i { rotate: none; transition: none; } }
+</style>
+<link rel="icon" type="image/png" href="/Assets/ab_pink_star.png">
+</head>
+<body class="cs-body finergy-page">
+
+<header class="site-nav case-main-nav" id="site-nav">
+  <div class="case-main-nav-canvas">
+<nav class="nav portfolio-nav" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html" aria-label="Go to home page"><img src="Assets/ab_star.png" alt="AB monogram logo"></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-current">work</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="coming-soon.html?project=Collage">collage</a></li>
+        <li>
+          <a href="https://docs.google.com/document/d/1TirXVIre3TSZLm0B2PwHUFP9qbT0IzNKVS-qZgrSqyw/edit?usp=sharing"
+             target="_blank"
+             rel="noopener noreferrer">
+            resume
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="cs-subnav-wrap" id="cs-subnav-wrap">
+  <nav class="cs-subnav" id="cs-subnav" aria-label="Case study sections">
+    <button type="button" data-target="background" class="active" aria-current="location">Background</button>
+    <button type="button" data-target="research">Research</button>
+    <button type="button" data-target="wireframes">Wireframes</button>
+    <button type="button" data-target="testing">Testing</button>
+    <button type="button" data-target="final">Final</button>
+    <button type="button" data-target="reflection">Reflection</button>
+  </nav>
+</div>
+
+<main class="finergy-content">
+  <div class="finergy-intro">
+    <div class="finergy-hero">
+      <div class="finergy-hero-glow" aria-hidden="true"><img src="Assets/finergy_cs/hero-glow.svg" alt=""></div>
+      <div class="finergy-hero-glow" aria-hidden="true"><img src="Assets/finergy_cs/hero-glow.svg" alt=""></div>
+      <div class="finergy-phones"><img src="finergy/3D_Finergy.png" alt="Two Finergy phone mockups showing the welcome screen and financial learning dashboard."></div>
+    </div>
+    <h1>Finergy: A mindful financial literacy app aimed at young adults.</h1>
+    <dl class="finergy-meta">
+      <div><dt>Role</dt><dd>UI/UX Designer<br>UX Researcher</dd></div>
+      <div><dt>Tools</dt><dd>Figma<br>FigJam<br>Notion</dd></div>
+      <div><dt>Team</dt><dd>Myself<br>Aisha Abraham</dd></div>
+      <div><dt>Duration</dt><dd class="finergy-duration">January 2026 - April 2026</dd></div>
+    </dl>
+  </div>
+
+  <section class="finergy-background" id="background" aria-labelledby="finergy-background-title">
+    <img class="finergy-divider" src="Assets/finergy_cs/divider.svg" alt="">
+    <h2 id="finergy-background-title">Background</h2>
+    <div class="finergy-problem-grid">
+      <div>
+        <h3>The Problem:</h3>
+        <div class="finergy-card finergy-stat">
+          <strong>35%</strong>
+          <p>of US college students report their current financial situation as “stressful”</p>
+          <small>Healthy Minds Survey (2018)</small>
+        </div>
+        <ul class="finergy-card finergy-points">
+          <li>Young adults are suddenly <strong>responsible</strong> for managing money <strong>without prior experience</strong></li>
+          <li>They lack <strong>foundational financial knowledge</strong></li>
+          <li>This leads to <strong>confusion</strong>, <strong>poor decisions</strong>, and <strong>delayed action</strong></li>
+        </ul>
+      </div>
+      <div class="finergy-consequences">
+        <h3>The Consequences:</h3>
+        <div class="finergy-card finergy-stat">
+          <strong>66%</strong>
+          <p>of Americans are financially illiterate</p>
+          <small>Financial Industry Regulatory Authority (FINRA)</small>
+        </div>
+        <ul class="finergy-card finergy-points">
+          <li>Early financial mistakes <strong>compound over time</strong></li>
+          <li>Lack of knowledge <strong>limits long-term stability</strong> and <strong>confidence</strong></li>
+          <li>Financial literacy <strong>affects everyday decisions</strong> around saving, spending, and debt</li>
+        </ul>
+      </div>
+    </div>
+    <div class="finergy-solution">
+      <h3>The Solution</h3>
+      <div class="finergy-tree">
+        <div class="finergy-tree-glow" aria-hidden="true"><img src="Assets/finergy_cs/tree-glow.svg" alt=""></div>
+        <img class="finergy-tree-image" src="Assets/finergy_cs/money-tree.png" alt="A money tree with green dollar signs as leaves.">
+        <p class="finergy-tree-name">Finergy</p>
+      </div>
+      <p>A new take on financial literacy aimed specifically towards young adults.</p>
+    </div>
+  </section>
+
+  <section class="finergy-research" aria-labelledby="research">
+    <div class="finergy-research-inner">
+      <img class="finergy-divider" src="Assets/finergy_cs/divider.svg" alt="">
+      <h2 id="research">User Research</h2>
+      <p class="finergy-enlarge-hint finergy-map-hint">*Click Diagram to Enlarge</p>
+      <button type="button" class="finergy-image-button finergy-research-diagram" data-image-title="Financial security mind map" aria-label="Enlarge financial security mind map" aria-haspopup="dialog"><img src="Assets/finergy_cs/research-mind-map.png" alt="Mind map exploring banking, saving money, taxes, insurance, investing, and daily expenses for young adults."></button>
+      <p class="finergy-research-copy finergy-mind-map-copy">We started by creating a <strong>mind map</strong> to establish an initial framework of what <strong>"financial security"</strong> realistically encompasses for young adults. We mapped out six primary domains—<strong>banking smartly, saving money, taxes, insurance, investing, and daily expenses</strong>—to brainstorm potential feature areas and anticipate user needs.</p>
+      <button type="button" class="finergy-image-button finergy-research-diagram finergy-competitor-diagram" data-image-title="Competitive analysis" aria-label="Enlarge competitive analysis diagram" aria-haspopup="dialog"><img src="finergy/Screenshot 2026-10-24 at 12.25.39 AM.png" alt="Competitive analysis comparing Greenlight, GoHenry, Wally, and Marcus Insights."></button>
+      <p class="finergy-research-copy finergy-audit-intro">Before moving into user research, I ran a <strong>competitive analysis</strong> to evaluate existing financial apps like Greenlight, GoHenry, Wally, and Marcus Insights:</p>
+      <ul class="finergy-research-copy finergy-audit-points">
+        <li>This audit showed that current tools either cater strictly to minors, act as passive trackers without teaching fundamentals, or target established professionals and <strong>not college students.</strong></li>
+        <li>Mapping these shortcomings helped me pinpoint the exact <strong>structural and educational gaps</strong> and <strong>financial friction points</strong> college students actually face.</li>
+      </ul>
+    </div>
+    <div class="finergy-primary-band">
+      <h3>For our primary research, we conducted:</h3>
+      <div class="finergy-research-counts"><p>35 surveys</p><p>10 interviews</p><p>3 user groups</p></div>
+    </div>
+    <div class="finergy-questions">
+      <h3>Key Questions:</h3>
+      <ol>
+        <li>What financial knowledge and skills do young adults <strong>currently have</strong>, and where are the <strong>biggest gaps in their understanding?</strong></li>
+        <li>What <strong>challenges</strong> prevent young adults from <strong>learning and applying</strong> money-management skills <strong>in real life</strong>?</li>
+        <li>What <strong>features, content formats, and learning styles</strong> would make a financial education application <strong>engaging, useful, and easy to use</strong> for young adults?</li>
+      </ol>
+    </div>
+    <hr class="finergy-interviews-divider">
+    <div class="finergy-interviews">
+      <h3>Interviews:</h3>
+      <div class="finergy-interview-groups">
+        <p><span><span class="participant-name">• P1-6: <strong>College Students</strong>,</span> ages 18-22, target audience for this app.</span></p>
+        <p><span><span class="participant-name">• P7-8: <strong>Young Adults</strong>,</span> ages 24-28, to understand financial situations of adults freshly out of college.</span></p>
+        <p><span><span class="participant-name">• P9-10: <strong>Older Adults</strong>,</span> ages 45-60, to understand their financial growth and advice for emerging adults.</span></p>
+      </div>
+    </div>
+    <div class="finergy-interview-details">
+      <div class="finergy-interview-row">
+        <figure class="finergy-interview-image"><button type="button" class="finergy-image-button" data-image-title="Interview findings" aria-label="Enlarge interview findings table" aria-haspopup="dialog"><img src="Assets/finergy_cs/interview-findings.png" alt="Interview findings comparing financial independence, money management, knowledge gaps, and barriers."></button><figcaption>Interviewees’ names are hidden for privacy.</figcaption></figure>
+        <p>• For <strong>older participants</strong>, we focused on <strong>retrospective insights</strong>: when their deeper financial understanding clicked, how their definition of independence shifted over time, and their <strong>long-term strategies</strong> for investing, retirement security, and navigating complex systems.</p>
+      </div>
+      <p class="finergy-enlarge-hint">*Click images to Enlarge</p>
+      <div class="finergy-interview-row finergy-interview-row-younger">
+        <p>• For <strong>younger participants</strong>, we explored their earliest financial exposures through parents, current student budgeting habits, reliance on allowances or internship stipends, and the friction points of <strong>transitioning into managing money independently</strong>.</p>
+        <figure class="finergy-interview-image"><button type="button" class="finergy-image-button" data-image-title="Interview themes" aria-label="Enlarge interview themes table" aria-haspopup="dialog"><img src="Assets/finergy_cs/interview-themes.png" alt="Interview themes covering financial knowledge, independence, barriers, trust, and learning preferences."></button><figcaption>Interviewees’ names are hidden for privacy.</figcaption></figure>
+      </div>
+    </div>
+    <div class="finergy-insights-band">
+      <div class="finergy-insights-inner">
+        <h3>Key Insights:</h3>
+        <div class="finergy-insight-cards">
+          <div class="finergy-insight-card"><div class="finergy-insight-icon finergy-insight-world"><img src="Assets/finergy_cs/insight-world.svg" alt=""></div><p>Financial concepts feel abstract/<strong>hard to understand</strong> without <strong>real world application</strong>.</p></div>
+          <div class="finergy-insight-card"><div class="finergy-insight-icon finergy-insight-family"><img src="Assets/finergy_cs/insight-family.svg" alt=""></div><p>Most users <strong>rely on their parents</strong> to teach them financial information.</p></div>
+          <div class="finergy-insight-card"><div class="finergy-insight-icon"><img src="Assets/finergy_cs/insight-emotions.svg" alt=""></div><p>Financial behavior is often shaped by <strong>underlying emotions</strong> and <strong>lack of confidence</strong>.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="finergy-wireframes" aria-labelledby="wireframes">
+    <div class="finergy-wireframe-inner">
+      <h2 id="wireframes">Ideation &amp; Low-Fi Wireframes</h2>
+      <p class="finergy-ideation-intro">Based on our insights, we began to ideate and explore our key features and UI considerations by drawing out multiple low-fi wireframes:</p>
+      <div class="finergy-lowfi-layout">
+        <div class="finergy-lowfi-first"><button type="button" class="finergy-image-button finergy-lowfi-crop" data-image-title="Low-fi onboarding sketches" aria-label="Enlarge low-fi onboarding sketches" aria-haspopup="dialog"><img src="Assets/finergy_cs/low-fi-onboarding.png" alt="Hand-drawn initial screens, login, welcome quiz, and financial starting-point questions."></button></div>
+        <ul class="finergy-wireframe-features">
+          <li><strong>Money Tree analogy:</strong> Creating a calming branding that encourages growing your financial knowledge over time.</li>
+          <li><strong>On-boarding Quiz:</strong> Building an application page tailored to the user based on their current knowledge, interests, pain points and more.</li>
+          <li><strong>Financial Simulator:</strong> Real-world, engaging, and risk-free scenarios and results without fear of entering personal information.</li>
+          <li><strong>AI Chat-Bot:</strong> Conversational way to ask everyday money questions and receive immediate answers paired with in-app lessons, simulations, or next steps.</li>
+        </ul>
+      </div>
+      <div class="finergy-lowfi-bottom"><button type="button" class="finergy-image-button finergy-lowfi-simulator" data-image-title="Low-fi simulator sketches" aria-label="Enlarge low-fi simulator sketches" aria-haspopup="dialog"><img src="Assets/finergy_cs/low-fi-simulator.png" alt="Color sketches exploring a personal financial simulator and a password practice interface."></button><button type="button" class="finergy-image-button finergy-lowfi-crop finergy-lowfi-second" data-image-title="Low-fi quiz and lesson sketches" aria-label="Enlarge low-fi quiz and lesson sketches" aria-haspopup="dialog"><img src="Assets/finergy_cs/low-fi-lessons.png" alt="Hand-drawn financial confidence quiz, personalized learning tier, account creation, and lesson screens."></button></div>
+      <p class="finergy-wireframe-hint">Click images to enlarge</p>
+
+      <div class="finergy-flows">
+        <img class="finergy-divider" src="Assets/finergy_cs/divider.svg" alt="">
+        <h3>User Flows &amp; Architecture</h3>
+        <div class="finergy-flow-images"><button type="button" class="finergy-image-button " data-image-title="Primary user flows" aria-label="Enlarge primary user flows" aria-haspopup="dialog"><img src="finergy/Screenshot 2026-10-23 at 11.50.14 PM.png" alt="User flows for first-time onboarding, financial simulation, lessons, and the AI chatbot."></button><button type="button" class="finergy-image-button " data-image-title="App architecture" aria-label="Enlarge app architecture" aria-haspopup="dialog"><img src="finergy/Screenshot 2026-10-24 at 12.00.47 AM.png" alt="Complete app architecture mapping account setup, the homepage, chatbot, lessons, personalization, and financial simulation."></button></div>
+        <p class="finergy-wireframe-hint">Click images to enlarge</p>
+        <div class="finergy-wireframe-copy">
+          <p>Once we aligned on our core features, I finalized our primary user flows to map out the <strong>entire app architecture</strong> from start to finish:</p>
+          <ul><li>Personalized onboarding quiz, dashboard navigation, gamified lessons, AI chatbot, and a financial simulator; all of these paths were strucutured to ensure users receive <strong>dynamic, actionable feedback.</strong></li></ul>
+        </div>
+      </div>
+
+      <div class="finergy-midfi">
+        <img class="finergy-divider" src="Assets/finergy_cs/divider.svg" alt="">
+        <h3>Mid-Fidelity Wireframes</h3>
+        <div class="finergy-midfi-grid">
+          <button type="button" class="finergy-image-button " data-image-title="Mid-fidelity starting screen" aria-label="Enlarge mid-fidelity starting screen" aria-haspopup="dialog"><img src="finergy/Finergy Initial Starting Page.png" alt="Grayscale Finergy welcome screen with the money-tree logo."></button>
+          <button type="button" class="finergy-image-button " data-image-title="Mid-fidelity welcome screen" aria-label="Enlarge mid-fidelity welcome screen" aria-haspopup="dialog"><img src="finergy/Welcome page.png" alt="Welcome screen introducing the financial starting-point questionnaire."></button>
+          <button type="button" class="finergy-image-button " data-image-title="Mid-fidelity age-group quiz" aria-label="Enlarge mid-fidelity age-group quiz" aria-haspopup="dialog"><img src="finergy/Quiz 1 - Age group.png" alt="Onboarding quiz asking the user to select their age group."></button>
+          <button type="button" class="finergy-image-button " data-image-title="Mid-fidelity Sprout result" aria-label="Enlarge mid-fidelity sprout result" aria-haspopup="dialog"><img src="finergy/Sprout.png" alt="Personalized Sprout beginner skill-level result."></button>
+          <button type="button" class="finergy-image-button " data-image-title="Mid-fidelity account creation" aria-label="Enlarge mid-fidelity account creation" aria-haspopup="dialog"><img src="finergy/Create account page.png" alt="Account creation form for saving financial learning progress."></button>
+          <button type="button" class="finergy-image-button " data-image-title="Mid-fidelity lessons" aria-label="Enlarge mid-fidelity lessons" aria-haspopup="dialog"><img src="finergy/Lesson Page.png" alt="Lessons screen with continued learning, recommendations, and topic categories."></button>
+          <button type="button" class="finergy-image-button " data-image-title="Mid-fidelity home dashboard" aria-label="Enlarge mid-fidelity home dashboard" aria-haspopup="dialog"><img src="finergy/Finergy Home page.png" alt="Homepage with an AI question prompt, learning status, and daily financial updates."></button>
+          <button type="button" class="finergy-image-button " data-image-title="Mid-fidelity financial simulator" aria-label="Enlarge mid-fidelity financial simulator" aria-haspopup="dialog"><img src="finergy/Financial simulator.png" alt="Simulator results with projected net worth, debt-free date, and key metrics."></button>
+        </div>
+        <p class="finergy-wireframe-hint">Click images to enlarge</p>
+        <div class="finergy-wireframe-copy finergy-midfi-copy">
+          <p>Moving to mid-fidelity prototyping, we built out the <strong>structural backbone</strong> of Finergy to map out the <strong>complete user experience</strong>.</p>
+          <ul>
+            <li><strong>Dashboard &amp; Navigation Architecture:</strong> Structured the main home and lesson screens to cleanly display learning status, "Continue Learning" modules, tailored recommendations, and daily updates.</li>
+            <li><strong>Personalized Onboarding Flow:</strong> Designed a welcome sequence with an introductory questionnaire to evaluate the user's financial starting point and assign a tier like "Sprout”/beginner.</li>
+            <li><strong>Financial Simulator Layout:</strong> Prototyped the simulator interface to clearly present complex metrics, such as projected net worth, debt-free timelines, and savings rates, in an approachable, easy-to-digest format.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="finergy-testing" aria-labelledby="testing">
+    <div class="finergy-testing-inner">
+      <img class="finergy-divider" src="Assets/finergy_cs/testing-divider.svg" alt="">
+      <h2 id="testing">Usability Testing</h2>
+      <p class="finergy-testing-intro">After finalizing our mid-fidelity designs, we put the prototype directly <strong>into the hands of 5 participants</strong> within our target demographic to understand how <strong>intuitive</strong> were our workflows, <strong>hesitation</strong> points, and any moments of <strong>unclarity</strong>.</p>
+      <img class="finergy-divider finergy-testing-changes-divider" src="Assets/finergy_cs/testing-divider.svg" alt="">
+      <h3>Key Changes:</h3>
+      <div class="finergy-changes">
+        <div class="finergy-change">
+<figure class="finergy-change-comparison"><div class="finergy-change-screens"><button type="button" class="finergy-image-button" data-image-title="Homepage before testing" aria-label="Enlarge homepage before testing" aria-haspopup="dialog"><img src="finergy/Finergy Home page.png" alt="Mid-fidelity homepage with learning metrics, daily updates, and text navigation."></button><span class="finergy-comparison-arrow" aria-hidden="true"><img src="Assets/finergy_cs/comparison-arrow.svg" alt=""></span><button type="button" class="finergy-image-button" data-image-title="Homepage after testing" aria-label="Enlarge homepage after testing" aria-haspopup="dialog"><img src="Assets/finergy_cs/testing-home-after.png" alt="Updated green homepage with clearer learning progress and prominent bottom navigation icons."></button></div><figcaption>Click images to enlarge</figcaption></figure><div class="finergy-change-copy"><h4 data-number="1">De-cluttering the home page and upgrading navigation</h4><ul><li>Reorganizing content into clean, digestible sections to reduce cognitive load.</li><li>Replaced small, text-based navigation links with prominent, thumb-friendly icons in the bottom bar to improve touch targets, accessibility, and visual clarity.</li></ul></div></div><div class="finergy-change"><div class="finergy-change-copy"><h4 data-number="2">Optimizing Learning Modules &amp; Quizzes</h4><ul><li>Prominent banner at the top of the page inviting users to take a quick quiz to reinforce their knowledge before diving into modules.</li><li>Replaced small, text-based navigation links with prominent, thumb-friendly icons in the bottom bar to improve touch targets, accessibility, and visual clarity.</li></ul></div><figure class="finergy-change-comparison"><div class="finergy-change-screens"><button type="button" class="finergy-image-button" data-image-title="Lessons before testing" aria-label="Enlarge lessons before testing" aria-haspopup="dialog"><img src="finergy/Lesson Page.png" alt="Mid-fidelity lessons screen with continued learning, recommendations, and topic categories."></button><span class="finergy-comparison-arrow" aria-hidden="true"><img src="Assets/finergy_cs/comparison-arrow.svg" alt=""></span><button type="button" class="finergy-image-button" data-image-title="Lessons after testing" aria-label="Enlarge lessons after testing" aria-haspopup="dialog"><img src="Assets/finergy_cs/testing-lessons-after.png" alt="Updated lessons screen with a prominent refresher quiz banner, learning modules, and icon navigation."></button></div></figure></div><div class="finergy-change"><figure class="finergy-change-comparison"><div class="finergy-change-screens"><button type="button" class="finergy-image-button" data-image-title="Financial simulator before testing" aria-label="Enlarge financial simulator before testing" aria-haspopup="dialog"><img src="finergy/Financial simulator.png" alt="Mid-fidelity financial simulator showing estimated net worth, a debt-free date, and key metrics."></button><span class="finergy-comparison-arrow" aria-hidden="true"><img src="Assets/finergy_cs/comparison-arrow.svg" alt=""></span><button type="button" class="finergy-image-button" data-image-title="Financial simulator after testing" aria-label="Enlarge financial simulator after testing" aria-haspopup="dialog"><img src="finergy/Hifi_Financial_Simulator_Result_Analysis.png" alt="Result analysis with numbered financial insights, achievement badges, and targeted lesson recommendations."></button></div></figure><div class="finergy-change-copy"><h4 data-number="3">Adding dynamic controls &amp; personalized feedback to the financial simulator</h4><ul><li>Added intuitive sliders for annual income, savings, debt, and monthly expenses, allowing users to easily model and test different financial scenarios.</li><li>Added a result analysis breakdown screen featuring numbered insights, milestone achievement badges, and targeted lesson recommendations.</li></ul></div></div>
+      </div>
+      <img class="finergy-divider finergy-testing-end-divider" src="Assets/finergy_cs/testing-divider.svg" alt="">
+    </div>
+  </section>
+
+  <section class="finergy-final" aria-labelledby="final">
+    <div class="finergy-final-inner">
+      <h2 id="final">Final Prototype</h2>
+      <div class="finergy-final-showcase">
+<div class="finergy-final-row"><video class="finergy-final-video" controls loop muted playsinline preload="metadata" poster="Assets/finergy_cs/onboarding_final-poster.jpg" aria-labelledby="finergy-demo-title-1"><source src="Assets/finergy_cs/onboarding_final.mp4" type="video/mp4">Your browser does not support embedded video. <a href="Assets/finergy_cs/onboarding_final.mp4">Watch the demonstration.</a></video><div class="finergy-final-copy"><h3 id="finergy-demo-title-1">ONBOARDING</h3><div class="finergy-final-description"><p>Structured, beginner-focused discovery quiz to assess financial comfort levels</p><p>Initial skill tier integrated directly into setup</p><p>Recognizable progress indicators for skill evaluation</p><p>Personalized learning paths and recommendations surfaced</p></div></div></div>
+<div class="finergy-final-row"><div class="finergy-final-copy"><h3 id="finergy-demo-title-2">HOME PAGE &amp; AI CHATBOT</h3><div class="finergy-final-description"><p>Simplified dashboard details with a cleaner visual hierarchy and reduced cognitive load</p><p>Made AI chatbot assistance immediately recognizable and accessible from the main view</p><p>Streamlined the transition from asking a question to receiving actionable guidance</p><p>Connected daily financial tips, learning status, and AI recommendations into one cohesive experience</p></div></div><video class="finergy-final-video" controls loop muted playsinline preload="metadata" poster="Assets/finergy_cs/home_page_final-poster.jpg" aria-labelledby="finergy-demo-title-2"><source src="Assets/finergy_cs/home_page_final.mp4" type="video/mp4">Your browser does not support embedded video. <a href="Assets/finergy_cs/home_page_final.mp4">Watch the demonstration.</a></video></div>
+<div class="finergy-final-row"><video class="finergy-final-video" controls loop muted playsinline preload="metadata" poster="Assets/finergy_cs/lessons_final-poster.jpg" aria-labelledby="finergy-demo-title-3"><source src="Assets/finergy_cs/lessons_final.mp4" type="video/mp4">Your browser does not support embedded video. <a href="Assets/finergy_cs/lessons_final.mp4">Watch the demonstration.</a></video><div class="finergy-final-copy"><h3 id="finergy-demo-title-3">LESSONS PAGE &amp; GROWTH</h3><div class="finergy-final-description"><p>Connected quick refresher quizzes directly to foundational learning modules</p><p>Plant-watering rewards integrated as a natural gamified incentive for progress</p><p>Familiar navigation patterns and clean category icons</p><p>Organized content into distinct "Continue learning" and sections for better scannability</p></div></div></div>
+<div class="finergy-final-row"><div class="finergy-final-copy"><h3 id="finergy-demo-title-4">FINANCIAL SIMULATOR</h3><div class="finergy-final-description"><p>Connected interactive customization sliders directly to real-time financial calculations</p><p>Stress-free financial modeling without risking personal data</p><p>Dynamic input-to-result animations and visual feedback loops</p><p>Strengthened feedback for tested scenarios with clear breakdowns of success metrics</p><p>Clear communication of projected net worth, savings rates, and debt-free timelines</p></div></div><video class="finergy-final-video" controls loop muted playsinline preload="metadata" poster="Assets/finergy_cs/simulator_final_video-poster.jpg" aria-labelledby="finergy-demo-title-4"><source src="Assets/finergy_cs/simulator_final_video.mp4" type="video/mp4">Your browser does not support embedded video. <a href="Assets/finergy_cs/simulator_final_video.mp4">Watch the demonstration.</a></video></div>
+      </div>
+    </div>
+  </section>
+  <section class="finergy-reflection" aria-labelledby="reflection">
+    <div class="finergy-reflection-inner">
+      <img class="finergy-divider" src="Assets/finergy_cs/testing-divider.svg" alt="">
+      <h2 id="reflection">Key Takeaways</h2>
+      <ol class="finergy-takeaways">
+<li><h3>Research-Driven Decisions</h3><ul><li>Conducting extensive exploratory research and user interviews before locking in a product direction gave us a solid, data-backed foundation for what to focus on.</li><li>Later on, usability testing played a crucial role in validating our design decisions and ensuring we were solving the right problems.</li></ul></li>
+<li><h3>Mastering UI/UX Design &amp; Professional Growth</h3><ul><li>Diving deep into Figma allowed me to master advanced prototyping, component structures, design systems, and more, and really solidified my interest in UI/UX design.</li><li>Participating in design critiques, learning from more experienced designers, and presenting our research and design outcomes to cross-functional teams significantly sharpened my technical craftsmanship and presentation skills.</li></ul></li>
+<li><h3>The Power of Intentional UI &amp; Hierarchy</h3><ul><li>This project highlighted how critical deliberate UI considerations are in product design.</li><li>Thoughtful choices around color palettes, typography, and visual hierarchy make a massive difference in reducing cognitive load and turning a complex financial tool into an approachable experience.</li></ul></li>
+<li><h3>Focusing on Core Features for Clear Impact</h3><ul><li>While we brainstormed and scoped numerous ideas,focusing our deep prototyping efforts on Finergy's core pillars was essential.</li><li>We had numerous secondary features within the app itself such as newsletters, user profiles, and settings that weren't fully prototyped, but our laser focus ensured the primary concept of the app was communicated clearly without overwhelming users,</li></ul></li>
+      </ol>
+
+      <div class="finergy-final-reflection">
+        <img class="finergy-divider" src="Assets/finergy_cs/testing-divider.svg" alt="">
+        <h2>Final Reflection</h2>
+        <div class="finergy-reflection-photos">
+          <button type="button" class="finergy-image-button finergy-reflection-presentation" data-image-title="Finergy showcase presentation" aria-label="Enlarge Finergy showcase presentation photo" aria-haspopup="dialog"><img src="Assets/finergy_cs/reflection-presentation.png" alt="Presenting Finergy’s final designs at the Bits of Good Design Bootcamp showcase."></button>
+          <button type="button" class="finergy-image-button finergy-reflection-certificate" data-image-title="Design Bootcamp certificate" aria-label="Enlarge Design Bootcamp certificate" aria-haspopup="dialog"><img src="Assets/finergy_cs/reflection-certificate.png" alt="Ananya Banerjee’s certificate of completion for the Spring 2026 Bits of Good Design Bootcamp."></button>
+          <button type="button" class="finergy-image-button finergy-reflection-group" data-image-title="Design Bootcamp showcase group" aria-label="Enlarge Design Bootcamp showcase group photo" aria-haspopup="dialog"><img src="finergy/final_photo.JPG" alt="The Spring 2026 Design Bootcamp showcase group celebrating their completed projects."></button>
+        </div>
+        <p class="finergy-wireframe-hint">Click images to enlarge</p>
+        <div class="finergy-closing-copy">
+          <p>Working on <strong class="finergy-closing-brand">Finergy</strong> has been an incredible journey in bridging the gap between <strong>complex financial systems</strong> and <strong>accessible, empowering design</strong> for students and <strong>young adults</strong>.</p>
+          <p>As someone navigating these exact life transitions myself, building a product that <strong>combats information overwhelm</strong> and <strong>replaces financial anxiety with clarity</strong> was an <strong>immense challenge</strong>, but one that was <strong>deeply rewarding.</strong></p>
+          <p>This project both <strong>sharpened my technical execution</strong> in Figma and user research methodologies and <strong>reinforced my belief</strong> that <strong>design can be a powerful tool</strong> for real-world education and financial wellness.</p>
+          <p>After this project, I could confidently say <strong>I am passionate about UX</strong> and product design, and I am <strong>beyond more than excited</strong> to continue applying human-centered design principles to solve everyday friction points and <strong>build products that genuinely make people's lives easier.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+<div class="finergy-thankyou">
+    <div class="ty-container">
+      <div class="ty-card-wrap">
+        <div class="ty-card"><p>thank you for your time!</p></div>
+      </div>
+
+      <a class="ty-arrow ty-arrow--right" href="coming-soon.html?project=GT%20Buzzwalk" aria-label="View GT Buzzwalk project, coming soon"><img src="Assets/placeful_cs/thankyou_arrow_right.svg" alt=""></a>
+      <a class="ty-arrow ty-arrow--left" href="placeful.html" aria-label="View Nenos Placeful project"><img src="Assets/placeful_cs/thankyou_arrow_left_base.svg" alt=""></a>
+
+      <a class="ty-placeful-link" href="placeful.html" aria-label="View Nenos Placeful project"><img src="Assets/placeful_logo.png" alt="Nenos Placeful"></a>
+
+      <a class="ty-buzzwalk-wrap" href="coming-soon.html?project=GT%20Buzzwalk" aria-label="View GT Buzzwalk project, coming soon">
+        <div class="ty-buzzwalk">
+          <img src="Assets/placeful_cs/thankyou_buzzwalk_badge.png" alt="GT Buzzwalk logo badge">
+        </div>
+      </a>
+
+      <div class="ty-tape ty-tape--1"><img src="Assets/placeful_cs/thankyou_yellow_tape.png" alt=""></div>
+      <div class="ty-tape ty-tape--2"><img src="Assets/placeful_cs/thankyou_yellow_tape.png" alt=""></div>
+    </div>
+
+    <p class="ty-view-more"><a href="index.html">~view my other projects!</a></p>
+</div>
+</main>
+<div class="cs-footer-band">
+<div class="cs-footer-anchor">
+  <footer class="site-footer">
+    <p class="footer-title"><span class="about-name-peel"><span class="about-name-front">contact me!</span><span class="about-name-back" aria-hidden="true">contact me!</span></span></p>
+
+    <div class="sk" style="--l:799px;--t:64px;--w:315.384px;--h:170.124px;">
+      <div class="sk-i flip" style="--iw:148.305px;--ih:305.407px;--r:-85.83deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:864.6px;--t:113.61px;--w:169.57px;--h:59px;">
+      <a href="mailto:ananyaban06@gmail.com" class="sk-i contact-link" style="--iw:166.18px;--ih:43.24px;--r:5.51deg;">
+        <div class="crop" style="width:55.51px;height:39.72px;flex-shrink:0;"><img src="Assets/email_icon.png" alt="" style="left:-23.28%;top:-50.2%;width:143.68%;height:200.8%;"></div>
+        <span>Email</span>
+      </a>
+    </div>
+
+    <div class="sk" style="--l:590px;--t:224px;--w:354px;--h:183.588px;">
+      <div class="sk-i flip" style="--iw:155.66px;--ih:342.238px;--r:94.77deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:638.17px;--t:282.8px;--w:227.6px;--h:73.77px;">
+      <a href="https://www.linkedin.com/in/ananyaba/"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="text-decoration:none; color:inherit;">
+      <div class="sk-i contact-link" style="--iw:223.62px;--ih:45.39px;--r:7.39deg;">
+        <img src="Assets/linkedin_icon.png" alt="" class="contact-icon contain" style="width:45px;height:45px;">
+        <span>LinkedIn</span>
+      </div>
+      </a>
+    </div>
+
+    <div class="sk" style="--l:1024px;--t:207px;--w:351.782px;--h:200.53px;">
+      <div class="sk-i" style="--iw:154.894px;--ih:333.201px;--r:81.86deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1088.65px;--t:268.81px;--w:238.37px;--h:83.39px;">
+      <a href="https://docs.google.com/document/d/1TirXVIre3TSZLm0B2PwHUFP9qbT0IzNKVS-qZgrSqyw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="sk-i contact-link" style="--iw:234.14px;--ih:45.03px;--r:-9.59deg;">
+        <div class="crop" style="width:48px;height:41px;flex-shrink:0;"><img src="Assets/folder_pink.png" alt="" style="left:-14.66%;top:-25%;width:129.31%;height:150%;"></div>
+        <span>Resume</span>
+      </a>
+    </div>
+
+    <button type="button" class="sk finergy-butterfly" aria-label="Let the butterfly fly" style="--l:579px;--t:89px;--w:92.19px;--h:104.3px;">
+      <span class="sk-i shadow-r" style="--iw:76.36px;--ih:91.6px;--r:10.82deg;"><img src="Assets/butterfly_gem.png" alt=""></span>
+    </button>
+    <div class="sk" style="--l:1200px;--t:132.05px;--w:67.22px;--h:67.22px;">
+      <div class="sk-i shadow-l" style="--iw:54.29px;--ih:54.29px;--r:-16.1deg;"><img src="Assets/heart_gem.png" alt=""></div>
+    </div>
+
+    <div class="finergy-contact-tape">
+      <img src="Assets/blue_tape.png" alt="">
+      <p class="footer-tape-text">would love to talk!</p>
+    </div>
+
+    <div class="sk" style="--l:30px;--t:320px;--w:100.88px;--h:100.88px;">
+      <div class="sk-i shadow-l" style="--iw:93.04px;--ih:92.04px;--r:-11deg;"><img src="Assets/star_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:218px;--t:316px;--w:112.233px;--h:112.233px;">
+      <div class="sk-i shadow-l" style="--iw:95.951px;--ih:95.951px;--r:10.8deg;"><img src="Assets/gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:1337px;--t:39px;--w:68.84px;--h:68.84px;">
+      <div class="sk-i shadow-r" style="--iw:55.43px;--ih:55.43px;--r:-16.43deg;"><img src="Assets/lucky_gem.png" alt=""></div>
+    </div>
+    <div class="sk" style="--l:434px;--t:320px;--w:68.84px;--h:68.84px;">
+      <div class="sk-i shadow-r" style="--iw:54.59px;--ih:54.59px;--r:-18.09deg;"><img src="Assets/pink_circle_gem.png" alt=""></div>
+    </div>
+
+    <p class="footer-signoff" style="left:528px;top:458px;width:384px;">&#9825; designed + coded + collaged by me!</p>
+  </footer>
+</div>
+</div>
+
+<script>
+(function () {
+  var wrap = document.getElementById("cs-subnav-wrap");
+  var buttons = Array.from(document.querySelectorAll("#cs-subnav button"));
+  var scheduled = false;
+
+  function setActive(id) {
+    buttons.forEach(function (button) {
+      var active = button.dataset.target === id;
+      button.classList.toggle("active", active);
+      if (active) button.setAttribute("aria-current", "location");
+      else button.removeAttribute("aria-current");
+    });
+  }
+
+  function updateActive() {
+    scheduled = false;
+    var edge = wrap.getBoundingClientRect().bottom + 1;
+    var activeId = "background";
+    buttons.forEach(function (button) {
+      var section = document.getElementById(button.dataset.target);
+      if (section && section.getBoundingClientRect().top <= edge) activeId = section.id;
+    });
+    setActive(activeId);
+  }
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var target = document.getElementById(button.dataset.target);
+      if (!target) return;
+      // Use viewport geometry so the shared case-study zoom is accounted for.
+      var top = target.getBoundingClientRect().top + window.scrollY - wrap.getBoundingClientRect().height;
+      window.scrollTo({ top: top, behavior: "instant" });
+      updateActive();
+    });
+  });
+
+  window.addEventListener("scroll", function () {
+    if (!scheduled) {
+      scheduled = true;
+      window.requestAnimationFrame(updateActive);
+    }
+  }, { passive: true });
+  window.addEventListener("resize", updateActive);
+  window.addEventListener("load", updateActive);
+})();
+</script>
+
+<dialog class="finergy-image-viewer" id="finergy-image-viewer" aria-labelledby="finergy-viewer-title">
+  <div class="finergy-viewer-toolbar"><h2 id="finergy-viewer-title">Research image</h2><button type="button" class="finergy-viewer-close" autofocus>Close ×</button></div>
+  <div class="finergy-viewer-scroll"><img id="finergy-viewer-image" alt=""></div>
+</dialog>
+<script>
+(function () {
+  var dialog = document.getElementById('finergy-image-viewer');
+  var image = document.getElementById('finergy-viewer-image');
+  var title = document.getElementById('finergy-viewer-title');
+  var opener;
+  var backdropPointerDown = false;
+  document.querySelectorAll('.finergy-image-button').forEach(function (button) {
+    button.addEventListener('click', function () {
+      opener = button;
+      var source = button.querySelector('img');
+      image.src = source.src;
+      image.alt = source.alt;
+      title.textContent = button.dataset.imageTitle;
+      dialog.showModal();
+      var viewport = dialog.querySelector(".finergy-viewer-scroll");
+      viewport.scrollTop = 0;
+      viewport.scrollLeft = 0;
+      document.documentElement.classList.add('finergy-viewer-open');
+    });
+  });
+  dialog.querySelector('.finergy-viewer-close').addEventListener('click', function () { dialog.close(); });
+  function outside(event) {
+    var rect = dialog.getBoundingClientRect();
+    return event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
+  }
+  dialog.addEventListener('pointerdown', function (event) { backdropPointerDown = outside(event); });
+  dialog.addEventListener('click', function (event) {
+    if (backdropPointerDown && outside(event)) dialog.close();
+    backdropPointerDown = false;
+  });
+  // Escape uses the native dialog cancel action; all close paths share cleanup.
+  dialog.addEventListener('close', function () {
+    document.documentElement.classList.remove('finergy-viewer-open');
+    image.removeAttribute('src');
+    if (opener) opener.focus({ preventScroll: true });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var videos = Array.from(document.querySelectorAll('.finergy-final-video'));
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var visible = new Set();
+  function syncPlayback() {
+    videos.forEach(function (video) {
+      if (!document.hidden && !reducedMotion.matches && visible.has(video)) {
+        video.play().catch(function () { /* Native controls remain available. */ });
+      } else video.pause();
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) visible.add(entry.target);
+        else visible.delete(entry.target);
+      });
+      syncPlayback();
+    }, { threshold: 0.25 });
+    videos.forEach(function (video) { observer.observe(video); });
+    document.addEventListener('visibilitychange', syncPlayback);
+    reducedMotion.addEventListener('change', syncPlayback);
+  }
+})();
+</script>
+
+<script>
+(function () {
+  var button = document.querySelector('.finergy-butterfly');
+  var flying = false;
+  button.addEventListener('click', async function () {
+    if (flying) return;
+    flying = true;
+    var sticker = button.querySelector('.sk-i');
+    var rect = sticker.getBoundingClientRect();
+    var flyer = sticker.querySelector('img').cloneNode(true);
+    flyer.alt = '';
+    flyer.setAttribute('aria-hidden', 'true');
+    // Use a viewport overlay so the footer’s clipping and page zoom do not trap it.
+    Object.assign(flyer.style, {
+      position: 'fixed', left: rect.left + 'px', top: rect.top + 'px',
+      width: rect.width + 'px', height: rect.height + 'px', objectFit: 'contain',
+      pointerEvents: 'none', zIndex: '1000', filter: 'drop-shadow(4px 0 3px #0008)'
+    });
+    document.documentElement.appendChild(flyer);
+    button.classList.add('is-flying');
+    try {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var rise = -(rect.top + rect.height + 40);
+      var frames = reduced ? [{ opacity: 1 }, { opacity: 0 }] : [
+        { transform: 'translate(0, 0) rotate(20deg)', opacity: 1 },
+        { transform: 'translate(35px, ' + rise * 0.25 + 'px) rotate(-8deg)', opacity: 1, offset: 0.25 },
+        { transform: 'translate(-25px, ' + rise * 0.55 + 'px) rotate(12deg)', opacity: 1, offset: 0.55 },
+        { transform: 'translate(20px, ' + rise + 'px) rotate(-5deg)', opacity: 0 }
+      ];
+      await flyer.animate(frames, { duration: reduced ? 160 : 1600, easing: 'ease-in-out', fill: 'forwards' }).finished;
+    } catch (error) {
+      // Restore the original even if an animation is interrupted or unavailable.
+    } finally {
+      flyer.remove();
+      button.classList.remove('is-flying');
+      flying = false;
+    }
+  });
+})();
+</script>
+<script src="portfolio-interactions.js"></script>
+</body>
+</html>

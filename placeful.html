@@ -8,24 +8,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Newsreader:ital,wght@0,600&family=Tillana:wght@500&family=Zalando+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Zalando+Sans+Expanded:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="preload" href="Assets/ab_pink_star.png" as="image">
+<link rel="icon" type="image/png" href="/Assets/ab_pink_star.png">
 </head>
 <body class="cs-body">
 
 <!-- ============ MAIN SITE NAV ============ -->
-<header class="site-nav" id="site-nav">
-  <div class="nav-logo-cs"><img src="Assets/ab_star.png" alt="AB monogram logo"></div>
-  <ul>
-    <li><a href="index.html" class="nav-current">work</a></li>
-    <li><a href="about.html">about</a></li>
-    <li><a href="coming-soon.html?project=Collage">collage</a></li>
-    <li>
-      <a href="https://docs.google.com/document/d/1rjOiWTw3FA5mIrzkZx_TTW7is4Xb-dvMyha_8OCmCT4/edit?usp=sharing"
-         target="_blank"
-         rel="noopener noreferrer">
-        resume
-      </a>
-    </li>
-  </ul>
+<header class="site-nav case-main-nav" id="site-nav">
+  <div class="case-main-nav-canvas">
+<nav class="nav portfolio-nav" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html" aria-label="Go to home page"><img src="Assets/ab_star.png" alt="AB monogram logo"></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-current">work</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="coming-soon.html?project=Collage">collage</a></li>
+        <li>
+          <a href="https://docs.google.com/document/d/1TirXVIre3TSZLm0B2PwHUFP9qbT0IzNKVS-qZgrSqyw/edit?usp=sharing"
+             target="_blank"
+             rel="noopener noreferrer">
+            resume
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <!-- ============ CASE STUDY SECONDARY NAV ============ -->
@@ -375,7 +381,7 @@
 <section class="cs-section" id="wireframes">
 
   <div class="cs-mockups-wrap">
-    <h2 class="cs-h1">Initial Mock-Ups</h2>
+    <h2 class="cs-h1" id="wireframes-trigger">Initial Mock-Ups</h2>
     <div class="cs-wireframe-img cs-wireframe-img--1">
       <img src="Assets/placeful_cs/wireframes_lofi1.png" alt="Low-fidelity wireframes: memento scanner onboarding screens, QR code scan and camera flow, success/error/duplicate states, and the Discover feed">
     </div>
@@ -431,7 +437,7 @@
   <div class="cs-usability-wrap">
     <div class="cs-usability-row">
       <div class="cs-usability-text">
-        <h2 class="cs-h1">Usability Testing</h2>
+        <h2 class="cs-h1" id="testing-trigger">Usability Testing</h2>
         <p class="cs-usability-intro">We conducted <span class="hl-usability">6 usability tests:</span></p>
         <ul class="cs-usability-list">
           <li><strong>2 live</strong>, moderated sessions</li>
@@ -575,7 +581,7 @@
   </div>
 
   <div class="cs-hifi-wrap">
-    <h2 class="cs-problem-title">Final Hi-Fidelity Designs</h2>
+    <h2 class="cs-problem-title" id="final-trigger">Final Hi-Fidelity Designs</h2>
 
     <div class="cs-hifi-bg">
     <div class="cs-hifi-rows">
@@ -759,7 +765,7 @@
   </div>
 
   <div class="cs-takeaways-wrap">
-    <h2 class="cs-h1" id="reflection-trigger">Key Takeaways</h2>
+    <h2 class="cs-h1" >Key Takeaways</h2>
 
     <div class="cs-takeaways-bg">
       <div class="takeaway-card">
@@ -802,7 +808,7 @@
 <section class="cs-section" id="reflection">
 
   <div class="cs-reflection-wrap">
-    <h2 class="cs-h1">Reflection</h2>
+    <h2 class="cs-h1" id="reflection-trigger">Reflection</h2>
 
     <div class="cs-reflect-photo-group">
       <div class="cs-reflect-photo">
@@ -827,27 +833,27 @@
       Most importantly, I learned that <span class="hl-ital">having creative freedom doesn&rsquo;t mean pursuing every possible idea</span>. It means knowing <span class="hl-med">when to explore</span>, <span class="hl-med">when to redesign</span>, and <span class="hl-med">when to constrain an idea</span> so that every decision ultimately serves the user and the product.
     </p>
 
-    <div class="ty-container">
+    <div class="ty-container placeful-thankyou">
       <div class="ty-card-wrap">
         <div class="ty-card"><p>thank you for your time!</p></div>
       </div>
 
-      <div class="ty-arrow ty-arrow--right"><img src="Assets/placeful_cs/thankyou_arrow_right.svg" alt=""></div>
-      <div class="ty-arrow ty-arrow--left"><img src="Assets/placeful_cs/thankyou_arrow_left_base.svg" alt=""></div>
+      <a class="ty-arrow ty-arrow--right" href="coming-soon.html?project=GT%20Buzzwalk" aria-label="View GT Buzzwalk project, coming soon"><img src="Assets/placeful_cs/thankyou_arrow_right.svg" alt=""></a>
+      <a class="ty-arrow ty-arrow--left" href="finergy.html" aria-label="View the Finergy case study"><img src="Assets/placeful_cs/thankyou_arrow_left_base.svg" alt=""></a>
 
-      <div class="ty-finergy-wrap">
+      <a class="ty-finergy-wrap" href="finergy.html" aria-label="View the Finergy case study">
         <div class="ty-finergy">
           <img class="ty-finergy-icon" src="Assets/placeful_cs/thankyou_finergy_leaf.png" alt="Finergy logo, a money tree icon">
           <p class="ty-finergy-title">Finergy</p>
           <p class="ty-finergy-tag">Embark on your financial journey&hellip;</p>
         </div>
-      </div>
+      </a>
 
-      <div class="ty-buzzwalk-wrap">
+      <a class="ty-buzzwalk-wrap" href="coming-soon.html?project=GT%20Buzzwalk" aria-label="View GT Buzzwalk project, coming soon">
         <div class="ty-buzzwalk">
           <img src="Assets/placeful_cs/thankyou_buzzwalk_badge.png" alt="GT Buzzwalk logo badge">
         </div>
-      </div>
+      </a>
 
       <div class="ty-tape ty-tape--1"><img src="Assets/placeful_cs/thankyou_yellow_tape.png" alt=""></div>
       <div class="ty-tape ty-tape--2"><img src="Assets/placeful_cs/thankyou_yellow_tape.png" alt=""></div>
@@ -861,22 +867,22 @@
 <div class="cs-footer-band">
 <div class="cs-footer-anchor">
   <footer class="site-footer">
-    <p class="footer-title">contact me!</p>
+    <p class="footer-title"><span class="about-name-peel"><span class="about-name-front">contact me!</span><span class="about-name-back" aria-hidden="true">contact me!</span></span></p>
 
-    <div class="sk" style="--l:784.56px;--t:70.39px;--w:269.65px;--h:145.45px;">
-      <div class="sk-i flip" style="--iw:126.8px;--ih:261.13px;--r:-85.83deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    <div class="sk" style="--l:799px;--t:64px;--w:315.384px;--h:170.124px;">
+      <div class="sk-i flip" style="--iw:148.305px;--ih:305.407px;--r:-85.83deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
     </div>
-    <div class="sk" style="--l:834.6px;--t:113.61px;--w:169.57px;--h:59px;">
-      <div class="sk-i contact-link" style="--iw:166.18px;--ih:43.24px;--r:5.51deg;">
+    <div class="sk" style="--l:864.6px;--t:113.61px;--w:169.57px;--h:59px;">
+      <a href="mailto:ananyaban06@gmail.com" class="sk-i contact-link" style="--iw:166.18px;--ih:43.24px;--r:5.51deg;">
         <div class="crop" style="width:55.51px;height:39.72px;flex-shrink:0;"><img src="Assets/email_icon.png" alt="" style="left:-23.28%;top:-50.2%;width:143.68%;height:200.8%;"></div>
         <span>Email</span>
-      </div>
+      </a>
     </div>
 
-    <div class="sk" style="--l:600.63px;--t:266.2px;--w:302.67px;--h:156.97px;">
-      <div class="sk-i flip" style="--iw:133.09px;--ih:292.62px;--r:94.77deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    <div class="sk" style="--l:590px;--t:224px;--w:354px;--h:183.588px;">
+      <div class="sk-i flip" style="--iw:155.66px;--ih:342.238px;--r:94.77deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
     </div>
-    <div class="sk" style="--l:638.17px;--t:307.8px;--w:227.6px;--h:73.77px;">
+    <div class="sk" style="--l:638.17px;--t:282.8px;--w:227.6px;--h:73.77px;">
       <a href="https://www.linkedin.com/in/ananyaba/"
            target="_blank"
            rel="noopener noreferrer"
@@ -885,33 +891,36 @@
         <img src="Assets/linkedin_icon.png" alt="" class="contact-icon contain" style="width:45px;height:45px;">
         <span>LinkedIn</span>
       </div>
+      </a>
     </div>
 
-    <div class="sk" style="--l:1057.45px;--t:224.78px;--w:300.77px;--h:171.45px;">
-      <div class="sk-i" style="--iw:132.44px;--ih:284.89px;--r:81.86deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
+    <div class="sk" style="--l:1024px;--t:207px;--w:351.782px;--h:200.53px;">
+      <div class="sk-i" style="--iw:154.894px;--ih:333.201px;--r:81.86deg;"><img class="paper" src="Assets/my own photos:assets/paper_scrap_3_cropped.png" alt=""></div>
     </div>
     <div class="sk" style="--l:1088.65px;--t:268.81px;--w:238.37px;--h:83.39px;">
-      <div class="sk-i contact-link" style="--iw:234.14px;--ih:45.03px;--r:-9.59deg;">
+      <a href="https://docs.google.com/document/d/1TirXVIre3TSZLm0B2PwHUFP9qbT0IzNKVS-qZgrSqyw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="sk-i contact-link" style="--iw:234.14px;--ih:45.03px;--r:-9.59deg;">
         <div class="crop" style="width:48px;height:41px;flex-shrink:0;"><img src="Assets/folder_pink.png" alt="" style="left:-14.66%;top:-25%;width:129.31%;height:150%;"></div>
         <span>Resume</span>
-      </div>
+      </a>
     </div>
 
-    <div class="sk" style="--l:579px;--t:89px;--w:92.19px;--h:104.3px;">
-      <div class="sk-i shadow-r" style="--iw:76.36px;--ih:91.6px;--r:10.82deg;"><img src="Assets/butterfly_gem.png" alt=""></div>
-    </div>
+    <button type="button" class="sk finergy-butterfly" aria-label="Let the butterfly fly" style="--l:579px;--t:89px;--w:92.19px;--h:104.3px;">
+      <span class="sk-i shadow-r" style="--iw:76.36px;--ih:91.6px;--r:10.82deg;"><img src="Assets/butterfly_gem.png" alt=""></span>
+    </button>
     <div class="sk" style="--l:1200px;--t:132.05px;--w:67.22px;--h:67.22px;">
       <div class="sk-i shadow-l" style="--iw:54.29px;--ih:54.29px;--r:-16.1deg;"><img src="Assets/heart_gem.png" alt=""></div>
     </div>
 
-    <div class="sk" style="--l:5.2px;--t:181.07px;--w:463.2px;--h:109.86px;filter:drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.6));"><img src="Assets/blue_tape.png" alt="" style="object-fit:fill;"></div>
-    <p class="footer-tape-text" style="left:80.07px;top:213.59px;width:313.46px;">would love to talk!</p>
+    <div class="finergy-contact-tape">
+      <img src="Assets/blue_tape.png" alt="">
+      <p class="footer-tape-text">would love to talk!</p>
+    </div>
 
     <div class="sk" style="--l:30px;--t:320px;--w:100.88px;--h:100.88px;">
       <div class="sk-i shadow-l" style="--iw:93.04px;--ih:92.04px;--r:-11deg;"><img src="Assets/star_gem.png" alt=""></div>
     </div>
-    <div class="sk" style="--l:209.58px;--t:307.58px;--w:129.06px;--h:129.06px;">
-      <div class="sk-i shadow-l" style="--iw:110.34px;--ih:110.34px;--r:10.8deg;"><img src="Assets/gem.png" alt=""></div>
+    <div class="sk" style="--l:218px;--t:316px;--w:112.233px;--h:112.233px;">
+      <div class="sk-i shadow-l" style="--iw:95.951px;--ih:95.951px;--r:10.8deg;"><img src="Assets/gem.png" alt=""></div>
     </div>
     <div class="sk" style="--l:1337px;--t:39px;--w:68.84px;--h:68.84px;">
       <div class="sk-i shadow-r" style="--iw:55.43px;--ih:55.43px;--r:-16.43deg;"><img src="Assets/lucky_gem.png" alt=""></div>
@@ -920,7 +929,7 @@
       <div class="sk-i shadow-r" style="--iw:54.59px;--ih:54.59px;--r:-18.09deg;"><img src="Assets/pink_circle_gem.png" alt=""></div>
     </div>
 
-    <p class="footer-signoff" style="left:528px;top:461px;width:384px;">&#9825; designed + coded + collaged by me!</p>
+    <p class="footer-signoff" style="left:528px;top:458px;width:384px;">&#9825; designed + coded + collaged by me!</p>
   </footer>
 </div>
 </div>
@@ -928,57 +937,92 @@
 
 <script>
 (function () {
-  var subnavWrap = document.getElementById('cs-subnav-wrap');
-  var buttons = Array.prototype.slice.call(document.querySelectorAll('#cs-subnav button'));
-  // Click still jumps to the top of the actual section, but the scroll-spy
-  // highlight for a couple of buttons should switch on at a specific piece
-  // of content further into the previous section, not the section boundary.
-  var spyOverrides = { research: 'research-trigger', reflection: 'reflection-trigger' };
-  var sections = buttons.map(function (btn) {
-    return document.getElementById(btn.dataset.target);
+  var wrap = document.getElementById('cs-subnav-wrap');
+  var buttons = Array.from(document.querySelectorAll('#cs-subnav button'));
+  var targets = {
+    background: 'background', research: 'research-trigger',
+    wireframes: 'wireframes-trigger', testing: 'testing-trigger',
+    final: 'final-trigger', reflection: 'reflection-trigger'
+  };
+  var sections = buttons.map(function (button) {
+    return { button: button, heading: document.getElementById(targets[button.dataset.target]) };
   });
-  var spyTargetToId = {};
-  var spyTargets = buttons.map(function (btn) {
-    var id = btn.dataset.target;
-    var spyId = spyOverrides[id] || id;
-    var el = document.getElementById(spyId);
-    if (el) spyTargetToId[spyId] = id;
-    return el;
-  });
-
-  function setActive(id) {
-    buttons.forEach(function (btn) {
-      btn.classList.toggle('active', btn.dataset.target === id);
+  function activate(button) {
+    buttons.forEach(function (item) {
+      var active = item === button;
+      item.classList.toggle('active', active);
+      if (active) item.setAttribute('aria-current', 'location');
+      else item.removeAttribute('aria-current');
     });
   }
-
-  buttons.forEach(function (btn, i) {
-    btn.addEventListener('click', function () {
-      var target = sections[i];
-      if (!target) return;
-      var offset = subnavWrap.getBoundingClientRect().height;
-      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: top, behavior: 'smooth' });
+  sections.forEach(function (section) {
+    section.button.addEventListener('click', function () {
+      if (!section.heading) return;
+      var top = section.heading.getBoundingClientRect().top + window.scrollY - wrap.getBoundingClientRect().height - 16;
+      window.scrollTo({ top: Math.max(0, top), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      activate(section.button);
     });
   });
-
-  if ('IntersectionObserver' in window) {
-    var navHeight = subnavWrap.getBoundingClientRect().height;
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) setActive(spyTargetToId[entry.target.id]);
-      });
-    }, {
-      rootMargin: '-' + navHeight + 'px 0px -90% 0px',
-      threshold: 0
+  var pending = false;
+  function update() {
+    pending = false;
+    var line = wrap.getBoundingClientRect().height + 20;
+    var current = sections[0];
+    sections.forEach(function (section) {
+      if (section.heading && section.heading.getBoundingClientRect().top <= line) current = section;
     });
-
-    spyTargets.forEach(function (target) {
-      if (target) observer.observe(target);
-    });
+    activate(current.button);
   }
+  function schedule() {
+    if (!pending) { pending = true; window.requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  window.addEventListener('load', schedule);
+  update();
 })();
 </script>
 
+<script>
+(function () {
+  var button = document.querySelector('.finergy-butterfly');
+  var flying = false;
+  button.addEventListener('click', async function () {
+    if (flying) return;
+    flying = true;
+    var sticker = button.querySelector('.sk-i');
+    var rect = sticker.getBoundingClientRect();
+    var flyer = sticker.querySelector('img').cloneNode(true);
+    flyer.alt = '';
+    flyer.setAttribute('aria-hidden', 'true');
+    // Use a viewport overlay so the footer’s clipping and page zoom do not trap it.
+    Object.assign(flyer.style, {
+      position: 'fixed', left: rect.left + 'px', top: rect.top + 'px',
+      width: rect.width + 'px', height: rect.height + 'px', objectFit: 'contain',
+      pointerEvents: 'none', zIndex: '1000', filter: 'drop-shadow(4px 0 3px #0008)'
+    });
+    document.documentElement.appendChild(flyer);
+    button.classList.add('is-flying');
+    try {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var rise = -(rect.top + rect.height + 40);
+      var frames = reduced ? [{ opacity: 1 }, { opacity: 0 }] : [
+        { transform: 'translate(0, 0) rotate(20deg)', opacity: 1 },
+        { transform: 'translate(35px, ' + rise * 0.25 + 'px) rotate(-8deg)', opacity: 1, offset: 0.25 },
+        { transform: 'translate(-25px, ' + rise * 0.55 + 'px) rotate(12deg)', opacity: 1, offset: 0.55 },
+        { transform: 'translate(20px, ' + rise + 'px) rotate(-5deg)', opacity: 0 }
+      ];
+      await flyer.animate(frames, { duration: reduced ? 160 : 1600, easing: 'ease-in-out', fill: 'forwards' }).finished;
+    } catch (error) {
+      // Restore the original even if an animation is interrupted or unavailable.
+    } finally {
+      flyer.remove();
+      button.classList.remove('is-flying');
+      flying = false;
+    }
+  });
+})();
+</script>
+<script src="portfolio-interactions.js"></script>
 </body>
 </html>
