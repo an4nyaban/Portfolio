@@ -1,0 +1,2 @@
+# Keep original collage source media local; the site uses Assets/collage exports.
+/collage:play stuff/

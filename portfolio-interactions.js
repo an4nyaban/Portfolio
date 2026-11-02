@@ -36,6 +36,8 @@
       if (!label || !label.querySelector('.contact-link')) return;
       var group = document.createElement('div');
       group.className = 'contact-paper-group';
+      var contactLabel = label.textContent.trim().toLowerCase();
+      group.dataset.contact = contactLabel;
       var left = parseFloat(paper.style.getPropertyValue('--l'));
       var top = parseFloat(paper.style.getPropertyValue('--t'));
       group.style.cssText = 'position:absolute;left:' + left + 'px;top:' + top + 'px;width:' + paper.style.getPropertyValue('--w') + ';height:' + paper.style.getPropertyValue('--h');
@@ -70,6 +72,23 @@
     }
     sizeCaseContact(); window.addEventListener('resize', sizeCaseContact);
   }
+  // Touch press feedback reuses the desktop art rather than maintaining a second layout.
+  if (document.body.classList.contains('home-page') || document.body.classList.contains('about-page')) {
+    var pressedArtwork = null;
+    function releaseArtwork() {
+      if (pressedArtwork) pressedArtwork.classList.remove('is-touch-pressed');
+      pressedArtwork = null;
+    }
+    document.addEventListener('pointerdown', function (event) {
+      if (event.pointerType !== 'touch') return;
+      releaseArtwork();
+      pressedArtwork = event.target.closest('.about-name-peel, .home-work-peel, .home-tag-group, [data-hero-stage="decoration"], .project-hover, .collage-turn');
+      if (pressedArtwork) pressedArtwork.classList.add('is-touch-pressed');
+    });
+    window.addEventListener('pointerup', releaseArtwork);
+    window.addEventListener('pointercancel', releaseArtwork);
+    window.addEventListener('blur', releaseArtwork);
+  }
   var about = document.body.classList.contains('about-page');
   var elements = Array.from(document.querySelectorAll('.site-footer > *'));
   if (document.body.classList.contains('home-page')) {
@@ -83,6 +102,13 @@
   if (about) document.querySelectorAll('.about-hero-collage > *, .about-hero-intro > *').forEach(function (element) { elements.push(element); });
   elements = Array.from(new Set(elements));
   function sizeFooter() {
+    if (window.innerWidth < 768) {
+      var mobileScale = window.innerWidth / 402;
+      var mobileBand = document.querySelector('.home-contact-band');
+      mobileBand.style.height = 328 * mobileScale + 'px';
+      mobileBand.querySelector('.home-contact-anchor').style.width = window.innerWidth + 'px';
+      return;
+    }
     var scale = Math.min(.65, Math.max(0, (window.innerWidth - 32) / 1440));
     var band = document.querySelector('.home-contact-band');
     document.documentElement.style.setProperty('--about-contact-scale', scale);
@@ -144,8 +170,14 @@
       duration: 2200, iterations: Infinity, easing: 'linear'
     });
     spin.pause();
-    cd.addEventListener('pointerenter', function () { if (!reduced.matches) spin.play(); });
-    cd.addEventListener('pointerleave', function () { spin.pause(); });
+    var touchSpinning = false;
+    cd.addEventListener('pointerenter', function (event) { if (event.pointerType !== 'touch' && !reduced.matches) spin.play(); });
+    cd.addEventListener('pointerleave', function () { if (!touchSpinning) spin.pause(); });
+    cd.addEventListener('click', function (event) {
+      if (event.pointerType !== 'touch' || reduced.matches) return;
+      touchSpinning = !touchSpinning;
+      if (touchSpinning) spin.play(); else spin.pause();
+    });
     reduced.addEventListener('change', function () { if (reduced.matches) spin.pause(); });
   });
   reduced.addEventListener('change', function () {
